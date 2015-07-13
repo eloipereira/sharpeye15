@@ -1,0 +1,10 @@
+seagull_commons_msgs/SeagullHeader header
+int8 command_code
+    uint8 CC_IAS=0
+    uint8 CC_ALTITUDE=1
+    uint8 CC_BANK=2
+    uint8 CC_FLAPS=3
+    uint8 CC_HEADING=4
+    uint8 CC_VRATE=5
+    uint8 CC_PITCH=6
+float32 value

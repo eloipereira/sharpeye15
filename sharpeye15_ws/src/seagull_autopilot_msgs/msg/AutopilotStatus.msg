@@ -1,0 +1,33 @@
+seagull_commons_msgs/SeagullHeader header
+uint8 orbitRadius
+uint8 trackerStatus
+uint16 timeToWp
+uint8 wpFrom
+uint8 wpTo
+bool airBoundaryViolated
+bool autopilotEngineKill
+bool commsTimeout
+bool fligthTimerElapsed
+bool fligthTermination
+bool gpsTimeout
+bool orbiting
+uint8 loopControl1
+uint8 loopControl2
+uint8 loopControl3
+uint8 loopControl4
+uint8 loopControl5
+uint8 loopControl6
+uint8 loopControl7
+uint8 loopControl8
+uint8 loopControlCount
+	uint8 STATUS_OFF=0
+	uint8 STATUS_ON=1
+	uint8 STATUS_AUTO=2
+bool userAction0
+bool userAction1
+bool userAction2
+bool userAction3
+bool userAction4
+bool userAction5
+bool userAction6
+bool userAction7

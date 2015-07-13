@@ -1,0 +1,8 @@
+prefix=/home/eloi/seagull_ws_dev/install
+
+Name: seagull_communication
+Description: Description of seagull_communication
+Version: 0.0.1
+Cflags: -I/home/eloi/seagull_ws_dev/install/include
+Libs: -L/home/eloi/seagull_ws_dev/install/lib 
+Requires: roscpp seagull_autopilot seagull_autopilot_msgs seagull_communication_msgs

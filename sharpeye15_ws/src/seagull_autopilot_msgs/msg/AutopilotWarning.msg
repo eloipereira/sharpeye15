@@ -1,0 +1,4 @@
+seagull_commons_msgs/SeagullHeader header
+uint8 command
+uint8 code
+string message

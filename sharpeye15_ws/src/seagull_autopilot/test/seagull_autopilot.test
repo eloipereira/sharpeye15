@@ -1,0 +1,11 @@
+<launch>
+    	
+    
+    <node name="autopilot_driver_onboard" pkg="seagull_autopilot" type="autopilot_driver"  output="screen">
+    	<param name="ap_conn_type" type="int" value="1" />
+        <param name="ap_host" type="str" value="localhost" />
+        <param name="ap_port" type="str" value="2005" />
+    </node>
+    
+  <test test-name="test_seagull_autopilot" pkg="seagull_autopilot" type="test_seagull_autopilot" />
+</launch>

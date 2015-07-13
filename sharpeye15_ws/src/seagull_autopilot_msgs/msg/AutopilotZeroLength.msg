@@ -1,0 +1,2 @@
+seagull_commons_msgs/SeagullHeader header
+int8 messageType

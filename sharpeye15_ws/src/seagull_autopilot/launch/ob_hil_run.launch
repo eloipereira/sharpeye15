@@ -1,0 +1,16 @@
+<launch>
+    <!-- This is only needed is not running a piccolo_driver Node-->
+    <node name="autopilot_driver" pkg="seagull_autopilot" type="autopilot_driver"  output="screen">
+    	<param name="ap_conn_type" type="int" value="0" />
+        <param name="ap_payloadstream" type="bool" value="false" />
+        <param name="ap_device" type="str" value="/dev/ttyUSB1" />
+        <param name="ap_baudrate" type="str" value="57600" />
+    </node>
+    <node name="autopilot_comms" pkg="seagull_autopilot" type="autopilot_comms"  output="screen">
+        	<param name="ps_baudrate" type="int" value="57600" />
+        	<param name="ps_vehicleid" type="int" value="2050" />
+	        <param name="ps_device" type="str" value="/dev/ttyUSB0" />
+    </node>
+    
+    <node name="comms_relay" pkg="seagull_communication" type="comms_relay"  output="screen"/>
+</launch>

@@ -1,0 +1,12 @@
+seagull_commons_msgs/SeagullHeader header
+bool request
+uint32 comms_timeout
+uint32 pilot_timeout
+uint32 gps_timeout
+uint8 lost_comms_wp
+uint8 autoland_wp
+int16 altitude_min
+int16 altitude_max
+uint32 fligth_timeout
+uint8 failure0
+uint8 failure1

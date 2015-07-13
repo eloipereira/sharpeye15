@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "seagull_commons_msgs")
+set(seagull_commons_msgs_MAINTAINER "Pedro Marques da Silva <posilva@academiafa.edu.pt>")
+set(seagull_commons_msgs_DEPRECATED "")
+set(seagull_commons_msgs_VERSION "0.0.1")
+set(seagull_commons_msgs_BUILD_DEPENDS "message_generation" "roscpp")
+set(seagull_commons_msgs_RUN_DEPENDS "message_runtime" "roscpp")
+set(seagull_commons_msgs_BUILDTOOL_DEPENDS "catkin")

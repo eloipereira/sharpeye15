@@ -1,0 +1,2 @@
+seagull_autopilot:seagull_autopilot_msgs:seagull_commons:seagull_commons_msgs:seagull_communication:seagull_communication_msgs
+-DCATKIN_DEVEL_PREFIX=/home/eloi/seagull_ws_dev/devel -DCMAKE_INSTALL_PREFIX=/home/eloi/seagull_ws_dev/install -G Unix Makefiles

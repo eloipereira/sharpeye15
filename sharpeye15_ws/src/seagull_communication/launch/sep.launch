@@ -1,0 +1,8 @@
+<launch>
+    <node name="seagull_manager" pkg="seagull_core" type="seagull_manager"  output="screen"   respawn="true">
+    </node>
+    <node name="frame_grabber" pkg="seagull_sensors" type="frame_grabber"  output="screen"   respawn="true">
+    </node>
+    <node name="seagull_detection" pkg="seagull_detection" type="seagull_detection"  output="screen"   respawn="true">
+    </node>
+</launch>

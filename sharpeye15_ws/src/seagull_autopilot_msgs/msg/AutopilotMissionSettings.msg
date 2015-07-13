@@ -1,0 +1,4 @@
+seagull_commons_msgs/SeagullHeader header
+int16 altitude_min
+int16 altitude_max
+uint32 fligth_timeout

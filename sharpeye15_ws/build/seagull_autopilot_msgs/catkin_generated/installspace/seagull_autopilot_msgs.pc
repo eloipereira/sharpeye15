@@ -1,0 +1,8 @@
+prefix=/home/eloi/seagull_ws_dev/install
+
+Name: seagull_autopilot_msgs
+Description: Description of seagull_autopilot_msgs
+Version: 0.0.2
+Cflags: -I/home/eloi/seagull_ws_dev/install/include
+Libs: -L/home/eloi/seagull_ws_dev/install/lib 
+Requires: roscpp rospy message_runtime seagull_commons_msgs

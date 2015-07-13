@@ -1,0 +1,8 @@
+prefix=/home/eloi/seagull_ws_dev/install
+
+Name: seagull_commons
+Description: Description of seagull_commons
+Version: 0.0.0
+Cflags: -I/home/eloi/seagull_ws_dev/install/include
+Libs: -L/home/eloi/seagull_ws_dev/install/lib -lseagull_commons
+Requires: roscpp

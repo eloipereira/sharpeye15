@@ -1,0 +1,5 @@
+seagull_commons_msgs/SeagullHeader header
+float analog1
+float analog2
+float analog3
+float analog4

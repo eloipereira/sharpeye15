@@ -1,0 +1,19 @@
+<launch>
+
+
+	<arg name="handle_payloadstream" default="true" />
+
+    <!-- This is only needed is not running a piccolo_driver Node-->
+    <node name="autopilot_driver" pkg="seagull_autopilot" type="autopilot_driver"  output="screen">
+    	<param name="ap_conn_type" type="int" value="1" />
+        <param name="ap_payloadstream" type="bool" value="$(arg handle_payloadstream)" />
+        <param name="ap_host" type="str" value="localhost" />
+        <param name="ap_port" type="str" value="2005" />
+    </node>
+    <node unless="$(arg handle_payloadstream)" name="autopilot_comms" pkg="seagull_autopilot" type="autopilot_comms"  output="screen">
+        	<param name="ps_baudrate" type="int" value="57600" />
+        	<param name="ps_vehicleid" type="int" value="1" />
+	        <param name="ps_device" type="str" value="/home/posilva/dev/ttyS99" />
+    </node>
+    
+</launch>
