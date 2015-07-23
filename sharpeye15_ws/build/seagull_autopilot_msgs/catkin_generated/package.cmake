@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "seagull_autopilot_msgs")
-set(seagull_autopilot_msgs_MAINTAINER "posilva <posilva@todo.todo>")
-set(seagull_autopilot_msgs_DEPRECATED "")
-set(seagull_autopilot_msgs_VERSION "0.0.2")
-set(seagull_autopilot_msgs_BUILD_DEPENDS "roscpp" "rospy" "message_generation" "seagull_commons_msgs")
-set(seagull_autopilot_msgs_RUN_DEPENDS "seagull_commons_msgs" "roscpp" "rospy" "message_runtime")
-set(seagull_autopilot_msgs_BUILDTOOL_DEPENDS "catkin")

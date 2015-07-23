@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "seagull_communication")
-set(seagull_communication_MAINTAINER "Pedro Marques da Silva <posilva@academiafa.edu.pt>")
-set(seagull_communication_DEPRECATED "")
-set(seagull_communication_VERSION "0.0.1")
-set(seagull_communication_BUILD_DEPENDS "roscpp" "seagull_autopilot" "seagull_autopilot_msgs" "seagull_communication_msgs")
-set(seagull_communication_RUN_DEPENDS "roscpp" "seagull_autopilot" "seagull_autopilot_msgs" "seagull_communication_msgs")
-set(seagull_communication_BUILDTOOL_DEPENDS "catkin")

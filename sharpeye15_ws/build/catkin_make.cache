@@ -1,2 +1,0 @@
-seagull_autopilot:seagull_autopilot_msgs:seagull_commons:seagull_commons_msgs:seagull_communication:seagull_communication_msgs
--DCATKIN_DEVEL_PREFIX=/home/eloi/sharpeye15/sharpeye15_ws/devel -DCMAKE_INSTALL_PREFIX=/home/eloi/sharpeye15/sharpeye15_ws/install -G Unix Makefiles

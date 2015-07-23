@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "seagull_commons")
-set(seagull_commons_MAINTAINER "posilva <posilva@todo.todo>")
-set(seagull_commons_DEPRECATED "")
-set(seagull_commons_VERSION "0.0.0")
-set(seagull_commons_BUILD_DEPENDS "roscpp")
-set(seagull_commons_RUN_DEPENDS "roscpp")
-set(seagull_commons_BUILDTOOL_DEPENDS "catkin")

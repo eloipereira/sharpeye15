@@ -1,2 +1,0 @@
-set(seagull_autopilot_msgs_MESSAGE_FILES "msg/AutopilotCommand.msg;msg/AutopilotTelemetry.msg;msg/AutopilotTrack.msg;msg/AutopilotStatus.msg;msg/AutopilotWaypoint.msg;msg/AutopilotWPList.msg;msg/AutopilotPayload.msg;msg/AutopilotRequestWaypoints.msg;msg/AutopilotWarning.msg;msg/AutopilotADCSamples.msg;msg/AutopilotMissionLimits.msg;msg/AutopilotMissionSettings.msg;msg/AutopilotUserAction.msg;msg/AutopilotZeroLength.msg;msg/AutopilotGimbalPayload.msg")
-set(seagull_autopilot_msgs_SERVICE_FILES "")

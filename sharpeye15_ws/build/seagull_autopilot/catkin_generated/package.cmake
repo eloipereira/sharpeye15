@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "seagull_autopilot")
-set(seagull_autopilot_MAINTAINER "Pedro Marques da Silva <posilva@academiafa.edu.pt>")
-set(seagull_autopilot_DEPRECATED "")
-set(seagull_autopilot_VERSION "0.1.2")
-set(seagull_autopilot_BUILD_DEPENDS "seagull_commons" "seagull_autopilot_msgs" "roscpp")
-set(seagull_autopilot_RUN_DEPENDS "seagull_commons" "seagull_autopilot_msgs" "roscpp")
-set(seagull_autopilot_BUILDTOOL_DEPENDS "catkin")
