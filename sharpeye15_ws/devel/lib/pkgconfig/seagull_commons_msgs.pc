@@ -1,8 +1,8 @@
-prefix=/home/eloi/seagull_ws_dev/devel
+prefix=/home/eloi/sharpeye15/sharpeye15_ws/devel
 
 Name: seagull_commons_msgs
 Description: Description of seagull_commons_msgs
 Version: 0.0.1
-Cflags: -I/home/eloi/seagull_ws_dev/devel/include -I/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/include
-Libs: -L/home/eloi/seagull_ws_dev/devel/lib 
+Cflags: -I/home/eloi/sharpeye15/sharpeye15_ws/devel/include -I/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/include
+Libs: -L/home/eloi/sharpeye15/sharpeye15_ws/devel/lib 
 Requires: roscpp message_runtime

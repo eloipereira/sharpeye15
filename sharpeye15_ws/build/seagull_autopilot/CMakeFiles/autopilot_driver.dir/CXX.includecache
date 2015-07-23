@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/eloi/seagull_ws_dev/devel/include/seagull_autopilot_msgs/AutopilotADCSamples.h
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_autopilot_msgs/AutopilotADCSamples.h
 string
 -
 vector
@@ -24,7 +24,7 @@ ros/message_operations.h
 seagull_commons_msgs/SeagullHeader.h
 -
 
-/home/eloi/seagull_ws_dev/devel/include/seagull_autopilot_msgs/AutopilotCommand.h
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_autopilot_msgs/AutopilotCommand.h
 string
 -
 vector
@@ -42,7 +42,7 @@ ros/message_operations.h
 seagull_commons_msgs/SeagullHeader.h
 -
 
-/home/eloi/seagull_ws_dev/devel/include/seagull_autopilot_msgs/AutopilotGimbalPayload.h
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_autopilot_msgs/AutopilotGimbalPayload.h
 string
 -
 vector
@@ -60,7 +60,7 @@ ros/message_operations.h
 seagull_commons_msgs/SeagullHeader.h
 -
 
-/home/eloi/seagull_ws_dev/devel/include/seagull_autopilot_msgs/AutopilotMissionLimits.h
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_autopilot_msgs/AutopilotMissionLimits.h
 string
 -
 vector
@@ -78,7 +78,7 @@ ros/message_operations.h
 seagull_commons_msgs/SeagullHeader.h
 -
 
-/home/eloi/seagull_ws_dev/devel/include/seagull_autopilot_msgs/AutopilotMissionSettings.h
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_autopilot_msgs/AutopilotMissionSettings.h
 string
 -
 vector
@@ -96,7 +96,7 @@ ros/message_operations.h
 seagull_commons_msgs/SeagullHeader.h
 -
 
-/home/eloi/seagull_ws_dev/devel/include/seagull_autopilot_msgs/AutopilotPayload.h
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_autopilot_msgs/AutopilotPayload.h
 string
 -
 vector
@@ -114,7 +114,7 @@ ros/message_operations.h
 seagull_commons_msgs/SeagullHeader.h
 -
 
-/home/eloi/seagull_ws_dev/devel/include/seagull_autopilot_msgs/AutopilotRequestWaypoints.h
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_autopilot_msgs/AutopilotRequestWaypoints.h
 string
 -
 vector
@@ -132,7 +132,7 @@ ros/message_operations.h
 seagull_commons_msgs/SeagullHeader.h
 -
 
-/home/eloi/seagull_ws_dev/devel/include/seagull_autopilot_msgs/AutopilotStatus.h
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_autopilot_msgs/AutopilotStatus.h
 string
 -
 vector
@@ -150,7 +150,7 @@ ros/message_operations.h
 seagull_commons_msgs/SeagullHeader.h
 -
 
-/home/eloi/seagull_ws_dev/devel/include/seagull_autopilot_msgs/AutopilotTelemetry.h
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_autopilot_msgs/AutopilotTelemetry.h
 string
 -
 vector
@@ -168,7 +168,7 @@ ros/message_operations.h
 seagull_commons_msgs/SeagullHeader.h
 -
 
-/home/eloi/seagull_ws_dev/devel/include/seagull_autopilot_msgs/AutopilotTrack.h
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_autopilot_msgs/AutopilotTrack.h
 string
 -
 vector
@@ -186,7 +186,7 @@ ros/message_operations.h
 seagull_commons_msgs/SeagullHeader.h
 -
 
-/home/eloi/seagull_ws_dev/devel/include/seagull_autopilot_msgs/AutopilotUserAction.h
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_autopilot_msgs/AutopilotUserAction.h
 string
 -
 vector
@@ -204,7 +204,7 @@ ros/message_operations.h
 seagull_commons_msgs/SeagullHeader.h
 -
 
-/home/eloi/seagull_ws_dev/devel/include/seagull_autopilot_msgs/AutopilotWPList.h
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_autopilot_msgs/AutopilotWPList.h
 string
 -
 vector
@@ -222,7 +222,7 @@ ros/message_operations.h
 seagull_commons_msgs/SeagullHeader.h
 -
 
-/home/eloi/seagull_ws_dev/devel/include/seagull_autopilot_msgs/AutopilotWarning.h
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_autopilot_msgs/AutopilotWarning.h
 string
 -
 vector
@@ -240,7 +240,7 @@ ros/message_operations.h
 seagull_commons_msgs/SeagullHeader.h
 -
 
-/home/eloi/seagull_ws_dev/devel/include/seagull_autopilot_msgs/AutopilotWaypoint.h
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_autopilot_msgs/AutopilotWaypoint.h
 string
 -
 vector
@@ -258,7 +258,7 @@ ros/message_operations.h
 seagull_commons_msgs/SeagullHeader.h
 -
 
-/home/eloi/seagull_ws_dev/devel/include/seagull_autopilot_msgs/AutopilotZeroLength.h
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_autopilot_msgs/AutopilotZeroLength.h
 string
 -
 vector
@@ -276,7 +276,7 @@ ros/message_operations.h
 seagull_commons_msgs/SeagullHeader.h
 -
 
-/home/eloi/seagull_ws_dev/devel/include/seagull_commons_msgs/SeagullHeader.h
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_commons_msgs/SeagullHeader.h
 string
 -
 vector
@@ -294,7 +294,7 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 
-/home/eloi/seagull_ws_dev/devel/include/seagull_commons_msgs/SeagullHeartbeat.h
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_commons_msgs/SeagullHeartbeat.h
 string
 -
 vector
@@ -312,7 +312,7 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 
-/home/eloi/seagull_ws_dev/src/seagull_autopilot/include/seagull_autopilot/AutopilotDriver.h
+/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot/include/seagull_autopilot/AutopilotDriver.h
 Piccolo/SDK/Core/CommunicationManager.h
 -
 Piccolo/SDK/Core/Packets/PacketConstants.h
@@ -364,11 +364,11 @@ vector
 boost/date_time.hpp
 -
 
-/home/eloi/seagull_ws_dev/src/seagull_autopilot/include/seagull_autopilot/TopicsAndServices.h
+/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot/include/seagull_autopilot/TopicsAndServices.h
 string
 -
 
-/home/eloi/seagull_ws_dev/src/seagull_autopilot/src/autopilot_driver.cpp
+/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot/src/autopilot_driver.cpp
 ros/ros.h
 -
 seagull_autopilot/AutopilotDriver.h
@@ -376,7 +376,7 @@ seagull_autopilot/AutopilotDriver.h
 exception
 -
 
-/home/eloi/seagull_ws_dev/src/seagull_autopilot/src/seagull_autopilot/AutopilotDriver.cpp
+/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot/src/seagull_autopilot/AutopilotDriver.cpp
 ros/console.h
 -
 ros/node_handle.h
@@ -416,7 +416,7 @@ seagull_commons/TopicsAndServices.h
 seagull_autopilot/AutopilotDriver.h
 -
 
-/home/eloi/seagull_ws_dev/src/seagull_commons/include/seagull_commons/Heartbeater.h
+/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons/include/seagull_commons/Heartbeater.h
 stdio.h
 -
 stdlib.h
@@ -432,11 +432,11 @@ ros/ros.h
 seagull_commons_msgs/SeagullHeartbeat.h
 -
 
-/home/eloi/seagull_ws_dev/src/seagull_commons/include/seagull_commons/ROSNode.h
+/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons/include/seagull_commons/ROSNode.h
 ros/ros.h
 -
 
-/home/eloi/seagull_ws_dev/src/seagull_commons/include/seagull_commons/TopicsAndServices.h
+/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons/include/seagull_commons/TopicsAndServices.h
 string
 -
 

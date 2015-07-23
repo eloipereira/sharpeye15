@@ -2,7 +2,7 @@
 
 message(STATUS "seagull_autopilot_msgs: 15 messages, 0 services")
 
-set(MSG_I_FLAGS "-Iseagull_autopilot_msgs:/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg;-Iseagull_commons_msgs:/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iseagull_autopilot_msgs:/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg;-Iseagull_commons_msgs:/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -16,79 +16,79 @@ add_custom_target(seagull_autopilot_msgs_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg" NAME_WE)
 add_custom_target(_seagull_autopilot_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg" NAME_WE)
 add_custom_target(_seagull_autopilot_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg" NAME_WE)
 add_custom_target(_seagull_autopilot_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg" NAME_WE)
 add_custom_target(_seagull_autopilot_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg" NAME_WE)
 add_custom_target(_seagull_autopilot_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg" NAME_WE)
 add_custom_target(_seagull_autopilot_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg" NAME_WE)
 add_custom_target(_seagull_autopilot_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg" NAME_WE)
 add_custom_target(_seagull_autopilot_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg" NAME_WE)
 add_custom_target(_seagull_autopilot_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg" NAME_WE)
 add_custom_target(_seagull_autopilot_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg" NAME_WE)
 add_custom_target(_seagull_autopilot_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg" NAME_WE)
 add_custom_target(_seagull_autopilot_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg" NAME_WE)
 add_custom_target(_seagull_autopilot_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg" NAME_WE)
 add_custom_target(_seagull_autopilot_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg" NAME_WE)
 add_custom_target(_seagull_autopilot_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "seagull_autopilot_msgs" "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg" "seagull_commons_msgs/SeagullHeader:std_msgs/Header"
 )
 
 #
@@ -98,93 +98,93 @@ add_custom_target(_seagull_autopilot_msgs_generate_messages_check_deps_${_filena
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_cpp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_cpp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_cpp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_cpp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_cpp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_cpp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_cpp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_cpp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_cpp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_cpp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_cpp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_cpp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_cpp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_cpp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 
@@ -202,35 +202,35 @@ add_custom_target(seagull_autopilot_msgs_generate_messages_cpp
 add_dependencies(seagull_autopilot_msgs_generate_messages seagull_autopilot_msgs_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_cpp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_cpp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_cpp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_cpp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_cpp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_cpp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_cpp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_cpp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_cpp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_cpp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_cpp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_cpp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_cpp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_cpp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_cpp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -243,93 +243,93 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS seagull_autopilot_msgs_generate_mes
 ### Section generating for lang: genjava
 ### Generating Messages
 _generate_msg_java(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_java(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_java(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_java(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_java(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_java(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_java(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_java(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_java(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_java(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_java(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_java(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_java(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_java(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_java(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genjava_INSTALL_DIR}/seagull_autopilot_msgs
 )
 
@@ -347,35 +347,35 @@ add_custom_target(seagull_autopilot_msgs_generate_messages_java
 add_dependencies(seagull_autopilot_msgs_generate_messages seagull_autopilot_msgs_generate_messages_java)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_java _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_java _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_java _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_java _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_java _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_java _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_java _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_java _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_java _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_java _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_java _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_java _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_java _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_java _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_java _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -388,93 +388,93 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS seagull_autopilot_msgs_generate_mes
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_lisp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_lisp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_lisp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_lisp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_lisp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_lisp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_lisp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_lisp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_lisp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_lisp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_lisp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_lisp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_lisp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_lisp(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/seagull_autopilot_msgs
 )
 
@@ -492,35 +492,35 @@ add_custom_target(seagull_autopilot_msgs_generate_messages_lisp
 add_dependencies(seagull_autopilot_msgs_generate_messages seagull_autopilot_msgs_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_lisp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_lisp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_lisp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_lisp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_lisp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_lisp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_lisp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_lisp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_lisp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_lisp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_lisp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_lisp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_lisp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_lisp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_lisp _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -533,93 +533,93 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS seagull_autopilot_msgs_generate_mes
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_py(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_py(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_py(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_py(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_py(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_py(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_py(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_py(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_py(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_py(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_py(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_py(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_py(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/seagull_autopilot_msgs
 )
 _generate_msg_py(seagull_autopilot_msgs
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg"
   "${MSG_I_FLAGS}"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg/SeagullHeader.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/seagull_autopilot_msgs
 )
 
@@ -637,35 +637,35 @@ add_custom_target(seagull_autopilot_msgs_generate_messages_py
 add_dependencies(seagull_autopilot_msgs_generate_messages seagull_autopilot_msgs_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_py _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_py _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_py _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTelemetry.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_py _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionLimits.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotGimbalPayload.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_py _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_py _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_py _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotUserAction.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_py _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotRequestWaypoints.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_py _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotTrack.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWaypoint.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_py _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotMissionSettings.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotCommand.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_py _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotStatus.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_py _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotPayload.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotADCSamples.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_py _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotZeroLength.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_py _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/eloi/seagull_ws_dev/src/seagull_autopilot_msgs/msg/AutopilotWPList.msg" NAME_WE)
+get_filename_component(_filename "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg/AutopilotWarning.msg" NAME_WE)
 add_dependencies(seagull_autopilot_msgs_generate_messages_py _seagull_autopilot_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

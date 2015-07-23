@@ -1,8 +1,8 @@
-# Install script for directory: /home/eloi/seagull_ws_dev/src/seagull_autopilot
+# Install script for directory: /home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/eloi/seagull_ws_dev/install")
+  SET(CMAKE_INSTALL_PREFIX "/home/eloi/sharpeye15/sharpeye15_ws/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,18 +33,18 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/eloi/seagull_ws_dev/build/seagull_autopilot/catkin_generated/installspace/seagull_autopilot.pc")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/eloi/sharpeye15/sharpeye15_ws/build/seagull_autopilot/catkin_generated/installspace/seagull_autopilot.pc")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/seagull_autopilot/cmake" TYPE FILE FILES
-    "/home/eloi/seagull_ws_dev/build/seagull_autopilot/catkin_generated/installspace/seagull_autopilotConfig.cmake"
-    "/home/eloi/seagull_ws_dev/build/seagull_autopilot/catkin_generated/installspace/seagull_autopilotConfig-version.cmake"
+    "/home/eloi/sharpeye15/sharpeye15_ws/build/seagull_autopilot/catkin_generated/installspace/seagull_autopilotConfig.cmake"
+    "/home/eloi/sharpeye15/sharpeye15_ws/build/seagull_autopilot/catkin_generated/installspace/seagull_autopilotConfig-version.cmake"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/seagull_autopilot" TYPE FILE FILES "/home/eloi/seagull_ws_dev/src/seagull_autopilot/package.xml")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/seagull_autopilot" TYPE FILE FILES "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot/package.xml")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -54,7 +54,7 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/seagull_autopilot/autopilot_driver"
          RPATH "")
   ENDIF()
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/seagull_autopilot" TYPE EXECUTABLE FILES "/home/eloi/seagull_ws_dev/devel/lib/seagull_autopilot/autopilot_driver")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/seagull_autopilot" TYPE EXECUTABLE FILES "/home/eloi/sharpeye15/sharpeye15_ws/devel/lib/seagull_autopilot/autopilot_driver")
   IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/seagull_autopilot/autopilot_driver" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/seagull_autopilot/autopilot_driver")
     FILE(RPATH_REMOVE
@@ -72,7 +72,7 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/seagull_autopilot/autopilot_comms"
          RPATH "")
   ENDIF()
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/seagull_autopilot" TYPE EXECUTABLE FILES "/home/eloi/seagull_ws_dev/devel/lib/seagull_autopilot/autopilot_comms")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/seagull_autopilot" TYPE EXECUTABLE FILES "/home/eloi/sharpeye15/sharpeye15_ws/devel/lib/seagull_autopilot/autopilot_comms")
   IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/seagull_autopilot/autopilot_comms" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/seagull_autopilot/autopilot_comms")
     FILE(RPATH_REMOVE
@@ -84,10 +84,10 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/seagull_autopilot/launch" TYPE DIRECTORY FILES "/home/eloi/seagull_ws_dev/src/seagull_autopilot/launch/" REGEX "/\\.svn$" EXCLUDE)
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/seagull_autopilot/launch" TYPE DIRECTORY FILES "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot/launch/" REGEX "/\\.svn$" EXCLUDE)
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/seagull_autopilot" TYPE DIRECTORY FILES "/home/eloi/seagull_ws_dev/src/seagull_autopilot/include/seagull_autopilot/" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/\\.svn$" EXCLUDE)
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/seagull_autopilot" TYPE DIRECTORY FILES "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot/include/seagull_autopilot/" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/\\.svn$" EXCLUDE)
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

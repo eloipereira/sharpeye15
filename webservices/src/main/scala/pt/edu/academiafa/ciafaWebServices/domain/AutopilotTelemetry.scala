@@ -6,58 +6,69 @@ import scala.slick.driver.MySQLDriver.simple._
   * AutopilotTelemetry entity.
   *
   * @param vehicleId vehicle id
-  * @param latitude latitude
-  * @param longitude longitude
+  * @param location lat lon position (WGS-84)
   * @param altitude altitude
   * @param ias indicated airspeed
-  * @param vx x-axis speed (inertial frame)
-  * @param vy y-axis speed (inertial frame)
-  * @param vz z-axis speed (inertial frame)
-  * @param roll roll angle
-  * @param pitch pitch angle
-  * @param yaw yaw angle
+  * @param gs ground speed (north, east, down)
+  * @param attitude roll, pitch and yaw angles
   * @param barometricAltitude barometric altitude
-  * @param windSouth wind speed (south component)
-  * @param windWest wind speed (west component)
-  * @param leftRPM left engine RPM
-  * @param rightRPM right engine RPM
+  * @param wind wind velocity (south and west components)
+  * @param rpm left and right engine RPM
   * @param staticPressure static pressure
-  * @param accelX x-axis acceleration
-  * @param accelY y-axis acceleration
-  * @param accelZ z-axis acceleration
+  * @param acceleration (x, y, and z components)
   * @param compass heading
   * @param agl altitude AGL
   * @param timestamp GMT posix timestamp converted from gps time 
   */
 
-case class GPSCoordinates(
-  latitude: Float,
-  longitude: Float
+case class Coordinates(
+  lat: Float,
+  long: Float
+)
+
+case class GroundSpeed(
+  north: Int,
+  east: Int,
+  down: Int
+)
+
+case class Attitude(
+  roll: Int,
+  pitch: Int,
+  yaw: Int
+)
+
+case class Wind(
+  south: Float,
+  west: Float
+)
+
+case class RPM(
+  left: Int,
+  right: Int
+)
+
+case class Acceleration(
+  x: Int,
+  y: Int,
+  z: Int
 )
 
 case class AutopilotTelemetry(
+  timestamp: Int,
   vehicleId: Int,
-  location: GPSCoordinates,
+  location: Coordinates,
   altitude: Float, 
   ias: Int,
-  vx: Int,
-  vy: Int,
-  vz: Int, 
-  roll: Int,
-  pitch: Int,
-  yaw: Float, 
+  gs: GroundSpeed,
+  attitude: Attitude,
   barometricAltitude: Int, 
-  windSouth: Float,
-  windWest: Float, 
-  leftRPM: Int, 
-  rightRPM: Int, 
+  wind: Wind, 
+  rpm: RPM,
   staticPressure: Int, 
-  accelX: Int, 
-  accelY: Int, 
-  accelZ: Int, 
+  acceleration: Acceleration, 
   compass: Int, 
-  agl: Int, 
-  timestamp: Int
+  agl: Int
 )
 
 /**

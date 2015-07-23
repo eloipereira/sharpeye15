@@ -1,8 +1,8 @@
-# Install script for directory: /home/eloi/seagull_ws_dev/src/seagull_communication
+# Install script for directory: /home/eloi/sharpeye15/sharpeye15_ws/src/seagull_communication
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/eloi/seagull_ws_dev/install")
+  SET(CMAKE_INSTALL_PREFIX "/home/eloi/sharpeye15/sharpeye15_ws/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/eloi/seagull_ws_dev/build/seagull_communication/catkin_generated/installspace/seagull_communication.pc")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/eloi/sharpeye15/sharpeye15_ws/build/seagull_communication/catkin_generated/installspace/seagull_communication.pc")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/seagull_communication/cmake" TYPE FILE FILES
-    "/home/eloi/seagull_ws_dev/build/seagull_communication/catkin_generated/installspace/seagull_communicationConfig.cmake"
-    "/home/eloi/seagull_ws_dev/build/seagull_communication/catkin_generated/installspace/seagull_communicationConfig-version.cmake"
+    "/home/eloi/sharpeye15/sharpeye15_ws/build/seagull_communication/catkin_generated/installspace/seagull_communicationConfig.cmake"
+    "/home/eloi/sharpeye15/sharpeye15_ws/build/seagull_communication/catkin_generated/installspace/seagull_communicationConfig-version.cmake"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/seagull_communication" TYPE FILE FILES "/home/eloi/seagull_ws_dev/src/seagull_communication/package.xml")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/seagull_communication" TYPE FILE FILES "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_communication/package.xml")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

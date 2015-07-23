@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/seagull_communication_msgs_generate_messages_py"
-  "/home/eloi/seagull_ws_dev/devel/lib/python2.7/dist-packages/seagull_communication_msgs/msg/_SeagullPayload.py"
-  "/home/eloi/seagull_ws_dev/devel/lib/python2.7/dist-packages/seagull_communication_msgs/msg/__init__.py"
+  "/home/eloi/sharpeye15/sharpeye15_ws/devel/lib/python2.7/dist-packages/seagull_communication_msgs/msg/_SeagullPayload.py"
+  "/home/eloi/sharpeye15/sharpeye15_ws/devel/lib/python2.7/dist-packages/seagull_communication_msgs/msg/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

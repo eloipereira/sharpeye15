@@ -1,8 +1,8 @@
-prefix=/home/eloi/seagull_ws_dev/install
+prefix=/home/eloi/sharpeye15/sharpeye15_ws/install
 
 Name: seagull_communication_msgs
 Description: Description of seagull_communication_msgs
 Version: 0.0.1
-Cflags: -I/home/eloi/seagull_ws_dev/install/include
-Libs: -L/home/eloi/seagull_ws_dev/install/lib 
+Cflags: -I/home/eloi/sharpeye15/sharpeye15_ws/install/include
+Libs: -L/home/eloi/sharpeye15/sharpeye15_ws/install/lib 
 Requires: roscpp message_runtime seagull_commons_msgs

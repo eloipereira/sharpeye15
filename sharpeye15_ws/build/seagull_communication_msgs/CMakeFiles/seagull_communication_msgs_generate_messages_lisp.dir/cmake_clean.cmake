@@ -1,6 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/seagull_communication_msgs_generate_messages_lisp"
-  "/home/eloi/seagull_ws_dev/devel/share/common-lisp/ros/seagull_communication_msgs/msg/SeagullPayload.lisp"
+  "/home/eloi/sharpeye15/sharpeye15_ws/devel/share/common-lisp/ros/seagull_communication_msgs/msg/SeagullPayload.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

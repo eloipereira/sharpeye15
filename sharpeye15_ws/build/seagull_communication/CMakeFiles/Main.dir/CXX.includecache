@@ -6,11 +6,101 @@
 
 #IncludeRegexTransform: 
 
-/home/eloi/seagull_ws_dev/src/seagull_autopilot/include/seagull_autopilot/TopicsAndServices.h
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_autopilot_msgs/AutopilotPayload.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+seagull_commons_msgs/SeagullHeader.h
+-
+
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_commons_msgs/CommsParameters.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+seagull_commons_msgs/SeagullHeader.h
+-
+
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_commons_msgs/SeagullHeader.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_commons_msgs/SeagullHeartbeat.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+
+/home/eloi/sharpeye15/sharpeye15_ws/devel/include/seagull_communication_msgs/SeagullPayload.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+seagull_commons_msgs/SeagullHeader.h
+-
+
+/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot/include/seagull_autopilot/TopicsAndServices.h
 string
 -
 
-/home/eloi/seagull_ws_dev/src/seagull_commons/include/seagull_commons/Heartbeater.h
+/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons/include/seagull_commons/Heartbeater.h
 stdio.h
 -
 stdlib.h
@@ -26,15 +116,15 @@ ros/ros.h
 seagull_commons_msgs/SeagullHeartbeat.h
 -
 
-/home/eloi/seagull_ws_dev/src/seagull_commons/include/seagull_commons/ROSNode.h
+/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons/include/seagull_commons/ROSNode.h
 ros/ros.h
 -
 
-/home/eloi/seagull_ws_dev/src/seagull_commons/include/seagull_commons/TopicsAndServices.h
+/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons/include/seagull_commons/TopicsAndServices.h
 string
 -
 
-/home/eloi/seagull_ws_dev/src/seagull_communication/include/seagull_communication/CommsDefinitions.h
+/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_communication/include/seagull_communication/CommsDefinitions.h
 string.h
 -
 vector
@@ -48,7 +138,7 @@ iostream
 functional
 -
 
-/home/eloi/seagull_ws_dev/src/seagull_communication/include/seagull_communication/CommsRelay.h
+/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_communication/include/seagull_communication/CommsRelay.h
 stdint.h
 -
 string
@@ -80,7 +170,7 @@ stdexcept
 seagull_commons/Heartbeater.h
 -
 
-/home/eloi/seagull_ws_dev/src/seagull_communication/include/seagull_communication/CommsUtils.h
+/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_communication/include/seagull_communication/CommsUtils.h
 seagull_communication/CommsDefinitions.h
 -
 stdint.h
@@ -100,11 +190,11 @@ string
 vector
 -
 
-/home/eloi/seagull_ws_dev/src/seagull_communication/include/seagull_communication/TopicsAndServices.h
+/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_communication/include/seagull_communication/TopicsAndServices.h
 string
 -
 
-/home/eloi/seagull_ws_dev/src/seagull_communication/src/seagull_communication/CommsRelay.cpp
+/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_communication/src/seagull_communication/CommsRelay.cpp
 ros/console.h
 -
 ros/duration.h
@@ -146,7 +236,7 @@ seagull_commons/TopicsAndServices.h
 seagull_communication/CommsRelay.h
 -
 
-/home/eloi/seagull_ws_dev/src/seagull_communication/test/Main.cpp
+/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_communication/test/Main.cpp
 vector
 -
 seagull_communication/CommsRelay.h
@@ -374,6 +464,10 @@ boost/make_shared.hpp
 cstddef
 -
 memory
+-
+
+/opt/ros/indigo/include/ros/message_operations.h
+ostream
 -
 
 /opt/ros/indigo/include/ros/message_traits.h
@@ -793,4 +887,20 @@ ros/forwards.h
 /opt/ros/indigo/include/ros/ros/forwards.h
 
 /opt/ros/indigo/include/rosconsole/macros_generated.h
+
+/opt/ros/indigo/include/std_msgs/Header.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
 

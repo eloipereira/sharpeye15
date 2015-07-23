@@ -16,12 +16,12 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/eloi/seagull_ws_dev/src/seagull_communication/include"
-  "/home/eloi/seagull_ws_dev/devel/include"
-  "/home/eloi/seagull_ws_dev/src/seagull_autopilot/include"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons/include"
-  "/home/eloi/seagull_ws_dev/src/seagull_commons_msgs/include"
-  "/home/eloi/seagull_ws_dev/src/seagull_communication_msgs/include"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_communication/include"
+  "/home/eloi/sharpeye15/sharpeye15_ws/devel/include"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_autopilot/include"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons/include"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/include"
+  "/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_communication_msgs/include"
   "/opt/ros/indigo/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

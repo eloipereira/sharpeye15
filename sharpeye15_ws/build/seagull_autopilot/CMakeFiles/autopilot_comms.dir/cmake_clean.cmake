@@ -1,8 +1,8 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/autopilot_comms.dir/src/autopilot_comms.cpp.o"
   "CMakeFiles/autopilot_comms.dir/src/seagull_autopilot/AutopilotComms.cpp.o"
-  "/home/eloi/seagull_ws_dev/devel/lib/seagull_autopilot/autopilot_comms.pdb"
-  "/home/eloi/seagull_ws_dev/devel/lib/seagull_autopilot/autopilot_comms"
+  "/home/eloi/sharpeye15/sharpeye15_ws/devel/lib/seagull_autopilot/autopilot_comms.pdb"
+  "/home/eloi/sharpeye15/sharpeye15_ws/devel/lib/seagull_autopilot/autopilot_comms"
 )
 
 # Per-language clean rules from dependency scanning.

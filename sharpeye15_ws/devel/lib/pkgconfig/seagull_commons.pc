@@ -1,8 +1,8 @@
-prefix=/home/eloi/seagull_ws_dev/devel
+prefix=/home/eloi/sharpeye15/sharpeye15_ws/devel
 
 Name: seagull_commons
 Description: Description of seagull_commons
 Version: 0.0.0
-Cflags: -I/home/eloi/seagull_ws_dev/src/seagull_commons/include
-Libs: -L/home/eloi/seagull_ws_dev/devel/lib -lseagull_commons
+Cflags: -I/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_commons/include
+Libs: -L/home/eloi/sharpeye15/sharpeye15_ws/devel/lib -lseagull_commons
 Requires: roscpp
