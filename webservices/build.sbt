@@ -10,7 +10,7 @@ libraryDependencies ++= Seq(
     "io.spray" % "spray-routing" % "1.1-M8",
     "com.typesafe.akka" %% "akka-actor" % "2.1.4",
     "com.typesafe.akka" %% "akka-slf4j" % "2.1.4",
-    "com.typesafe.slick" %% "slick" % "1.0.1",
+    "com.typesafe.slick" %% "slick" % "2.0.0",
     "mysql" % "mysql-connector-java" % "5.1.25",
     "net.liftweb" %% "lift-json" % "2.5.1",
     "ch.qos.logback" % "logback-classic" % "1.0.13"

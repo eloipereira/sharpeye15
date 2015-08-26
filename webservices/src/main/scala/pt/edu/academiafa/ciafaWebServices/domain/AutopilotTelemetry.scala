@@ -1,100 +1,86 @@
 package pt.edu.academiafa.ciafaWebServices.domain
 
 import scala.slick.driver.MySQLDriver.simple._
+import scala.slick.lifted._
 
 /**
   * AutopilotTelemetry entity.
   *
-  * @param vehicleId vehicle id
-  * @param location lat lon position (WGS-84)
-  * @param altitude altitude
+  * @param id telemetry id
+  * @param vId vehicle id
+  * @param lat latitude 
+  * @param lon longitude
+  * @param alt altitude
   * @param ias indicated airspeed
-  * @param gs ground speed (north, east, down)
-  * @param attitude roll, pitch and yaw angles
-  * @param barometricAltitude barometric altitude
-  * @param wind wind velocity (south and west components)
-  * @param rpm left and right engine RPM
-  * @param staticPressure static pressure
-  * @param acceleration (x, y, and z components)
+  * @param gsN ground speed (north component)
+  * @param gsE ground speed (east component)
+  * @param gsD ground speed (down component)
+  * @param roll roll angle
+  * @param pitch pitch angle
+  * @param yaw yaw angle
+  * @param windS wind speed (South component)
+  * @param windW wind speed (West component)
+  * @param rpmL left engine RPM
+  * @param rpmR right engine RPM
+  * @param accelX acceleration (x-axis)
+  * @param accelY acceleration (y-axis)
+  * @param accelZ acceleration (z-axis)
   * @param compass heading
   * @param agl altitude AGL
   * @param timestamp GMT posix timestamp converted from gps time 
   */
 
-case class Coordinates(
+case class AutopilotTelemetry(
+  id: Long,
+  timestamp: Int,
+  vId: Int,
   lat: Float,
-  long: Float
-)
-
-case class GroundSpeed(
-  north: Int,
-  east: Int,
-  down: Int
-)
-
-case class Attitude(
+  lon: Float,
+  alt: Float,
+  ias: Int,
+  gsN: Int,
+  gsE: Int,
+  gsD: Int,
   roll: Int,
   pitch: Int,
-  yaw: Int
-)
-
-case class Wind(
-  south: Float,
-  west: Float
-)
-
-case class RPM(
-  left: Int,
-  right: Int
-)
-
-case class Acceleration(
-  x: Int,
-  y: Int,
-  z: Int
-)
-
-case class AutopilotTelemetry(
-  timestamp: Int,
-  vehicleId: Int,
-  location: Coordinates,
-  altitude: Float, 
-  ias: Int,
-  gs: GroundSpeed,
-  attitude: Attitude,
-  barometricAltitude: Int, 
-  wind: Wind, 
-  rpm: RPM,
-  staticPressure: Int, 
-  acceleration: Acceleration, 
-  compass: Int, 
+  yaw: Float,
+  windS: Float,
+  windW: Float,
+  rpmL: Int,
+  rpmR: Int,
+  accelX: Int,
+  accelY: Int,
+  accelZ: Int,
+  compass: Int,
   agl: Int
 )
-
+ 
 /**
  * Mapped telemetry samples table object.
  */
-// object TelemetrySamples extends Table[AutopilotTelemetry]("telemetrySamples") {
+class TelemetrySamples(tag: Tag) extends Table[AutopilotTelemetry](tag,"TELEMETRY_SAMPLES") {
 
-//   def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
-
-//   def firstName = column[String]("first_name")
-
-//   def lastName = column[String]("last_name")
-
-//   def birthday = column[java.util.Date]("birthday", O.Nullable)
-
-//   def * = id.? ~ firstName ~ lastName ~ birthday.? <>(Customer, Customer.unapply _)
-
-//   implicit val dateTypeMapper = MappedTypeMapper.base[java.util.Date, java.sql.Date](
-//   {
-//     ud => new java.sql.Date(ud.getTime)
-//   }, {
-//     sd => new java.util.Date(sd.getTime)
-//   })
-
-//   val findById = for {
-//     id <- Parameters[Long]
-//     c <- this if c.id is id
-//   } yield c
-// }
+  def id = column[Long]("TEL_ID", O.PrimaryKey, O.AutoInc)
+  def timestamp = column[Int]("TIMESTAMP")
+  def vId = column[Int]("VEHICLE_ID")
+  def lat = column[Float]("LAT")
+  def lon = column[Float]("LON")
+  def alt = column[Float]("ALT")
+  def ias = column[Int]("IAS")
+  def gsN = column[Int]("GS_N")
+  def gsE = column[Int]("GS_E")
+  def gsD = column[Int]("GS_D")
+  def roll = column[Int]("ROLL")
+  def pitch = column[Int]("PITCH")
+  def yaw = column[Float]("YAW")
+  def windS = column[Float]("WIND_S")
+  def windW = column[Float]("WIND_W")
+  def rpmL = column[Int]("RPM_L")
+  def rpmR = column[Int]("RPM_R")
+  def accelX = column[Int]("ACCEL_X")
+  def accelY = column[Int]("ACCEL_Y")
+  def accelZ = column[Int]("ACCEL_Z")
+  def compass = column[Int]("heading")
+  def agl = column[Int]("agl")
+  def * = (id,timestamp,vId,lat,lon,alt,ias,gsN,gsE,gsD,roll,pitch,yaw,windS,windW,rpmL,rpmR,accelX,accelY,accelZ,compass,agl) <> (AutopilotTelemetry.tupled,AutopilotTelemetry.unapply)
+}

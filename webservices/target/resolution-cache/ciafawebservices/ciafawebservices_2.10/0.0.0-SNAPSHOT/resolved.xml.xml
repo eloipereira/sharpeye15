@@ -4,7 +4,7 @@
 		module="ciafawebservices_2.10"
 		revision="0.0.0-SNAPSHOT"
 		status="integration"
-		publication="20150722135248"
+		publication="20150826093341"
 	>
 		<description>
 		ciafaWebServices
@@ -39,7 +39,7 @@
 		<dependency org="io.spray" name="spray-routing" rev="1.1-M8" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-actor_2.10" rev="2.1.4" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-slf4j_2.10" rev="2.1.4" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.slick" name="slick_2.10" rev="1.0.1" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.slick" name="slick_2.10" rev="2.0.0" conf="compile->default(compile)"/>
 		<dependency org="mysql" name="mysql-connector-java" rev="5.1.25" conf="compile->default(compile)"/>
 		<dependency org="net.liftweb" name="lift-json_2.10" rev="2.5.1" conf="compile->default(compile)"/>
 		<dependency org="ch.qos.logback" name="logback-classic" rev="1.0.13" conf="compile->default(compile)"/>
