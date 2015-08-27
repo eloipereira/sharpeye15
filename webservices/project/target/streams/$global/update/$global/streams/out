@@ -27,7 +27,7 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/mpeltonen/sbt-idea_2.10_0.13/1.6.0/sbt-idea-1.6.0.pom[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/mpeltonen/sbt-idea_2.10_0.13/1.6.0/sbt-idea-1.6.0.pom.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/mpeltonen/sbt-idea_2.10_0.13/1.6.0/sbt-idea-1.6.0.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.mpeltonen#sbt-idea;1.6.0!sbt-idea.pom(pom.original) (146ms)[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.github.mpeltonen#sbt-idea;1.6.0!sbt-idea.pom(pom.original) (178ms)[0m
 [0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/com.github.mpeltonen/sbt-idea/1.6.0/jars/sbt-idea.jar[0m
 [0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/com.github.mpeltonen/sbt-idea/1.6.0/jars/sbt-idea.jar[0m
 [0m[[0mdebug[0m] [0m		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.github.mpeltonen/sbt-idea/1.6.0/jars/sbt-idea.jar[0m
@@ -50,9 +50,25 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.github.mpeltonen#sbt-idea;1.6.0->commons-io#commons-io;2.0.1 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving commons-io#commons-io;2.0.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: commons-io#commons-io;2.0.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: commons-io#commons-io;2.0.1[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: commons-io#commons-io;2.0.1[0m
-[0m[[0mdebug[0m] [0m	found commons-io#commons-io;2.0.1 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/commons-io/commons-io/2.0.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/commons-io/commons-io/2.0.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for commons-io#commons-io;2.0.1[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/commons-io/commons-io/2.0.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/commons-io/commons-io/2.0.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for commons-io#commons-io;2.0.1[0m
+[0m[[0mdebug[0m] [0m		tried /home/eloi/.ivy2/local/commons-io/commons-io/2.0.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for commons-io#commons-io;2.0.1[0m
+[0m[[0mdebug[0m] [0m		tried file:/doesnotexist/repository/commons-io/commons-io/2.0.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for commons-io#commons-io;2.0.1[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/commons-io/commons-io/2.0.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: found md file for commons-io#commons-io;2.0.1[0m
+[0m[[0mdebug[0m] [0m		=> file:/home/eloi/activator-1.3.2/repository/commons-io/commons-io/2.0.1/ivys/ivy.xml (2.0.1)[0m
+[0m[[0mdebug[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/commons-io/commons-io/2.0.1/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/commons-io/commons-io/2.0.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/commons-io/commons-io/2.0.1/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/commons-io/commons-io/2.0.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] commons-io#commons-io;2.0.1!ivy.xml(ivy.original) (25ms)[0m
+[0m[[0mdebug[0m] [0m	found commons-io#commons-io;2.0.1 in activator-local[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.github.mpeltonen#sbt-idea;1.6.0->commons-io#commons-io;2.0.1 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.github.mpeltonen#sbt-idea;1.6.0->commons-io#commons-io;2.0.1 [compile->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.github.mpeltonen#sbt-idea;1.6.0->commons-io#commons-io;2.0.1 [compile->compile][0m
@@ -62,9 +78,18 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies default#webservices-build;0.1-SNAPSHOT->com.eed3si9n#sbt-assembly;0.9.0 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.eed3si9n#sbt-assembly;0.9.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.eed3si9n#sbt-assembly;0.9.0 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.eed3si9n#sbt-assembly;0.9.0[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: com.eed3si9n#sbt-assembly;0.9.0[0m
-[0m[[0mdebug[0m] [0m	found com.eed3si9n#sbt-assembly;0.9.0 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for com.eed3si9n#sbt-assembly;0.9.0[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: found md file for com.eed3si9n#sbt-assembly;0.9.0[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/ivys/ivy.xml (0.9.0)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.eed3si9n#sbt-assembly;0.9.0!ivy.xml(ivy.original) (1566ms)[0m
+[0m[[0mdebug[0m] [0m	found com.eed3si9n#sbt-assembly;0.9.0 in sbt-plugin-releases[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#webservices-build;0.1-SNAPSHOT [runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#webservices-build;0.1-SNAPSHOT [compile][0m
@@ -94,10 +119,26 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#webservices-build;0.1-SNAPSHOT [provided][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#webservices-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2bcebc20[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.4[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-lang#scala-library;2.10.4[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.4 in sbt-chain[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@41ab18e7[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang/scala-library/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang/scala-library/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for org.scala-lang#scala-library;2.10.4[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang/scala-library/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang/scala-library/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for org.scala-lang#scala-library;2.10.4[0m
+[0m[[0mdebug[0m] [0m		tried /home/eloi/.ivy2/local/org.scala-lang/scala-library/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#scala-library;2.10.4[0m
+[0m[[0mdebug[0m] [0m		tried file:/doesnotexist/repository/org.scala-lang/scala-library/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for org.scala-lang#scala-library;2.10.4[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-library/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: found md file for org.scala-lang#scala-library;2.10.4[0m
+[0m[[0mdebug[0m] [0m		=> file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-library/2.10.4/ivys/ivy.xml (2.10.4)[0m
+[0m[[0mdebug[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-library/2.10.4/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-library/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-library/2.10.4/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-library/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-library;2.10.4!ivy.xml(ivy.original) (30ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.4 in activator-local[0m
 [0m[[0mdebug[0m] [0m	[2.10.4] org.scala-lang#scala-library;2.10.4[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#webservices-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#webservices-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [provided->compile][0m
@@ -105,9 +146,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies default#webservices-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.5 [provided->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#sbt;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#sbt;0.13.5 {provided=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#sbt;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#sbt;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#sbt;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#sbt;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#sbt;0.13.5!ivy.xml(ivy.original) (1574ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#sbt;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -115,9 +162,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-sbt#main;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#main;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#main;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#main;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#main;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#main;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#main;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#main;0.13.5!ivy.xml(ivy.original) (1716ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#main;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#main;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#main;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#main;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -125,9 +178,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#main;0.13.5->org.scala-sbt#actions;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#actions;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#actions;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#actions;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#actions;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#actions;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#actions;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#actions;0.13.5!ivy.xml(ivy.original) (1406ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#actions;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#actions;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#actions;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#actions;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -135,15 +194,37 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#actions;0.13.5->org.scala-sbt#classpath;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#classpath;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#classpath;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#classpath;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#classpath;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#classpath;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#classpath;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#classpath;0.13.5!ivy.xml(ivy.original) (1328ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#classpath;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#classpath;0.13.5->org.scala-lang#scala-compiler;2.10.4 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.10.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-compiler;2.10.4 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-compiler;2.10.4[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-lang#scala-compiler;2.10.4[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-compiler;2.10.4 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang/scala-compiler/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang/scala-compiler/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for org.scala-lang#scala-compiler;2.10.4[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang/scala-compiler/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang/scala-compiler/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for org.scala-lang#scala-compiler;2.10.4[0m
+[0m[[0mdebug[0m] [0m		tried /home/eloi/.ivy2/local/org.scala-lang/scala-compiler/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#scala-compiler;2.10.4[0m
+[0m[[0mdebug[0m] [0m		tried file:/doesnotexist/repository/org.scala-lang/scala-compiler/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for org.scala-lang#scala-compiler;2.10.4[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-compiler/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: found md file for org.scala-lang#scala-compiler;2.10.4[0m
+[0m[[0mdebug[0m] [0m		=> file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-compiler/2.10.4/ivys/ivy.xml (2.10.4)[0m
+[0m[[0mdebug[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-compiler/2.10.4/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-compiler/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-compiler/2.10.4/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-compiler/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.10.4!ivy.xml(ivy.original) (15ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-compiler;2.10.4 in activator-local[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#classpath;0.13.5->org.scala-lang#scala-compiler;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#classpath;0.13.5->org.scala-lang#scala-compiler;2.10.4 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#scala-library;2.10.4 [compile->master(*)][0m
@@ -153,9 +234,25 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#scala-reflect;2.10.4 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.10.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-reflect;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.10.4[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-lang#scala-reflect;2.10.4[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-reflect;2.10.4 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang/scala-reflect/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang/scala-reflect/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for org.scala-lang#scala-reflect;2.10.4[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang/scala-reflect/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang/scala-reflect/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for org.scala-lang#scala-reflect;2.10.4[0m
+[0m[[0mdebug[0m] [0m		tried /home/eloi/.ivy2/local/org.scala-lang/scala-reflect/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#scala-reflect;2.10.4[0m
+[0m[[0mdebug[0m] [0m		tried file:/doesnotexist/repository/org.scala-lang/scala-reflect/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for org.scala-lang#scala-reflect;2.10.4[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-reflect/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: found md file for org.scala-lang#scala-reflect;2.10.4[0m
+[0m[[0mdebug[0m] [0m		=> file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-reflect/2.10.4/ivys/ivy.xml (2.10.4)[0m
+[0m[[0mdebug[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-reflect/2.10.4/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-reflect/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-reflect/2.10.4/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-reflect/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.10.4!ivy.xml(ivy.original) (23ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-reflect;2.10.4 in activator-local[0m
 [0m[[0mdebug[0m] [0m	[2.10.4] org.scala-lang#scala-reflect;2.10.4[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#scala-reflect;2.10.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.4->org.scala-lang#scala-library;2.10.4 [compile->master(*)][0m
@@ -176,9 +273,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#classpath;0.13.5->org.scala-sbt#launcher-interface;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#launcher-interface;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#launcher-interface;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#launcher-interface;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#launcher-interface;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#launcher-interface;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/launcher-interface/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#launcher-interface;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/launcher-interface/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/launcher-interface/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/launcher-interface/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/launcher-interface/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/launcher-interface/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#launcher-interface;0.13.5!ivy.xml(ivy.original) (1320ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#launcher-interface;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#launcher-interface;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#launcher-interface;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#launcher-interface;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -186,9 +289,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#classpath;0.13.5->org.scala-sbt#interface;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#interface;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#interface;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#interface;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#interface;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#interface;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#interface;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#interface;0.13.5!ivy.xml(ivy.original) (1923ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#interface;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#interface;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#interface;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#interface;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -196,9 +305,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#classpath;0.13.5->org.scala-sbt#io;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#io;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#io;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#io;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#io;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#io;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#io;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#io;0.13.5!ivy.xml(ivy.original) (1644ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#io;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#io;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#io;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#io;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -206,9 +321,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#io;0.13.5->org.scala-sbt#control;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#control;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#control;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#control;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#control;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#control;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#control;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#control;0.13.5!ivy.xml(ivy.original) (1596ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#control;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#control;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#control;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#control;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -216,9 +337,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#actions;0.13.5->org.scala-sbt#completion;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#completion;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#completion;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#completion;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#completion;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#completion;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#completion;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#completion;0.13.5!ivy.xml(ivy.original) (1369ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#completion;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#completion;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#completion;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#completion;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -226,9 +353,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#completion;0.13.5->org.scala-sbt#collections;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#collections;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#collections;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#collections;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#collections;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#collections;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#collections;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#collections;0.13.5!ivy.xml(ivy.original) (1435ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#collections;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#collections;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#collections;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#collections;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -238,18 +371,40 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#completion;0.13.5->jline#jline;2.11 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving jline#jline;2.11 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: jline#jline;2.11 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: jline#jline;2.11[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: jline#jline;2.11[0m
-[0m[[0mdebug[0m] [0m	found jline#jline;2.11 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/jline/jline/2.11/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/jline/jline/2.11/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for jline#jline;2.11[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/jline/jline/2.11/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/jline/jline/2.11/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for jline#jline;2.11[0m
+[0m[[0mdebug[0m] [0m		tried /home/eloi/.ivy2/local/jline/jline/2.11/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for jline#jline;2.11[0m
+[0m[[0mdebug[0m] [0m		tried file:/doesnotexist/repository/jline/jline/2.11/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for jline#jline;2.11[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/jline/jline/2.11/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: found md file for jline#jline;2.11[0m
+[0m[[0mdebug[0m] [0m		=> file:/home/eloi/activator-1.3.2/repository/jline/jline/2.11/ivys/ivy.xml (2.11)[0m
+[0m[[0mdebug[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/jline/jline/2.11/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/jline/jline/2.11/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/jline/jline/2.11/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/jline/jline/2.11/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] jline#jline;2.11!ivy.xml(ivy.original) (24ms)[0m
+[0m[[0mdebug[0m] [0m	found jline#jline;2.11 in activator-local[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#completion;0.13.5->jline#jline;2.11 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#completion;0.13.5->jline#jline;2.11 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#completion;0.13.5->jline#jline;2.11 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#actions;0.13.5->org.scala-sbt#api;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#api;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#api;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#api;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#api;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#api;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#api;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#api;0.13.5!ivy.xml(ivy.original) (2671ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#api;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#api;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#api;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#api;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -258,9 +413,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#actions;0.13.5->org.scala-sbt#compiler-integration;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#compiler-integration;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#compiler-integration;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#compiler-integration;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#compiler-integration;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#compiler-integration;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-integration/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#compiler-integration;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-integration/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-integration/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-integration/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-integration/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-integration/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#compiler-integration;0.13.5!ivy.xml(ivy.original) (1608ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#compiler-integration;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-integration;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-integration;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-integration;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -268,9 +429,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-integration;0.13.5->org.scala-sbt#incremental-compiler;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#incremental-compiler;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#incremental-compiler;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#incremental-compiler;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#incremental-compiler;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#incremental-compiler;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#incremental-compiler;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#incremental-compiler;0.13.5!ivy.xml(ivy.original) (1559ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#incremental-compiler;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#incremental-compiler;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#incremental-compiler;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#incremental-compiler;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -280,9 +447,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#incremental-compiler;0.13.5->org.scala-sbt#logging;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#logging;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#logging;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#logging;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#logging;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#logging;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#logging;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#logging;0.13.5!ivy.xml(ivy.original) (1396ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#logging;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#logging;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#logging;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#logging;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -291,9 +464,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#logging;0.13.5->org.scala-sbt#process;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#process;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#process;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#process;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#process;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#process;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#process;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#process;0.13.5!ivy.xml(ivy.original) (2186ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#process;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#process;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#process;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#process;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -306,9 +485,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#incremental-compiler;0.13.5->org.scala-sbt#relation;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#relation;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#relation;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#relation;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#relation;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#relation;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/relation/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#relation;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/relation/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/relation/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/relation/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/relation/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/relation/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#relation;0.13.5!ivy.xml(ivy.original) (1630ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#relation;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#relation;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#relation;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#relation;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -318,9 +503,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-integration;0.13.5->org.scala-sbt#compile;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#compile;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#compile;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#compile;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#compile;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#compile;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#compile;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#compile;0.13.5!ivy.xml(ivy.original) (1324ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#compile;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compile;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compile;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compile;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -333,9 +524,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-integration;0.13.5->org.scala-sbt#persist;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#persist;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#persist;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#persist;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#persist;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#persist;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#persist;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#persist;0.13.5!ivy.xml(ivy.original) (1426ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#persist;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#persist;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#persist;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#persist;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -345,9 +542,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#persist;0.13.5->org.scala-tools.sbinary#sbinary_2.10;0.4.2 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-tools.sbinary#sbinary_2.10;0.4.2 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-tools.sbinary#sbinary_2.10;0.4.2 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-tools.sbinary#sbinary_2.10;0.4.2[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-tools.sbinary#sbinary_2.10;0.4.2[0m
-[0m[[0mdebug[0m] [0m	found org.scala-tools.sbinary#sbinary_2.10;0.4.2 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbinary/sbinary_2.10/0.4.2/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-tools.sbinary#sbinary_2.10;0.4.2[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbinary/sbinary_2.10/0.4.2/ivys/ivy.xml (0.4.2)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbinary/sbinary_2.10/0.4.2/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbinary/sbinary_2.10/0.4.2/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbinary/sbinary_2.10/0.4.2/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbinary/sbinary_2.10/0.4.2/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-tools.sbinary#sbinary_2.10;0.4.2!ivy.xml(ivy.original) (1536ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-tools.sbinary#sbinary_2.10;0.4.2 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-tools.sbinary#sbinary_2.10;0.4.2->org.scala-lang#scala-library;2.10.2 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-tools.sbinary#sbinary_2.10;0.4.2->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-tools.sbinary#sbinary_2.10;0.4.2->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
@@ -357,9 +560,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-integration;0.13.5->org.scala-sbt#classfile;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#classfile;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#classfile;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#classfile;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#classfile;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#classfile;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#classfile;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#classfile;0.13.5!ivy.xml(ivy.original) (1640ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#classfile;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#classfile;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#classfile;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#classfile;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -370,9 +579,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#actions;0.13.5->org.scala-sbt#compiler-ivy-integration;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#compiler-ivy-integration;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#compiler-ivy-integration;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#compiler-ivy-integration;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#compiler-ivy-integration;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#compiler-ivy-integration;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-ivy-integration/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#compiler-ivy-integration;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-ivy-integration/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-ivy-integration/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-ivy-integration/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-ivy-integration/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-ivy-integration/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#compiler-ivy-integration;0.13.5!ivy.xml(ivy.original) (1290ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#compiler-ivy-integration;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-ivy-integration;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-ivy-integration;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-ivy-integration;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -380,9 +595,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-ivy-integration;0.13.5->org.scala-sbt#ivy;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#ivy;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#ivy;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#ivy;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#ivy;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#ivy;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#ivy;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#ivy;0.13.5!ivy.xml(ivy.original) (1501ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#ivy;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#ivy;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#ivy;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#ivy;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -392,9 +613,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#ivy;0.13.5->org.scala-sbt#cross;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#cross;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#cross;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#cross;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#cross;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#cross;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cross/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#cross;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cross/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cross/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cross/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cross/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cross/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#cross;0.13.5!ivy.xml(ivy.original) (2113ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#cross;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#cross;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#cross;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#cross;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -404,18 +631,50 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#ivy;0.13.5->org.apache.ivy#ivy;2.3.0 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.apache.ivy#ivy;2.3.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.ivy#ivy;2.3.0 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.apache.ivy#ivy;2.3.0[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.apache.ivy#ivy;2.3.0[0m
-[0m[[0mdebug[0m] [0m	found org.apache.ivy#ivy;2.3.0 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.apache.ivy/ivy/2.3.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.apache.ivy/ivy/2.3.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for org.apache.ivy#ivy;2.3.0[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.ivy/ivy/2.3.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.apache.ivy/ivy/2.3.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for org.apache.ivy#ivy;2.3.0[0m
+[0m[[0mdebug[0m] [0m		tried /home/eloi/.ivy2/local/org.apache.ivy/ivy/2.3.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.apache.ivy#ivy;2.3.0[0m
+[0m[[0mdebug[0m] [0m		tried file:/doesnotexist/repository/org.apache.ivy/ivy/2.3.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for org.apache.ivy#ivy;2.3.0[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/org.apache.ivy/ivy/2.3.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: found md file for org.apache.ivy#ivy;2.3.0[0m
+[0m[[0mdebug[0m] [0m		=> file:/home/eloi/activator-1.3.2/repository/org.apache.ivy/ivy/2.3.0/ivys/ivy.xml (2.3.0)[0m
+[0m[[0mdebug[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/org.apache.ivy/ivy/2.3.0/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.apache.ivy/ivy/2.3.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.apache.ivy/ivy/2.3.0/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/org.apache.ivy/ivy/2.3.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.apache.ivy#ivy;2.3.0!ivy.xml(ivy.original) (4ms)[0m
+[0m[[0mdebug[0m] [0m	found org.apache.ivy#ivy;2.3.0 in activator-local[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#ivy;0.13.5->org.apache.ivy#ivy;2.3.0 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#ivy;0.13.5->org.apache.ivy#ivy;2.3.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#ivy;0.13.5->org.apache.ivy#ivy;2.3.0 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#ivy;0.13.5->com.jcraft#jsch;0.1.46 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.jcraft#jsch;0.1.46 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.jcraft#jsch;0.1.46 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.jcraft#jsch;0.1.46[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: com.jcraft#jsch;0.1.46[0m
-[0m[[0mdebug[0m] [0m	found com.jcraft#jsch;0.1.46 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/com.jcraft/jsch/0.1.46/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/com.jcraft/jsch/0.1.46/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for com.jcraft#jsch;0.1.46[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.jcraft/jsch/0.1.46/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.jcraft/jsch/0.1.46/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for com.jcraft#jsch;0.1.46[0m
+[0m[[0mdebug[0m] [0m		tried /home/eloi/.ivy2/local/com.jcraft/jsch/0.1.46/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.jcraft#jsch;0.1.46[0m
+[0m[[0mdebug[0m] [0m		tried file:/doesnotexist/repository/com.jcraft/jsch/0.1.46/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for com.jcraft#jsch;0.1.46[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/com.jcraft/jsch/0.1.46/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: found md file for com.jcraft#jsch;0.1.46[0m
+[0m[[0mdebug[0m] [0m		=> file:/home/eloi/activator-1.3.2/repository/com.jcraft/jsch/0.1.46/ivys/ivy.xml (0.1.46)[0m
+[0m[[0mdebug[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/com.jcraft/jsch/0.1.46/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/com.jcraft/jsch/0.1.46/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/com.jcraft/jsch/0.1.46/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/com.jcraft/jsch/0.1.46/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.jcraft#jsch;0.1.46!ivy.xml(ivy.original) (28ms)[0m
+[0m[[0mdebug[0m] [0m	found com.jcraft#jsch;0.1.46 in activator-local[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#ivy;0.13.5->com.jcraft#jsch;0.1.46 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#ivy;0.13.5->com.jcraft#jsch;0.1.46 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#ivy;0.13.5->com.jcraft#jsch;0.1.46 [compile->master][0m
@@ -428,9 +687,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#actions;0.13.5->org.scala-sbt#run;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#run;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#run;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#run;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#run;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#run;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#run;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#run;0.13.5!ivy.xml(ivy.original) (1425ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#run;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#run;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#run;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#run;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -443,9 +708,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#actions;0.13.5->org.scala-sbt#task-system;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#task-system;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#task-system;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#task-system;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#task-system;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#task-system;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#task-system;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#task-system;0.13.5!ivy.xml(ivy.original) (1380ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#task-system;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#task-system;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#task-system;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#task-system;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -453,9 +724,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#task-system;0.13.5->org.scala-sbt#tasks;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#tasks;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#tasks;0.13.5 {compile=[default(compile)], test=[test]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#tasks;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#tasks;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#tasks;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#tasks;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#tasks;0.13.5!ivy.xml(ivy.original) (1534ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#tasks;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#tasks;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#tasks;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#tasks;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -470,9 +747,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#actions;0.13.5->org.scala-sbt#tracking;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#tracking;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#tracking;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#tracking;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#tracking;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#tracking;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#tracking;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#tracking;0.13.5!ivy.xml(ivy.original) (1744ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#tracking;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#tracking;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#tracking;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#tracking;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -480,9 +763,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#tracking;0.13.5->org.scala-sbt#cache;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#cache;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#cache;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#cache;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#cache;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#cache;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#cache;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#cache;0.13.5!ivy.xml(ivy.original) (1328ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#cache;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#cache;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#cache;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#cache;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -494,9 +783,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#actions;0.13.5->org.scala-sbt#testing;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#testing;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#testing;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#testing;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#testing;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#testing;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#testing;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#testing;0.13.5!ivy.xml(ivy.original) (2557ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#testing;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#testing;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#testing;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#testing;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -508,9 +803,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#testing;0.13.5->org.scala-sbt#test-agent;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#test-agent;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#test-agent;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#test-agent;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#test-agent;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#test-agent;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-agent/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#test-agent;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-agent/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-agent/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-agent/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-agent/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-agent/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#test-agent;0.13.5!ivy.xml(ivy.original) (1425ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#test-agent;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#test-agent;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#test-agent;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#test-agent;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -518,9 +819,25 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#test-agent;0.13.5->org.scala-sbt#test-interface;1.0 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#test-interface;1.0 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#test-interface;1.0 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#test-interface;1.0[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#test-interface;1.0[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#test-interface;1.0 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-interface/1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-interface/1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for org.scala-sbt#test-interface;1.0[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-sbt/test-interface/1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-sbt/test-interface/1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for org.scala-sbt#test-interface;1.0[0m
+[0m[[0mdebug[0m] [0m		tried /home/eloi/.ivy2/local/org.scala-sbt/test-interface/1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-sbt#test-interface;1.0[0m
+[0m[[0mdebug[0m] [0m		tried file:/doesnotexist/repository/org.scala-sbt/test-interface/1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for org.scala-sbt#test-interface;1.0[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/org.scala-sbt/test-interface/1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: found md file for org.scala-sbt#test-interface;1.0[0m
+[0m[[0mdebug[0m] [0m		=> file:/home/eloi/activator-1.3.2/repository/org.scala-sbt/test-interface/1.0/ivys/ivy.xml (1.0)[0m
+[0m[[0mdebug[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/org.scala-sbt/test-interface/1.0/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-sbt/test-interface/1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-sbt/test-interface/1.0/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/org.scala-sbt/test-interface/1.0/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#test-interface;1.0!ivy.xml(ivy.original) (32ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#test-interface;1.0 in activator-local[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#test-agent;0.13.5->org.scala-sbt#test-interface;1.0 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#test-agent;0.13.5->org.scala-sbt#test-interface;1.0 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#test-agent;0.13.5->org.scala-sbt#test-interface;1.0 [compile->master][0m
@@ -531,9 +848,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#main;0.13.5->org.scala-sbt#main-settings;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#main-settings;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#main-settings;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#main-settings;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#main-settings;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#main-settings;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main-settings/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#main-settings;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main-settings/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main-settings/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main-settings/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main-settings/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main-settings/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#main-settings;0.13.5!ivy.xml(ivy.original) (1641ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#main-settings;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#main-settings;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#main-settings;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#main-settings;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -541,9 +864,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#main-settings;0.13.5->org.scala-sbt#apply-macro;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#apply-macro;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#apply-macro;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#apply-macro;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#apply-macro;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#apply-macro;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/apply-macro/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#apply-macro;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/apply-macro/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/apply-macro/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/apply-macro/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/apply-macro/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/apply-macro/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#apply-macro;0.13.5!ivy.xml(ivy.original) (1498ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#apply-macro;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#apply-macro;0.13.5->org.scala-lang#scala-compiler;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#apply-macro;0.13.5->org.scala-lang#scala-compiler;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#apply-macro;0.13.5->org.scala-lang#scala-compiler;2.10.4 [compile->compile][0m
@@ -561,9 +890,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#main-settings;0.13.5->org.scala-sbt#command;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#command;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#command;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#command;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#command;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#command;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/command/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#command;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/command/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/command/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/command/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/command/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/command/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#command;0.13.5!ivy.xml(ivy.original) (1332ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#command;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#command;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#command;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#command;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -588,9 +923,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#main;0.13.5->org.scala-sbt#logic;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#logic;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#logic;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#logic;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#logic;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#logic;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logic/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#logic;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logic/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logic/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logic/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logic/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logic/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#logic;0.13.5!ivy.xml(ivy.original) (2446ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#logic;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#logic;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#logic;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#logic;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -603,9 +944,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-sbt#compiler-interface;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#compiler-interface;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#compiler-interface;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#compiler-interface;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#compiler-interface;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#compiler-interface;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#compiler-interface;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#compiler-interface;0.13.5!ivy.xml(ivy.original) (1679ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#compiler-interface;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-interface;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-interface;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-interface;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->compile][0m
@@ -614,9 +961,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-sbt#precompiled-2_8_2;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#precompiled-2_8_2;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#precompiled-2_8_2;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#precompiled-2_8_2;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#precompiled-2_8_2;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#precompiled-2_8_2;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_8_2/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#precompiled-2_8_2;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_8_2/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_8_2/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_8_2/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_8_2/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_8_2/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#precompiled-2_8_2;0.13.5!ivy.xml(ivy.original) (1493ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#precompiled-2_8_2;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#precompiled-2_8_2;0.13.5->org.scala-lang#scala-library;2.8.2 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#precompiled-2_8_2;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#precompiled-2_8_2;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
@@ -626,9 +979,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-sbt#precompiled-2_9_2;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#precompiled-2_9_2;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#precompiled-2_9_2;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#precompiled-2_9_2;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#precompiled-2_9_2;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#precompiled-2_9_2;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_2/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#precompiled-2_9_2;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_2/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_2/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_2/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_2/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_2/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#precompiled-2_9_2;0.13.5!ivy.xml(ivy.original) (1377ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#precompiled-2_9_2;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#precompiled-2_9_2;0.13.5->org.scala-lang#scala-library;2.9.2 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#precompiled-2_9_2;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#precompiled-2_9_2;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
@@ -638,9 +997,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt;0.13.5->org.scala-sbt#precompiled-2_9_3;0.13.5 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#precompiled-2_9_3;0.13.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#precompiled-2_9_3;0.13.5 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#precompiled-2_9_3;0.13.5[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-sbt#precompiled-2_9_3;0.13.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-sbt#precompiled-2_9_3;0.13.5 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_3/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: found md file for org.scala-sbt#precompiled-2_9_3;0.13.5[0m
+[0m[[0mdebug[0m] [0m		=> http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_3/0.13.5/ivys/ivy.xml (0.13.5)[0m
+[0m[[0mdebug[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_3/0.13.5/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_3/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_3/0.13.5/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_3/0.13.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-sbt#precompiled-2_9_3;0.13.5!ivy.xml(ivy.original) (1321ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-sbt#precompiled-2_9_3;0.13.5 in typesafe-ivy-releases[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-lang#scala-library;2.9.3 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.5->org.scala-lang#scala-library;2.10.4 [compile->runtime][0m
@@ -1376,16 +1741,48 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#jline;2.10.4 [optional->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#jline;2.10.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#jline;2.10.4 {optional=[compile(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#jline;2.10.4[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.scala-lang#jline;2.10.4[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#jline;2.10.4 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang/jline/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.scala-lang/jline/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for org.scala-lang#jline;2.10.4[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang/jline/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scala-lang/jline/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for org.scala-lang#jline;2.10.4[0m
+[0m[[0mdebug[0m] [0m		tried /home/eloi/.ivy2/local/org.scala-lang/jline/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#jline;2.10.4[0m
+[0m[[0mdebug[0m] [0m		tried file:/doesnotexist/repository/org.scala-lang/jline/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for org.scala-lang#jline;2.10.4[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/org.scala-lang/jline/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: found md file for org.scala-lang#jline;2.10.4[0m
+[0m[[0mdebug[0m] [0m		=> file:/home/eloi/activator-1.3.2/repository/org.scala-lang/jline/2.10.4/ivys/ivy.xml (2.10.4)[0m
+[0m[[0mdebug[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/jline/2.10.4/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/jline/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/jline/2.10.4/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/org.scala-lang/jline/2.10.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#jline;2.10.4!ivy.xml(ivy.original) (17ms)[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#jline;2.10.4 in activator-local[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.4->org.scala-lang#jline;2.10.4 [optional->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#jline;2.10.4->org.fusesource.jansi#jansi;1.4 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.fusesource.jansi#jansi;1.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.fusesource.jansi#jansi;1.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.4[0m
-[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: revision in cache: org.fusesource.jansi#jansi;1.4[0m
-[0m[[0mdebug[0m] [0m	found org.fusesource.jansi#jansi;1.4 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.fusesource.jansi/jansi/1.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.fusesource.jansi/jansi/1.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: no ivy file found for org.fusesource.jansi#jansi;1.4[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.fusesource.jansi/jansi/1.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.fusesource.jansi/jansi/1.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: no ivy file found for org.fusesource.jansi#jansi;1.4[0m
+[0m[[0mdebug[0m] [0m		tried /home/eloi/.ivy2/local/org.fusesource.jansi/jansi/1.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.fusesource.jansi#jansi;1.4[0m
+[0m[[0mdebug[0m] [0m		tried file:/doesnotexist/repository/org.fusesource.jansi/jansi/1.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-launcher-local: no ivy file found for org.fusesource.jansi#jansi;1.4[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/org.fusesource.jansi/jansi/1.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: found md file for org.fusesource.jansi#jansi;1.4[0m
+[0m[[0mdebug[0m] [0m		=> file:/home/eloi/activator-1.3.2/repository/org.fusesource.jansi/jansi/1.4/ivys/ivy.xml (1.4)[0m
+[0m[[0mdebug[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/org.fusesource.jansi/jansi/1.4/ivys/ivy.xml ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.fusesource.jansi/jansi/1.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.fusesource.jansi/jansi/1.4/ivys/ivy.xml.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/org.fusesource.jansi/jansi/1.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.fusesource.jansi#jansi;1.4!ivy.xml(ivy.original) (22ms)[0m
+[0m[[0mdebug[0m] [0m	found org.fusesource.jansi#jansi;1.4 in activator-local[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#jline;2.10.4->org.fusesource.jansi#jansi;1.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#webservices-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->default][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#webservices-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.4 [scala-tool->runtime][0m
@@ -1399,58 +1796,308 @@
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/mpeltonen/sbt-idea_2.10_0.13/1.6.0/sbt-idea-1.6.0.jar[0m
 [0m[[0mdebug[0m] [0m	public: downloading http://repo1.maven.org/maven2/com/github/mpeltonen/sbt-idea_2.10_0.13/1.6.0/sbt-idea-1.6.0.jar.sha1[0m
 [0m[[0mdebug[0m] [0msha1 OK for http://repo1.maven.org/maven2/com/github/mpeltonen/sbt-idea_2.10_0.13/1.6.0/sbt-idea-1.6.0.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.github.mpeltonen#sbt-idea;1.6.0!sbt-idea.jar (462ms)[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.eed3si9n#sbt-assembly;0.9.0!sbt-assembly.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] commons-io#commons-io;2.0.1!commons-io.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.10.4!scala-library.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#sbt;0.13.5!sbt.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#main;0.13.5!main.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.5!compiler-interface-src.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.5!compiler-interface-bin.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.5!compiler-interface-bin.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.5!compiler-interface-bin.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.5!compiler-interface-bin.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#actions;0.13.5!actions.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#main-settings;0.13.5!main-settings.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#interface;0.13.5!interface.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#io;0.13.5!io.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#ivy;0.13.5!ivy.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#launcher-interface;0.13.5!launcher-interface.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#logging;0.13.5!logging.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#logic;0.13.5!logic.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#process;0.13.5!process.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#run;0.13.5!run.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#command;0.13.5!command.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#classpath;0.13.5!classpath.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#completion;0.13.5!completion.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#api;0.13.5!api.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#compiler-integration;0.13.5!compiler-integration.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#compiler-ivy-integration;0.13.5!compiler-ivy-integration.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#relation;0.13.5!relation.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#task-system;0.13.5!task-system.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#tasks;0.13.5!tasks.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#tracking;0.13.5!tracking.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#testing;0.13.5!testing.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.4!scala-compiler.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.10.4!scala-reflect.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#control;0.13.5!control.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#collections;0.13.5!collections.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.11!jline.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#incremental-compiler;0.13.5!incremental-compiler.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#compile;0.13.5!compile.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#persist;0.13.5!persist.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#classfile;0.13.5!classfile.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-tools.sbinary#sbinary_2.10;0.4.2!sbinary_2.10.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#cross;0.13.5!cross.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.apache.ivy#ivy;2.3.0!ivy.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.jcraft#jsch;0.1.46!jsch.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#cache;0.13.5!cache.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.5!test-agent.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 6494ms :: artifacts dl 528ms[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.github.mpeltonen#sbt-idea;1.6.0!sbt-idea.jar (520ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/jars/sbt-assembly.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/jars/sbt-assembly.jar ...[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/jars/sbt-assembly.jar[0m
+[0m[[0mdebug[0m] [0m	sbt-plugin-releases: downloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/jars/sbt-assembly.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.9.0/jars/sbt-assembly.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.eed3si9n#sbt-assembly;0.9.0!sbt-assembly.jar (2201ms)[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/commons-io/commons-io/2.0.1/jars/commons-io.jar[0m
+[0m[[0minfo[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/commons-io/commons-io/2.0.1/jars/commons-io.jar ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/commons-io/commons-io/2.0.1/jars/commons-io.jar[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/commons-io/commons-io/2.0.1/jars/commons-io.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/commons-io/commons-io/2.0.1/jars/commons-io.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] commons-io#commons-io;2.0.1!commons-io.jar (26ms)[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-library/2.10.4/jars/scala-library.jar[0m
+[0m[[0minfo[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-library/2.10.4/jars/scala-library.jar ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-library/2.10.4/jars/scala-library.jar[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-library/2.10.4/jars/scala-library.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-library/2.10.4/jars/scala-library.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-library;2.10.4!scala-library.jar (136ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.5/jars/sbt.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.5/jars/sbt.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.5/jars/sbt.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.5/jars/sbt.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt/0.13.5/jars/sbt.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#sbt;0.13.5!sbt.jar (1952ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.5/jars/main.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.5/jars/main.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.5/jars/main.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.5/jars/main.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main/0.13.5/jars/main.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#main;0.13.5!main.jar (2915ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.13.5/jars/compiler-interface-src.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.13.5/jars/compiler-interface-src.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.13.5/jars/compiler-interface-src.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.13.5/jars/compiler-interface-src.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.13.5/jars/compiler-interface-src.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#compiler-interface;0.13.5!compiler-interface-src.jar (1713ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.13.5/jars/compiler-interface-bin.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.13.5/jars/compiler-interface-bin.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.13.5/jars/compiler-interface-bin.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.13.5/jars/compiler-interface-bin.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.13.5/jars/compiler-interface-bin.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#compiler-interface;0.13.5!compiler-interface-bin.jar (2053ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_8_2/0.13.5/jars/compiler-interface-bin.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_8_2/0.13.5/jars/compiler-interface-bin.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_8_2/0.13.5/jars/compiler-interface-bin.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_8_2/0.13.5/jars/compiler-interface-bin.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_8_2/0.13.5/jars/compiler-interface-bin.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#precompiled-2_8_2;0.13.5!compiler-interface-bin.jar (2168ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_2/0.13.5/jars/compiler-interface-bin.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_2/0.13.5/jars/compiler-interface-bin.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_2/0.13.5/jars/compiler-interface-bin.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_2/0.13.5/jars/compiler-interface-bin.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_2/0.13.5/jars/compiler-interface-bin.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#precompiled-2_9_2;0.13.5!compiler-interface-bin.jar (2115ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_3/0.13.5/jars/compiler-interface-bin.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_3/0.13.5/jars/compiler-interface-bin.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_3/0.13.5/jars/compiler-interface-bin.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_3/0.13.5/jars/compiler-interface-bin.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_3/0.13.5/jars/compiler-interface-bin.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#precompiled-2_9_3;0.13.5!compiler-interface-bin.jar (2030ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions/0.13.5/jars/actions.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions/0.13.5/jars/actions.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions/0.13.5/jars/actions.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions/0.13.5/jars/actions.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions/0.13.5/jars/actions.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#actions;0.13.5!actions.jar (2390ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main-settings/0.13.5/jars/main-settings.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main-settings/0.13.5/jars/main-settings.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main-settings/0.13.5/jars/main-settings.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main-settings/0.13.5/jars/main-settings.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main-settings/0.13.5/jars/main-settings.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#main-settings;0.13.5!main-settings.jar (2453ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.13.5/jars/interface.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.13.5/jars/interface.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.13.5/jars/interface.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.13.5/jars/interface.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.13.5/jars/interface.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#interface;0.13.5!interface.jar (1940ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io/0.13.5/jars/io.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io/0.13.5/jars/io.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io/0.13.5/jars/io.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io/0.13.5/jars/io.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io/0.13.5/jars/io.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#io;0.13.5!io.jar (2150ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy/0.13.5/jars/ivy.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy/0.13.5/jars/ivy.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy/0.13.5/jars/ivy.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy/0.13.5/jars/ivy.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy/0.13.5/jars/ivy.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#ivy;0.13.5!ivy.jar (2439ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/launcher-interface/0.13.5/jars/launcher-interface.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/launcher-interface/0.13.5/jars/launcher-interface.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/launcher-interface/0.13.5/jars/launcher-interface.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/launcher-interface/0.13.5/jars/launcher-interface.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/launcher-interface/0.13.5/jars/launcher-interface.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#launcher-interface;0.13.5!launcher-interface.jar (1840ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.13.5/jars/logging.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.13.5/jars/logging.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.13.5/jars/logging.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.13.5/jars/logging.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging/0.13.5/jars/logging.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#logging;0.13.5!logging.jar (1969ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logic/0.13.5/jars/logic.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logic/0.13.5/jars/logic.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logic/0.13.5/jars/logic.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logic/0.13.5/jars/logic.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logic/0.13.5/jars/logic.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#logic;0.13.5!logic.jar (1945ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process/0.13.5/jars/process.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process/0.13.5/jars/process.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process/0.13.5/jars/process.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process/0.13.5/jars/process.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process/0.13.5/jars/process.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#process;0.13.5!process.jar (2889ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run/0.13.5/jars/run.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run/0.13.5/jars/run.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run/0.13.5/jars/run.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run/0.13.5/jars/run.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run/0.13.5/jars/run.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#run;0.13.5!run.jar (2279ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/command/0.13.5/jars/command.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/command/0.13.5/jars/command.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/command/0.13.5/jars/command.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/command/0.13.5/jars/command.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/command/0.13.5/jars/command.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#command;0.13.5!command.jar (2298ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath/0.13.5/jars/classpath.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath/0.13.5/jars/classpath.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath/0.13.5/jars/classpath.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath/0.13.5/jars/classpath.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath/0.13.5/jars/classpath.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#classpath;0.13.5!classpath.jar (2053ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion/0.13.5/jars/completion.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion/0.13.5/jars/completion.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion/0.13.5/jars/completion.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion/0.13.5/jars/completion.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion/0.13.5/jars/completion.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#completion;0.13.5!completion.jar (2151ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api/0.13.5/jars/api.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api/0.13.5/jars/api.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api/0.13.5/jars/api.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api/0.13.5/jars/api.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api/0.13.5/jars/api.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#api;0.13.5!api.jar (2215ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-integration/0.13.5/jars/compiler-integration.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-integration/0.13.5/jars/compiler-integration.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-integration/0.13.5/jars/compiler-integration.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-integration/0.13.5/jars/compiler-integration.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-integration/0.13.5/jars/compiler-integration.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#compiler-integration;0.13.5!compiler-integration.jar (2173ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-ivy-integration/0.13.5/jars/compiler-ivy-integration.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-ivy-integration/0.13.5/jars/compiler-ivy-integration.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-ivy-integration/0.13.5/jars/compiler-ivy-integration.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-ivy-integration/0.13.5/jars/compiler-ivy-integration.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-ivy-integration/0.13.5/jars/compiler-ivy-integration.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#compiler-ivy-integration;0.13.5!compiler-ivy-integration.jar (1948ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/relation/0.13.5/jars/relation.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/relation/0.13.5/jars/relation.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/relation/0.13.5/jars/relation.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/relation/0.13.5/jars/relation.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/relation/0.13.5/jars/relation.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#relation;0.13.5!relation.jar (1743ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system/0.13.5/jars/task-system.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system/0.13.5/jars/task-system.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system/0.13.5/jars/task-system.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system/0.13.5/jars/task-system.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system/0.13.5/jars/task-system.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#task-system;0.13.5!task-system.jar (1947ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks/0.13.5/jars/tasks.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks/0.13.5/jars/tasks.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks/0.13.5/jars/tasks.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks/0.13.5/jars/tasks.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks/0.13.5/jars/tasks.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#tasks;0.13.5!tasks.jar (1837ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking/0.13.5/jars/tracking.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking/0.13.5/jars/tracking.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking/0.13.5/jars/tracking.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking/0.13.5/jars/tracking.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking/0.13.5/jars/tracking.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#tracking;0.13.5!tracking.jar (1948ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing/0.13.5/jars/testing.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing/0.13.5/jars/testing.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing/0.13.5/jars/testing.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing/0.13.5/jars/testing.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing/0.13.5/jars/testing.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#testing;0.13.5!testing.jar (2047ms)[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-compiler/2.10.4/jars/scala-compiler.jar[0m
+[0m[[0minfo[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-compiler/2.10.4/jars/scala-compiler.jar ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-compiler/2.10.4/jars/scala-compiler.jar[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-compiler/2.10.4/jars/scala-compiler.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-compiler/2.10.4/jars/scala-compiler.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.10.4!scala-compiler.jar (301ms)[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-reflect/2.10.4/jars/scala-reflect.jar[0m
+[0m[[0minfo[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-reflect/2.10.4/jars/scala-reflect.jar ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-reflect/2.10.4/jars/scala-reflect.jar[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-reflect/2.10.4/jars/scala-reflect.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/org.scala-lang/scala-reflect/2.10.4/jars/scala-reflect.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.10.4!scala-reflect.jar (83ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control/0.13.5/jars/control.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control/0.13.5/jars/control.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control/0.13.5/jars/control.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control/0.13.5/jars/control.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control/0.13.5/jars/control.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#control;0.13.5!control.jar (2075ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections/0.13.5/jars/collections.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections/0.13.5/jars/collections.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections/0.13.5/jars/collections.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections/0.13.5/jars/collections.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections/0.13.5/jars/collections.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#collections;0.13.5!collections.jar (2669ms)[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/jline/jline/2.11/jars/jline.jar[0m
+[0m[[0minfo[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/jline/jline/2.11/jars/jline.jar ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/jline/jline/2.11/jars/jline.jar[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/jline/jline/2.11/jars/jline.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/jline/jline/2.11/jars/jline.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] jline#jline;2.11!jline.jar (18ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler/0.13.5/jars/incremental-compiler.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler/0.13.5/jars/incremental-compiler.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler/0.13.5/jars/incremental-compiler.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler/0.13.5/jars/incremental-compiler.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler/0.13.5/jars/incremental-compiler.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#incremental-compiler;0.13.5!incremental-compiler.jar (2434ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.13.5/jars/compile.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.13.5/jars/compile.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.13.5/jars/compile.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.13.5/jars/compile.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile/0.13.5/jars/compile.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#compile;0.13.5!compile.jar (2046ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist/0.13.5/jars/persist.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist/0.13.5/jars/persist.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist/0.13.5/jars/persist.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist/0.13.5/jars/persist.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist/0.13.5/jars/persist.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#persist;0.13.5!persist.jar (1936ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile/0.13.5/jars/classfile.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile/0.13.5/jars/classfile.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile/0.13.5/jars/classfile.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile/0.13.5/jars/classfile.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile/0.13.5/jars/classfile.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#classfile;0.13.5!classfile.jar (1817ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbinary/sbinary_2.10/0.4.2/jars/sbinary_2.10.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbinary/sbinary_2.10/0.4.2/jars/sbinary_2.10.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbinary/sbinary_2.10/0.4.2/jars/sbinary_2.10.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbinary/sbinary_2.10/0.4.2/jars/sbinary_2.10.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbinary/sbinary_2.10/0.4.2/jars/sbinary_2.10.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-tools.sbinary#sbinary_2.10;0.4.2!sbinary_2.10.jar (1978ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cross/0.13.5/jars/cross.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cross/0.13.5/jars/cross.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cross/0.13.5/jars/cross.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cross/0.13.5/jars/cross.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cross/0.13.5/jars/cross.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#cross;0.13.5!cross.jar (1731ms)[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/org.apache.ivy/ivy/2.3.0/jars/ivy.jar[0m
+[0m[[0minfo[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/org.apache.ivy/ivy/2.3.0/jars/ivy.jar ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.apache.ivy/ivy/2.3.0/jars/ivy.jar[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.apache.ivy/ivy/2.3.0/jars/ivy.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/org.apache.ivy/ivy/2.3.0/jars/ivy.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.apache.ivy#ivy;2.3.0!ivy.jar (32ms)[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/com.jcraft/jsch/0.1.46/jars/jsch.jar[0m
+[0m[[0minfo[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/com.jcraft/jsch/0.1.46/jars/jsch.jar ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/com.jcraft/jsch/0.1.46/jars/jsch.jar[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/com.jcraft/jsch/0.1.46/jars/jsch.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/com.jcraft/jsch/0.1.46/jars/jsch.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.jcraft#jsch;0.1.46!jsch.jar (14ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache/0.13.5/jars/cache.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache/0.13.5/jars/cache.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache/0.13.5/jars/cache.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache/0.13.5/jars/cache.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache/0.13.5/jars/cache.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#cache;0.13.5!cache.jar (2207ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-agent/0.13.5/jars/test-agent.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-agent/0.13.5/jars/test-agent.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-agent/0.13.5/jars/test-agent.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-agent/0.13.5/jars/test-agent.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/test-agent/0.13.5/jars/test-agent.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#test-agent;0.13.5!test-agent.jar (1745ms)[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/org.scala-sbt/test-interface/1.0/jars/test-interface.jar[0m
+[0m[[0minfo[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/org.scala-sbt/test-interface/1.0/jars/test-interface.jar ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-sbt/test-interface/1.0/jars/test-interface.jar[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-sbt/test-interface/1.0/jars/test-interface.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/org.scala-sbt/test-interface/1.0/jars/test-interface.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#test-interface;1.0!test-interface.jar (21ms)[0m
+[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/apply-macro/0.13.5/jars/apply-macro.jar[0m
+[0m[[0minfo[0m] [0mdownloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/apply-macro/0.13.5/jars/apply-macro.jar ...[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/apply-macro/0.13.5/jars/apply-macro.jar[0m
+[0m[[0mdebug[0m] [0m	typesafe-ivy-releases: downloading http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/apply-macro/0.13.5/jars/apply-macro.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/apply-macro/0.13.5/jars/apply-macro.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar (1920ms)[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/org.scala-lang/jline/2.10.4/jars/jline.jar[0m
+[0m[[0minfo[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/jline/2.10.4/jars/jline.jar ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/jline/2.10.4/jars/jline.jar[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.scala-lang/jline/2.10.4/jars/jline.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/org.scala-lang/jline/2.10.4/jars/jline.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#jline;2.10.4!jline.jar (26ms)[0m
+[0m[[0mdebug[0m] [0m		tried file:/home/eloi/activator-1.3.2/repository/org.fusesource.jansi/jansi/1.4/jars/jansi.jar[0m
+[0m[[0minfo[0m] [0mdownloading file:/home/eloi/activator-1.3.2/repository/org.fusesource.jansi/jansi/1.4/jars/jansi.jar ...[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.fusesource.jansi/jansi/1.4/jars/jansi.jar[0m
+[0m[[0mdebug[0m] [0m	activator-local: downloading file:/home/eloi/activator-1.3.2/repository/org.fusesource.jansi/jansi/1.4/jars/jansi.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for file:/home/eloi/activator-1.3.2/repository/org.fusesource.jansi/jansi/1.4/jars/jansi.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.fusesource.jansi#jansi;1.4!jansi.jar (14ms)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 90146ms :: artifacts dl 85605ms[0m
 [0m[[0mdebug[0m] [0m	report for default#webservices-build;0.1-SNAPSHOT compile produced in /home/eloi/sharpeye15/webservices/project/target/resolution-cache/reports/default-webservices-build-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#webservices-build;0.1-SNAPSHOT runtime produced in /home/eloi/sharpeye15/webservices/project/target/resolution-cache/reports/default-webservices-build-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#webservices-build;0.1-SNAPSHOT test produced in /home/eloi/sharpeye15/webservices/project/target/resolution-cache/reports/default-webservices-build-test.xml[0m
@@ -1464,5 +2111,5 @@
 [0m[[0mdebug[0m] [0m	report for default#webservices-build;0.1-SNAPSHOT docs produced in /home/eloi/sharpeye15/webservices/project/target/resolution-cache/reports/default-webservices-build-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#webservices-build;0.1-SNAPSHOT pom produced in /home/eloi/sharpeye15/webservices/project/target/resolution-cache/reports/default-webservices-build-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#webservices-build;0.1-SNAPSHOT scala-tool produced in /home/eloi/sharpeye15/webservices/project/target/resolution-cache/reports/default-webservices-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (6494ms resolve - 528ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (90146ms resolve - 85605ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

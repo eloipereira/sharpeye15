@@ -1,7 +1,7 @@
 package pt.edu.academiafa.ciafaWebServices.domain
 
 import scala.slick.driver.MySQLDriver.simple._
-import scala.slick.lifted._
+import scala.slick.lifted.Tag
 
 /**
   * AutopilotTelemetry entity.
@@ -30,8 +30,8 @@ import scala.slick.lifted._
   * @param timestamp GMT posix timestamp converted from gps time 
   */
 
-case class AutopilotTelemetry(
-  id: Long,
+case class TelemetrySample(
+  id: Option[Long],
   timestamp: Int,
   vId: Int,
   lat: Float,
@@ -55,10 +55,11 @@ case class AutopilotTelemetry(
   agl: Int
 )
  
+
 /**
  * Mapped telemetry samples table object.
  */
-class TelemetrySamples(tag: Tag) extends Table[AutopilotTelemetry](tag,"TELEMETRY_SAMPLES") {
+class TelemetrySamples(tag: Tag) extends Table[TelemetrySample](tag,"TELEMETRY_SAMPLES") {
 
   def id = column[Long]("TEL_ID", O.PrimaryKey, O.AutoInc)
   def timestamp = column[Int]("TIMESTAMP")
@@ -80,7 +81,13 @@ class TelemetrySamples(tag: Tag) extends Table[AutopilotTelemetry](tag,"TELEMETR
   def accelX = column[Int]("ACCEL_X")
   def accelY = column[Int]("ACCEL_Y")
   def accelZ = column[Int]("ACCEL_Z")
-  def compass = column[Int]("heading")
-  def agl = column[Int]("agl")
-  def * = (id,timestamp,vId,lat,lon,alt,ias,gsN,gsE,gsD,roll,pitch,yaw,windS,windW,rpmL,rpmR,accelX,accelY,accelZ,compass,agl) <> (AutopilotTelemetry.tupled,AutopilotTelemetry.unapply)
+  def compass = column[Int]("HEADING")
+  def agl = column[Int]("AGL")
+  def * = (id.?,timestamp,vId,lat,lon,alt,ias,gsN,gsE,gsD,roll,pitch,yaw,windS,windW,rpmL,rpmR,accelX,accelY,accelZ,compass,agl) <> (TelemetrySample.tupled,TelemetrySample.unapply)
+
+}
+
+object TelemetrySamples {
+  lazy val samples = TableQuery[TelemetrySamples]
+  val findByID = samples.findBy(_.id)
 }
