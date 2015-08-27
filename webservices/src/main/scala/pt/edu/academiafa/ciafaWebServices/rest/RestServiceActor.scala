@@ -14,6 +14,7 @@ import spray.http._
 import spray.httpx.unmarshalling._
 import spray.routing._
 
+
 /**
  * REST Service actor.
  */
@@ -35,6 +36,7 @@ trait RestService extends HttpService with SLF4JLogging {
 
   implicit val formats = net.liftweb.json.DefaultFormats
 
+  // Ensure that rejections are written as json
   implicit val customRejectionHandler = RejectionHandler {
     case rejections => mapHttpResponse {
       response =>

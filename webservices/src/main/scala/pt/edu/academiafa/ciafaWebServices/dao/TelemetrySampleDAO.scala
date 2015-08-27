@@ -5,7 +5,6 @@ import pt.edu.academiafa.ciafaWebServices.domain._
 import java.sql._
 import scala.Some
 import scala.slick.jdbc.JdbcBackend.Database.dynamicSession
-//import scala.slick.driver.MySQLDriver.simple.Database.threadLocalSession
 import scala.slick.driver.MySQLDriver.simple._
 import slick.jdbc.meta.MTable
 
@@ -17,7 +16,7 @@ class TelemetrySampleDAO extends Configuration {
 
   // create tables if not exist
   db.withDynSession {
-    if (MTable.getTables("TELEMETRY_SAMPLES").list().isEmpty) {
+    if (MTable.getTables("TELEMETRY").list().isEmpty) {
       TelemetrySamples.samples.ddl.create
     }
   }

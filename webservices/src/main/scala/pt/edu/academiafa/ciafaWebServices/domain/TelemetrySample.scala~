@@ -4,7 +4,7 @@ import scala.slick.driver.MySQLDriver.simple._
 import scala.slick.lifted.Tag
 
 /**
-  * AutopilotTelemetry entity.
+  * TelemetrySample entity.
   *
   * @param id telemetry id
   * @param vId vehicle id
@@ -89,5 +89,5 @@ class TelemetrySamples(tag: Tag) extends Table[TelemetrySample](tag,"TELEMETRY_S
 
 object TelemetrySamples {
   lazy val samples = TableQuery[TelemetrySamples]
-  val findByID = samples.findBy(_.id)
+  def findById(id: Long) = samples.filter(_.id === id)
 }

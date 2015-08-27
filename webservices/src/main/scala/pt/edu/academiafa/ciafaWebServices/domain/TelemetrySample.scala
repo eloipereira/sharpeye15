@@ -59,7 +59,7 @@ case class TelemetrySample(
 /**
  * Mapped telemetry samples table object.
  */
-class TelemetrySamples(tag: Tag) extends Table[TelemetrySample](tag,"TELEMETRY_SAMPLES") {
+class TelemetrySamples(tag: Tag) extends Table[TelemetrySample](tag,"TELEMETRY") {
 
   def id = column[Long]("TEL_ID", O.PrimaryKey, O.AutoInc)
   def timestamp = column[Int]("TIMESTAMP")

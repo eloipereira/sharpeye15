@@ -7,8 +7,41 @@
 		revision="0.0.0-SNAPSHOT"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20150827084832"/>
+		date="20150827163203"/>
 	<dependencies>
+		<module organisation="pt.edu.academiafa.seagull" name="seagull_commons_msgs">
+			<revision name="0.0.2" status="release" pubdate="20150827162933" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="26">
+				<metadata-artifact status="no" details="" size="2285" time="0" location="/home/eloi/.ivy2/cache/pt.edu.academiafa.seagull/seagull_commons_msgs/ivy-0.0.2.xml" searched="false" origin-is-local="false" origin-location="https://bitbucket.org/ciafa-sw/maven2-release/raw/master/ros-messages/pt/edu/academiafa/seagull/seagull_commons_msgs/0.0.2/seagull_commons_msgs-0.0.2.pom"/>
+				<caller organisation="ciafawebservices" name="ciafawebservices_2.10" conf="compile, runtime" rev="0.0.2" rev-constraint-default="0.0.2" rev-constraint-dynamic="0.0.2" callerrev="0.0.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="seagull_commons_msgs" type="jar" ext="jar" status="no" details="" size="2931" time="0" location="/home/eloi/.ivy2/cache/pt.edu.academiafa.seagull/seagull_commons_msgs/jars/seagull_commons_msgs-0.0.2.jar">
+						<origin-location is-local="false" location="https://bitbucket.org/ciafa-sw/maven2-release/raw/master/ros-messages/pt/edu/academiafa/seagull/seagull_commons_msgs/0.0.2/seagull_commons_msgs-0.0.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="pt.edu.academiafa.seagull" name="seagull_autopilot_msgs">
+			<revision name="0.0.4" status="release" pubdate="20150827163209" resolver="Seagull Messages" artresolver="Seagull Messages" homepage="" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="25">
+				<metadata-artifact status="successful" details="" size="491" time="1231" location="/home/eloi/.ivy2/cache/pt.edu.academiafa.seagull/seagull_autopilot_msgs/ivy-0.0.4.xml" searched="true" original-local-location="/home/eloi/.ivy2/cache/pt.edu.academiafa.seagull/seagull_autopilot_msgs/ivy-0.0.4.xml.original" origin-is-local="false" origin-location="https://bitbucket.org/ciafa-sw/maven2-release/raw/master/ros-messages/pt/edu/academiafa/seagull/seagull_autopilot_msgs/0.0.4/seagull_autopilot_msgs-0.0.4.pom"/>
+				<caller organisation="ciafawebservices" name="ciafawebservices_2.10" conf="compile, runtime" rev="0.0.4" rev-constraint-default="0.0.4" rev-constraint-dynamic="0.0.4" callerrev="0.0.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="seagull_autopilot_msgs" type="jar" ext="jar" status="successful" details="" size="10580" time="1135" location="/home/eloi/.ivy2/cache/pt.edu.academiafa.seagull/seagull_autopilot_msgs/jars/seagull_autopilot_msgs-0.0.4.jar">
+						<origin-location is-local="false" location="https://bitbucket.org/ciafa-sw/maven2-release/raw/master/ros-messages/pt/edu/academiafa/seagull/seagull_autopilot_msgs/0.0.4/seagull_autopilot_msgs-0.0.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="pt.edu.academiafa" name="seagull-rosjava-lib">
+			<revision name="0.0.2" status="release" pubdate="20150827162923" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="24">
+				<metadata-artifact status="no" details="" size="2275" time="0" location="/home/eloi/.ivy2/cache/pt.edu.academiafa/seagull-rosjava-lib/ivy-0.0.2.xml" searched="false" origin-is-local="false" origin-location="https://bitbucket.org/ciafa-sw/maven2-release/raw/master/seagull-rosjava-libs/pt/edu/academiafa/seagull-rosjava-lib/0.0.2/seagull-rosjava-lib-0.0.2.pom"/>
+				<caller organisation="ciafawebservices" name="ciafawebservices_2.10" conf="compile, runtime" rev="0.0.2" rev-constraint-default="0.0.2" rev-constraint-dynamic="0.0.2" callerrev="0.0.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="seagull-rosjava-lib" type="jar" ext="jar" status="no" details="" size="7223770" time="0" location="/home/eloi/.ivy2/cache/pt.edu.academiafa/seagull-rosjava-lib/jars/seagull-rosjava-lib-0.0.2.jar">
+						<origin-location is-local="false" location="https://bitbucket.org/ciafa-sw/maven2-release/raw/master/seagull-rosjava-libs/pt/edu/academiafa/seagull-rosjava-lib/0.0.2/seagull-rosjava-lib-0.0.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="ch.qos.logback" name="logback-classic">
 			<revision name="1.0.13" status="release" pubdate="20130510133446" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://logback.qos.ch" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="21">
 				<license name="Eclipse Public License - v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>

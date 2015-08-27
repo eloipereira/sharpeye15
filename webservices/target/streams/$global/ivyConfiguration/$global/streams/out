@@ -9,5 +9,7 @@
 [0m[[0mdebug[0m] [0m	typesafe-releases: http://repo.typesafe.com/typesafe/releases[0m
 [0m[[0mdebug[0m] [0m	URLRepository(typesafe-ivy-releasez,Patterns(ivyPatterns=List(http://repo.typesafe.com/typesafe/ivy-releases/[organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), artifactPatterns=List(http://repo.typesafe.com/typesafe/ivy-releases/[organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]), isMavenCompatible=false, descriptorOptional=false, skipConsistencyCheck=false))[0m
 [0m[[0mdebug[0m] [0m	Spray repository: http://repo.spray.io[0m
-[0m[[0mdebug[0m] [0m	Typesafe repository: http://repo.typesafe.com/typesafe/releases/[0m
+[0m[[0mdebug[0m] [0m	Typesafe repository: https://repo.typesafe.com/typesafe/releases/[0m
+[0m[[0mdebug[0m] [0m	Seagull RosJava: https://bitbucket.org/ciafa-sw/maven2-release/raw/master/seagull-rosjava-libs[0m
+[0m[[0mdebug[0m] [0m	Seagull Messages: https://bitbucket.org/ciafa-sw/maven2-release/raw/master/ros-messages[0m
 [0m[[0mdebug[0m] [0mUsing inline dependencies specified in Scala.[0m
