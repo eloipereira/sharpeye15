@@ -4,7 +4,7 @@
 		module="ciafawebservices_2.10"
 		revision="0.0.0-SNAPSHOT"
 		status="integration"
-		publication="20150827163202"
+		publication="20150828163017"
 	>
 		<description>
 		ciafaWebServices

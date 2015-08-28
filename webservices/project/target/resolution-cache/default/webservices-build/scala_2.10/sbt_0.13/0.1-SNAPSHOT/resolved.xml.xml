@@ -4,7 +4,7 @@
 		module="webservices-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20150826181841"
+		publication="20150828162215"
 		e:scalaVersion="2.10" e:sbtVersion="0.13"
 	>
 		<description>

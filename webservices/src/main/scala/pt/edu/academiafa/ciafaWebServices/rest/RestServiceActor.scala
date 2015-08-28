@@ -30,13 +30,18 @@ class RestServiceActor extends Actor with RestService {
  */
 trait RestService extends HttpService with SLF4JLogging {
 
-  val telemetryService = new TelemetrySampleDAO
+  val daoService = new TelemetrySampleDAO
+
+  
+
 
   implicit val executionContext = actorRefFactory.dispatcher
 
   implicit val formats = net.liftweb.json.DefaultFormats
 
-  // Ensure that rejections are written as json
+  /**
+   * Handles rejections in Json format 
+   */
   implicit val customRejectionHandler = RejectionHandler {
     case rejections => mapHttpResponse {
       response =>
@@ -55,7 +60,7 @@ trait RestService extends HttpService with SLF4JLogging {
               ctx: RequestContext =>
                 handleRequest(ctx) {
                   log.debug("Searching for telemetry sample with id: %s".format(id))
-                  telemetryService.get(id)
+                  daoService.get(id)
                 }
             }
           }

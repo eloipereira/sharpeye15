@@ -14,10 +14,15 @@ class TelemetrySampleDAO extends Configuration {
   private val db = Database.forURL(url = "jdbc:mysql://%s:%d/%s".format(dbHost, dbPort, dbName),
     user = dbUser, password = dbPassword, driver = "com.mysql.jdbc.Driver")
 
+  val samples = TableQuery[TelemetrySamples]
+
+  def findById(id: Long) = samples.filter(_.id === id)
+
   // create tables if not exist
   db.withDynSession {
     if (MTable.getTables("TELEMETRY").list().isEmpty) {
-      TelemetrySamples.samples.ddl.create
+      println("CREATE TABLE")
+      samples.ddl.create
     }
   }
 
@@ -30,7 +35,7 @@ class TelemetrySampleDAO extends Configuration {
   def create(sample: TelemetrySample): Either[Failure, TelemetrySample] = {
     try {
       val id = db.withDynSession {
-        TelemetrySamples.samples += sample
+        samples += sample
       }
       Right(sample.copy(id = Some(id)))
     } catch {
@@ -49,7 +54,7 @@ class TelemetrySampleDAO extends Configuration {
   def update(id: Long, sample: TelemetrySample): Either[Failure, TelemetrySample] = {
     try
       db.withDynSession {
-        TelemetrySamples.samples.where(_.id === id) update sample.copy(id = Some(id)) match {
+        samples.where(_.id === id) update sample.copy(id = Some(id)) match {
           case 0 => Left(notFoundError(id))
           case _ => Right(sample.copy(id = Some(id)))
         }
@@ -69,14 +74,14 @@ class TelemetrySampleDAO extends Configuration {
   def delete(id: Long): Either[Failure, TelemetrySample] = {
     try {
       db.withDynTransaction {
-        val query = TelemetrySamples.samples.where(_.id === id)
-        val samples = query.run.asInstanceOf[List[TelemetrySample]]
-        samples.size match {
+        val query = samples.where(_.id === id)
+        val samplesQ = query.run.asInstanceOf[List[TelemetrySample]]
+        samplesQ.size match {
           case 0 =>
             Left(notFoundError(id))
           case _ => {
             query.delete
-            Right(samples.head)
+            Right(samplesQ.head)
           }
         }
       }
@@ -95,7 +100,7 @@ class TelemetrySampleDAO extends Configuration {
   def get(id: Long): Either[Failure, TelemetrySample] = {
     try {
       db.withDynSession {
-        TelemetrySamples.findById(id).firstOption match {
+        findById(id).firstOption match {
           case Some(sample: TelemetrySample) =>
             Right(sample)
           case _ =>

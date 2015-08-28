@@ -1,7 +1,10 @@
 package pt.edu.academiafa.ciafaWebServices.config
 
 import com.typesafe.config.ConfigFactory
+import java.net.{URI, URISyntaxException}
 import util.Try
+import org.ros.address.InetAddressFactory
+import org.ros.node.NodeConfiguration
 
 trait Configuration{
   /**
@@ -29,4 +32,14 @@ trait Configuration{
 
   /** Password for specified user and database. */
   lazy val dbPassword = Try(config.getString("db.password")).toOption.orNull
+
+  /** ROS Configuration */
+  lazy val rosConfiguration: NodeConfiguration = NodeConfiguration.newPublic(InetAddressFactory.newNonLoopback.getHostName, masterUri)
+  
+  lazy val rosmasterHost: String = Try(config.getString("ros.host")).getOrElse("localhost")
+
+  lazy val rosmasterPort: Int = Try(Integer.parseInt(config.getString("ros.port"))).getOrElse(11311)
+  
+  lazy val masterUri: URI = Try(new URI("http", null, rosmasterHost, rosmasterPort, "/", null, null)).getOrElse(new URI("http://localhost:11311/"))
+
 }

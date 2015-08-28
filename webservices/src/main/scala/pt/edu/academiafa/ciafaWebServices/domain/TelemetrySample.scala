@@ -32,7 +32,7 @@ import scala.slick.lifted.Tag
 
 case class TelemetrySample(
   id: Option[Long],
-  timestamp: Int,
+  timestamp: Long,
   vId: Int,
   lat: Float,
   lon: Float,
@@ -62,7 +62,7 @@ case class TelemetrySample(
 class TelemetrySamples(tag: Tag) extends Table[TelemetrySample](tag,"TELEMETRY") {
 
   def id = column[Long]("TEL_ID", O.PrimaryKey, O.AutoInc)
-  def timestamp = column[Int]("TIMESTAMP")
+  def timestamp = column[Long]("TIMESTAMP")
   def vId = column[Int]("VEHICLE_ID")
   def lat = column[Float]("LAT")
   def lon = column[Float]("LON")
@@ -87,7 +87,7 @@ class TelemetrySamples(tag: Tag) extends Table[TelemetrySample](tag,"TELEMETRY")
 
 }
 
-object TelemetrySamples {
-  lazy val samples = TableQuery[TelemetrySamples]
-  def findById(id: Long) = samples.filter(_.id === id)
-}
+// object TelemetrySamples {
+//   lazy val samples = TableQuery[TelemetrySamples]
+//   def findById(id: Long) = samples.filter(_.id === id)
+// }
