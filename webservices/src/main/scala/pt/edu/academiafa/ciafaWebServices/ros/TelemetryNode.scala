@@ -10,6 +10,7 @@ import org.apache.commons.logging.Log
 
 import seagull_autopilot_msgs.AutopilotADCSamples
 import seagull_autopilot_msgs.AutopilotTelemetry
+import seagull_commons_msgs.SeagullHeader
 
 import pt.edu.academiafa.ciafaWebServices.domain.TelemetrySample
 import pt.edu.academiafa.ciafaWebServices.dao._
@@ -23,11 +24,12 @@ class TelemetryNode extends AbstractNodeMain{
     val subscriber: Subscriber[AutopilotTelemetry] = connectedNode.newSubscriber("autopilot_telemetry", AutopilotTelemetry._TYPE)
     subscriber.addMessageListener(new MessageListener[AutopilotTelemetry] {
       override def onNewMessage(msg: AutopilotTelemetry): Unit = {
-        log.info("[TelemetryNode]: received new telemetry message")
+        log.info("[TelemetryNode]: received new telemetry message from vehicle " +  msg.getHeader.getVehicleId)
+        
         val sample = TelemetrySample(
           None,
           msg.getTimestamp,
-          0, //FIXME - get vehicle ID from header
+          msg.getHeader.getVehicleId, 
           msg.getLatitude,
           msg.getLongitude,
           msg.getAltitude,
@@ -51,8 +53,6 @@ class TelemetryNode extends AbstractNodeMain{
         daoService.create(sample)
       }
     })
- 
-
     super.onStart(connectedNode)
   }
 }
