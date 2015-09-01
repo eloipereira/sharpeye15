@@ -7,15 +7,13 @@ import pt.edu.academiafa.ciafaWebServices.rest.RestServiceActor
 import pt.edu.academiafa.ciafaWebServices.ros._
 import spray.can.Http
 import org.ros.node.{DefaultNodeMainExecutor, NodeMainExecutor}
-import pt.edu.academiafa.ciafaWebServices.dao.TelemetrySampleDAO
+
 
 object Boot extends App with Configuration {
 
-  
-
   // start ROS telemetry node 
   val executor: NodeMainExecutor = DefaultNodeMainExecutor.newDefault
-  executor.execute(new TelemetryNode, rosConfiguration)
+  executor.execute(new VehicleNode, rosConfiguration)
 
   // create an actor system for application
   implicit val system = ActorSystem("rest-service")

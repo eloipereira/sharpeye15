@@ -3,7 +3,7 @@ package pt.edu.academiafa.ciafaWebServices.rest
 
 import akka.actor.Actor
 import akka.event.slf4j.SLF4JLogging
-import pt.edu.academiafa.ciafaWebServices.dao.TelemetrySampleDAO
+import pt.edu.academiafa.ciafaWebServices.dao.DataAccessObject
 import pt.edu.academiafa.ciafaWebServices.domain._
 import java.text.{ParseException, SimpleDateFormat}
 import java.util.Date
@@ -30,10 +30,7 @@ class RestServiceActor extends Actor with RestService {
  */
 trait RestService extends HttpService with SLF4JLogging {
 
-  val daoService = new TelemetrySampleDAO
-
-  
-
+  val daoService = new DataAccessObject
 
   implicit val executionContext = actorRefFactory.dispatcher
 
@@ -60,7 +57,7 @@ trait RestService extends HttpService with SLF4JLogging {
               ctx: RequestContext =>
                 handleRequest(ctx) {
                   log.debug("Searching for telemetry sample with id: %s".format(id))
-                  daoService.get(id)
+                  daoService.getTelemetrySample(id)
                 }
             }
           }
