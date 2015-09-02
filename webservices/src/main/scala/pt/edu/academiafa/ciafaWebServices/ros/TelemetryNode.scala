@@ -12,6 +12,7 @@ import org.apache.commons.logging.Log
 import seagull_autopilot_msgs.AutopilotADCSamples
 import seagull_autopilot_msgs.AutopilotTelemetry
 import seagull_autopilot_msgs.AutopilotWaypoint
+import seagull_autopilot_msgs.AutopilotStatus
 import seagull_autopilot_msgs.AutopilotRequestWaypoints
 import org.ros.concurrent.CancellableLoop
 import seagull_commons_msgs.SeagullHeader
@@ -24,6 +25,12 @@ class VehicleNode extends AbstractNodeMain{
   
   var time: Long = 0
   var vehicleId: Short = 0
+  var status = false
+  var orbiting = false
+  var from:Short = 0
+  var to:Short = 0 
+  var eta = 0
+  var gotStatus = false
   val daoService = new DataAccessObject
   override def getDefaultNodeName: GraphName = GraphName.of("vehicleNode")
   override def onStart(connectedNode: ConnectedNode): Unit = {
@@ -32,36 +39,57 @@ class VehicleNode extends AbstractNodeMain{
     telemetrySub.addMessageListener(new MessageListener[AutopilotTelemetry] {
       override def onNewMessage(msg: AutopilotTelemetry): Unit = {
         log.info("[VehicleNode]: received new telemetry message from vehicle " +  msg.getHeader.getVehicleId)
+        if (gotStatus){
         time = msg.getTimestamp
         vehicleId = msg.getHeader.getVehicleId 
         val sample = TelemetrySample(
           None,
           time,
           vehicleId, 
-          msg.getLatitude,
-          msg.getLongitude,
-          msg.getAltitude,
+          Location(
+            msg.getLatitude,
+            msg.getLongitude,
+            msg.getAltitude),
           msg.getIas,
-          msg.getVx,
-          msg.getVy,
-          msg.getVz,
-          msg.getRoll,
-          msg.getPitch,
-          msg.getYaw,
-          msg.getWindSouth,
-          msg.getWindWest,
-          msg.getLeftRPM,
-          msg.getRightRPM,
-          msg.getAccelX,
-          msg.getAccelY,
-          msg.getAccelZ,
+          GroundSpeed(
+            msg.getVx,
+            msg.getVy,
+            msg.getVz),
+          Attitude(
+            msg.getRoll,
+            msg.getPitch,
+            msg.getYaw),
+          Wind(
+            msg.getWindSouth,
+            msg.getWindWest),
+          Engine(
+            msg.getLeftRPM,
+            msg.getRightRPM),
+          Acceleration(
+            msg.getAccelX,
+            msg.getAccelY,
+            msg.getAccelZ),
           msg.getCompass,
-          msg.getAgl
+          msg.getAgl,
+          Tracker(status,orbiting,from,to,eta)
         )
-        daoService.createTelemetrySample(sample)
+          daoService.createTelemetrySample(sample)
+        }
       }
     })
 
+    val statusSub: Subscriber[AutopilotStatus] = connectedNode.newSubscriber("autopilot_status", AutopilotStatus._TYPE)
+    statusSub.addMessageListener(new MessageListener[AutopilotStatus]{
+      override def onNewMessage(msg: AutopilotStatus): Unit = {
+        log.info("[VehicleNode]: received new status message from vehicle " +  msg.getHeader.getVehicleId)
+        status = (msg.getTrackerStatus == 1) 
+        orbiting = msg.getOrbiting
+        from = msg.getWpFrom
+        to = msg.getWpTo
+        eta = msg.getTimeToWp
+        gotStatus = true
+      }
+    })
     val waypointSub: Subscriber[AutopilotWaypoint] = connectedNode.newSubscriber("autopilot_waypoint_from_ap", AutopilotWaypoint._TYPE)
     waypointSub.addMessageListener(new MessageListener[AutopilotWaypoint] {
       override def onNewMessage(msg: AutopilotWaypoint): Unit = {

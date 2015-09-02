@@ -4,62 +4,9 @@ import scala.slick.driver.MySQLDriver.simple._
 import scala.slick.lifted.Tag
 
 /**
-  * TelemetrySample entity.
-  *
-  * @param id telemetry id
-  * @param vId vehicle id
-  * @param lat latitude 
-  * @param lon longitude
-  * @param alt altitude
-  * @param ias indicated airspeed
-  * @param gsN ground speed (north component)
-  * @param gsE ground speed (east component)
-  * @param gsD ground speed (down component)
-  * @param roll roll angle
-  * @param pitch pitch angle
-  * @param yaw yaw angle
-  * @param windS wind speed (South component)
-  * @param windW wind speed (West component)
-  * @param rpmL left engine RPM
-  * @param rpmR right engine RPM
-  * @param accelX acceleration (x-axis)
-  * @param accelY acceleration (y-axis)
-  * @param accelZ acceleration (z-axis)
-  * @param compass heading
-  * @param agl altitude AGL
-  * @param timestamp GMT posix timestamp converted from gps time 
-  */
-
-case class TelemetrySample(
-  id: Option[Long],
-  timestamp: Long,
-  vId: Int,
-  lat: Float,
-  lon: Float,
-  alt: Float,
-  ias: Int,
-  gsN: Int,
-  gsE: Int,
-  gsD: Int,
-  roll: Int,
-  pitch: Int,
-  yaw: Float,
-  windS: Float,
-  windW: Float,
-  rpmL: Int,
-  rpmR: Int,
-  accelX: Int,
-  accelY: Int,
-  accelZ: Int,
-  compass: Int,
-  agl: Int
-)
- 
-
-/**
  * Mapped telemetry samples table object.
  */
-class TelemetrySamples(tag: Tag) extends Table[TelemetrySample](tag,"TELEMETRY") {
+class TelemetrySamples(tag: Tag) extends Table[TelemetrySample](tag,"TELEMETRY") with TupleTypes {
 
   def id = column[Long]("TEL_ID", O.PrimaryKey, O.AutoInc)
   def timestamp = column[Long]("TIMESTAMP")
@@ -83,11 +30,135 @@ class TelemetrySamples(tag: Tag) extends Table[TelemetrySample](tag,"TELEMETRY")
   def accelZ = column[Int]("ACCEL_Z")
   def compass = column[Int]("HEADING")
   def agl = column[Int]("AGL")
-  def * = (id.?,timestamp,vId,lat,lon,alt,ias,gsN,gsE,gsD,roll,pitch,yaw,windS,windW,rpmL,rpmR,accelX,accelY,accelZ,compass,agl) <> (TelemetrySample.tupled,TelemetrySample.unapply)
+  def status = column[Boolean]("TRACKER_STATUS")
+  def orbiting = column[Boolean]("ORBITING")
+  def from = column[Short]("FROM_WP")
+  def to = column[Short]("TO_WP")
+  def eta = column[Int]("ETA")
+  def * = telemetrySampleValue <> (toModel,toTuple)
+
+  private val telemetrySampleValue = (
+    id.?,
+    timestamp,
+    vId,
+    (lat,lon,alt),
+    ias,
+    (gsN,gsE,gsD),
+    (roll,pitch,yaw),
+    (windS,windW),
+    (rpmL,rpmR),
+    (accelX,accelY,accelZ),
+    compass,
+    agl,
+    (status,orbiting,from,to,eta)
+  )
+
+  private val toModel: TelemetrySampleTupleType => TelemetrySample = { telTuple =>
+    TelemetrySample(
+      telTuple._1,
+      telTuple._2,
+      telTuple._3,
+      Location.tupled.apply(telTuple._4),
+      telTuple._5,
+      GroundSpeed.tupled.apply(telTuple._6),
+      Attitude.tupled.apply(telTuple._7),
+      Wind.tupled.apply(telTuple._8),
+      Engine.tupled.apply(telTuple._9),
+      Acceleration.tupled.apply(telTuple._10),
+      telTuple._11,
+      telTuple._12,
+      Tracker.tupled.apply(telTuple._13)
+    )
+  }
+
+  private val toTuple: TelemetrySample => Option[TelemetrySampleTupleType] = { tel =>
+    Some { 
+      (
+        tel.id,
+        tel.timestamp,
+        tel.vId,
+        Location.unapply(tel.loc).get,
+        tel.ias,
+        GroundSpeed.unapply(tel.gs).get,
+        Attitude.unapply(tel.att).get,
+        Wind.unapply(tel.wind).get,
+        Engine.unapply(tel.engine).get,
+        Acceleration.unapply(tel.accel).get,
+        tel.heading,
+        tel.agl,
+        Tracker.unapply(tel.track).get
+      )
+    }
+  }
 
 }
 
-// object TelemetrySamples {
-//   lazy val samples = TableQuery[TelemetrySamples]
-//   def findById(id: Long) = samples.filter(_.id === id)
-// }
+/**
+ * Mapped waypoint samples table object.
+ */
+class WaypointSamples(tag: Tag) extends Table[WaypointSample](tag,"WAYPOINT") with TupleTypes {
+  
+  def id = column[Option[Long]]("WP_SAMPLE_ID", O.PrimaryKey, O.AutoInc)
+  def timestamp = column[Long]("TIMESTAMP")
+  def index = column[Int]("INDEX")
+  def vId = column[Int]("VEHICLE_ID")
+  def lat = column[Float]("LAT")
+  def lon = column[Float]("LON")
+  def alt = column[Float]("ALT")
+  def orbitRight = column[Boolean]("ORBIT_RIGHT")
+  def orbitRadius = column[Int]("ORBIT_RADIUS")
+  def orbitTime = column[Int]("ORBIT_TIME")
+  def next = column[Int]("NEXT")
+
+  // Projection
+  def * = waypointSampleValue <> (toModel,toTuple)
+
+  private val waypointSampleValue = (
+    id,
+    timestamp,
+    index,
+    vId,
+    (lat,lon,alt),
+    (orbitRight,orbitRadius,orbitTime),
+    next).shaped[WaypointSampleTupleType]
+
+  private val toModel: WaypointSampleTupleType => WaypointSample = { wpTuple =>
+      WaypointSample(
+        wpTuple._1,
+        wpTuple._2,
+        wpTuple._3,
+        wpTuple._4,
+        Location.tupled.apply(wpTuple._5),
+        Orbit.tupled.apply(wpTuple._6),
+        wpTuple._7)
+  }
+
+  private val toTuple: WaypointSample => Option[WaypointSampleTupleType] = { wp =>
+    Some {
+      (
+        wp.id,
+        wp.timestamp,
+        wp.index,
+        wp.vId,
+        (Location.unapply(wp.loc).get),
+        (Orbit.unapply(wp.orbit).get),
+        wp.next
+      )
+    }
+  }
+}
+
+trait TupleTypes {
+
+  protected type LocationTupleType = (Float,Float,Float)
+  protected type GroundSpeedTupleType = (Int,Int,Int)
+  protected type AttitudeTupleType = (Int,Int,Float)
+  protected type WindTupleType = (Float,Float)
+  protected type EngineTupleType = (Int,Int)
+  protected type AccelerationTupleType = (Int,Int,Int)
+  protected type TrackerTupleType = (Boolean,Boolean,Short,Short,Int)
+  protected type TelemetrySampleTupleType = (Option[Long],Long,Int,LocationTupleType,Int,GroundSpeedTupleType,AttitudeTupleType,WindTupleType,EngineTupleType,AccelerationTupleType,Int,Int,TrackerTupleType)
+  protected type OrbitTupleType = (Boolean,Int,Int)
+  protected type WaypointSampleTupleType = (Option[Long],Long,Int,Int,LocationTupleType,OrbitTupleType,Int)
+
+}

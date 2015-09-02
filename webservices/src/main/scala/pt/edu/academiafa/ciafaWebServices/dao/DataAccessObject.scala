@@ -98,6 +98,26 @@ trait TelemetrySampleDataAccess  extends DatabaseErrorHandlers {
         Left(databaseError(e))
     }
   }
+
+    /**
+   * Retrieves last telemetry sample from database.
+   *
+   * @return last telemetry sample entity 
+   */
+  def getLastTelemetrySample: Either[Failure, TelemetrySample] = {
+    try {
+      db.withDynSession {
+        if (telemetrySamples.list.length > 0){
+          Right(telemetrySamples.list.last)
+        } else {
+          Left(telemetrySampleTableEmpty)
+        }
+      }
+    } catch {
+      case e: SQLException =>
+        Left(databaseError(e))
+    }
+  }
 }
 
 trait WaypointSampleDataAccess extends DatabaseErrorHandlers {
@@ -155,15 +175,14 @@ trait WaypointSampleDataAccess extends DatabaseErrorHandlers {
    * @param id id of the waypoint sample to retrieve
    * @return waypoint sample entity with specified id
    */
-  def getWaypointSample(id: Long): Either[Failure, WaypointSample] = {
+  def getLastWaypointSampleWithIndex(i: Int): Either[Failure, WaypointSample] = {
     try {
       db.withDynSession {
-        waypointSamples.where(_.id === id).firstOption match {
-          case Some(sample: WaypointSample) =>
-            Right(sample)
-          case _ =>
-            Left(waypointSampleNotFoundError(id))
-        }
+        val wps = waypointSamples.where(_.index === i).list
+        if (wps.size > 0) 
+          Right(wps.last)
+        else
+          Left(waypointSampleNotFoundError(i))
       }
     } catch {
       case e: SQLException =>
@@ -200,4 +219,9 @@ trait DatabaseErrorHandlers {
    */
   protected def telemetrySampleNotFoundError(sampleId: Long) =
     Failure("Telemetry sample with id=%d does not exist".format(sampleId), FailureType.NotFound)
+
+
+  protected def telemetrySampleTableEmpty =
+    Failure("Telemetry sample table is empty", FailureType.NotFound)
+  
 }
