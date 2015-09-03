@@ -35,6 +35,7 @@ class TelemetrySamples(tag: Tag) extends Table[TelemetrySample](tag,"TELEMETRY")
   def from = column[Short]("FROM_WP")
   def to = column[Short]("TO_WP")
   def eta = column[Int]("ETA")
+  def fuel = column[Float]("FUEL")
   def * = telemetrySampleValue <> (toModel,toTuple)
 
   private val telemetrySampleValue = (
@@ -50,7 +51,8 @@ class TelemetrySamples(tag: Tag) extends Table[TelemetrySample](tag,"TELEMETRY")
     (accelX,accelY,accelZ),
     compass,
     agl,
-    (status,orbiting,from,to,eta)
+    (status,orbiting,from,to,eta),
+    fuel
   )
 
   private val toModel: TelemetrySampleTupleType => TelemetrySample = { telTuple =>
@@ -67,7 +69,8 @@ class TelemetrySamples(tag: Tag) extends Table[TelemetrySample](tag,"TELEMETRY")
       Acceleration.tupled.apply(telTuple._10),
       telTuple._11,
       telTuple._12,
-      Tracker.tupled.apply(telTuple._13)
+      Tracker.tupled.apply(telTuple._13),
+      telTuple._14
     )
   }
 
@@ -86,7 +89,8 @@ class TelemetrySamples(tag: Tag) extends Table[TelemetrySample](tag,"TELEMETRY")
         Acceleration.unapply(tel.accel).get,
         tel.heading,
         tel.agl,
-        Tracker.unapply(tel.track).get
+        Tracker.unapply(tel.track).get,
+        tel.fuel
       )
     }
   }
@@ -157,7 +161,7 @@ trait TupleTypes {
   protected type EngineTupleType = (Int,Int)
   protected type AccelerationTupleType = (Int,Int,Int)
   protected type TrackerTupleType = (Boolean,Boolean,Short,Short,Int)
-  protected type TelemetrySampleTupleType = (Option[Long],Long,Int,LocationTupleType,Int,GroundSpeedTupleType,AttitudeTupleType,WindTupleType,EngineTupleType,AccelerationTupleType,Int,Int,TrackerTupleType)
+  protected type TelemetrySampleTupleType = (Option[Long],Long,Int,LocationTupleType,Int,GroundSpeedTupleType,AttitudeTupleType,WindTupleType,EngineTupleType,AccelerationTupleType,Int,Int,TrackerTupleType,Float)
   protected type OrbitTupleType = (Boolean,Int,Int)
   protected type WaypointSampleTupleType = (Option[Long],Long,Int,Int,LocationTupleType,OrbitTupleType,Int)
 

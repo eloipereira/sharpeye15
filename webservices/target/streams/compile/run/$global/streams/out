@@ -1,5 +1,4 @@
 [0m[[0minfo[0m] [0mRunning pt.edu.academiafa.ciafaWebServices.boot.Boot [0m
-[0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
 [0m[[0mdebug[0m] [0m  Classpath:[0m
 [0m[[0mdebug[0m] [0m	/home/eloi/sharpeye15/webservices/target/scala-2.10/classes[0m
 [0m[[0mdebug[0m] [0m	/home/eloi/.ivy2/cache/io.spray/spray-can/jars/spray-can-1.1-M8.jar[0m
@@ -29,6 +28,7 @@
 [0m[[0mdebug[0m] [0m	/home/eloi/.ivy2/cache/pt.edu.academiafa/seagull-rosjava-lib/jars/seagull-rosjava-lib-0.0.2.jar[0m
 [0m[[0mdebug[0m] [0m	/home/eloi/.ivy2/cache/pt.edu.academiafa.seagull/seagull_autopilot_msgs/jars/seagull_autopilot_msgs-0.0.4.jar[0m
 [0m[[0mdebug[0m] [0m	/home/eloi/.ivy2/cache/pt.edu.academiafa.seagull/seagull_commons_msgs/jars/seagull_commons_msgs-0.0.2.jar[0m
+[0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
 [0m[[0mdebug[0m] [0mWaiting for thread run-main-0 to terminate.[0m
 [0m[[0mdebug[0m] [0m	Thread run-main-0 exited.[0m
-[0m[[0mdebug[0m] [0mWaiting for thread pool-5-thread-9 to terminate.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread pool-5-thread-1 to terminate.[0m

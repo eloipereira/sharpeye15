@@ -1,5 +1,6 @@
 package pt.edu.academiafa.ciafaWebServices.dao
 
+
 import pt.edu.academiafa.ciafaWebServices.config.Configuration
 import pt.edu.academiafa.ciafaWebServices.domain._
 import java.sql._
@@ -26,7 +27,10 @@ class DataAccessObject extends Configuration with TelemetrySampleDataAccess with
     }
   }
 
+
 }
+
+
 
 
 trait TelemetrySampleDataAccess  extends DatabaseErrorHandlers {

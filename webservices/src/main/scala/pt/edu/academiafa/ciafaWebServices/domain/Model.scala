@@ -30,7 +30,8 @@ case class TelemetrySample(
   accel: Acceleration,
   heading: Int,
   agl: Int,
-  track: Tracker
+  track: Tracker,
+  fuel: Float
 )
 
 /**

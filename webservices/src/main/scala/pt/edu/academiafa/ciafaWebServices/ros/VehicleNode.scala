@@ -1,5 +1,6 @@
 package pt.edu.academiafa.ciafaWebServices.ros
 
+
 import org.ros.message.MessageListener
 import org.ros.namespace.GraphName
 import org.ros.node.AbstractNodeMain
@@ -19,8 +20,9 @@ import seagull_commons_msgs.SeagullHeader
 
 import pt.edu.academiafa.ciafaWebServices.domain._
 import pt.edu.academiafa.ciafaWebServices.dao._
+import pt.edu.academiafa.ciafaWebServices.config.Configuration
 
-class VehicleNode extends AbstractNodeMain{
+class VehicleNode extends AbstractNodeMain with Configuration{
 
   
   var time: Long = 0
@@ -31,6 +33,12 @@ class VehicleNode extends AbstractNodeMain{
   var to:Short = 0 
   var eta = 0
   var gotStatus = false
+  var fuel:Float = 0
+  
+  var lastSavedTime: Long = 0
+  
+  
+
   val daoService = new DataAccessObject
   override def getDefaultNodeName: GraphName = GraphName.of("vehicleNode")
   override def onStart(connectedNode: ConnectedNode): Unit = {
@@ -40,40 +48,46 @@ class VehicleNode extends AbstractNodeMain{
       override def onNewMessage(msg: AutopilotTelemetry): Unit = {
         log.info("[VehicleNode]: received new telemetry message from vehicle " +  msg.getHeader.getVehicleId)
         if (gotStatus){
-        time = msg.getTimestamp
-        vehicleId = msg.getHeader.getVehicleId 
-        val sample = TelemetrySample(
-          None,
-          time,
-          vehicleId, 
-          Location(
-            msg.getLatitude,
-            msg.getLongitude,
-            msg.getAltitude),
-          msg.getIas,
-          GroundSpeed(
-            msg.getVx,
-            msg.getVy,
-            msg.getVz),
-          Attitude(
-            msg.getRoll,
-            msg.getPitch,
-            msg.getYaw),
-          Wind(
-            msg.getWindSouth,
-            msg.getWindWest),
-          Engine(
-            msg.getLeftRPM,
-            msg.getRightRPM),
-          Acceleration(
-            msg.getAccelX,
-            msg.getAccelY,
-            msg.getAccelZ),
-          msg.getCompass,
-          msg.getAgl,
-          Tracker(status,orbiting,from,to,eta)
-        )
-          daoService.createTelemetrySample(sample)
+          time = msg.getTimestamp
+          vehicleId = msg.getHeader.getVehicleId
+        
+          val sample = TelemetrySample(
+            None,
+            time,
+            vehicleId,
+            Location(
+              msg.getLatitude,
+              msg.getLongitude,
+              msg.getAltitude),
+            msg.getIas,
+            GroundSpeed(
+              msg.getVx,
+              msg.getVy,
+              msg.getVz),
+            Attitude(
+              msg.getRoll,
+              msg.getPitch,
+              msg.getYaw),
+            Wind(
+              msg.getWindSouth,
+              msg.getWindWest),
+            Engine(
+              msg.getLeftRPM,
+              msg.getRightRPM),
+            Acceleration(
+              msg.getAccelX,
+              msg.getAccelY,
+              msg.getAccelZ),
+            msg.getCompass,
+            msg.getAgl,
+            Tracker(status,orbiting,from,to,eta),
+            fuel
+          )
+
+          if (time - lastSavedTime >= samplePeriod){
+            daoService.createTelemetrySample(sample)
+            lastSavedTime = time
+          }
         }
       }
     })
@@ -90,6 +104,26 @@ class VehicleNode extends AbstractNodeMain{
         gotStatus = true
       }
     })
+
+    val adcSamplesSub: Subscriber[AutopilotADCSamples] = connectedNode.newSubscriber("autopilot_adc_samples", AutopilotADCSamples._TYPE)
+    adcSamplesSub.addMessageListener(new MessageListener[AutopilotADCSamples]{
+      override def onNewMessage(msg: AutopilotADCSamples): Unit = {
+        log.info("[VehicleNode]: received new adc samples message from vehicle " +  msg.getHeader.getVehicleId)
+        fuelSensorSource match {
+          case 1 => 
+            fuel = msg.getAnalog1
+          case 2 => 
+            fuel = msg.getAnalog2
+          case 3 => 
+            fuel = msg.getAnalog3
+          case 4 => 
+            fuel = msg.getAnalog4
+          case _ => 
+            log.error("[VehicleNode]: Invalid fuel sensor source.")
+        }
+      }
+    })
+
     val waypointSub: Subscriber[AutopilotWaypoint] = connectedNode.newSubscriber("autopilot_waypoint_from_ap", AutopilotWaypoint._TYPE)
     waypointSub.addMessageListener(new MessageListener[AutopilotWaypoint] {
       override def onNewMessage(msg: AutopilotWaypoint): Unit = {
@@ -111,7 +145,7 @@ class VehicleNode extends AbstractNodeMain{
       new CancellableLoop{
         override def loop: Unit = {
           if (vehicleId != 0){
-            Thread.sleep(1000)
+            Thread.sleep(updateWaypointsPeriod)
             var req: AutopilotRequestWaypoints = waypointRequestPub.newMessage
             var header = req.getHeader
             header.setVehicleId(vehicleId)

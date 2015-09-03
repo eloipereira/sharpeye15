@@ -39,7 +39,13 @@ trait Configuration{
   lazy val rosmasterHost: String = Try(config.getString("ros.host")).getOrElse("localhost")
 
   lazy val rosmasterPort: Int = Try(Integer.parseInt(config.getString("ros.port"))).getOrElse(11311)
+
+   lazy val samplePeriod: Int = Try(Integer.parseInt(config.getString("ros.samplePeriod"))).getOrElse(0)
   
+  lazy val updateWaypointsPeriod: Int = Try(Integer.parseInt(config.getString("piccolo.updateWP"))).getOrElse(60000)
+
+  lazy val fuelSensorSource: Int = Try(Integer.parseInt(config.getString("piccolo.fuelSource"))).getOrElse(1)
+
   lazy val masterUri: URI = Try(new URI("http", null, rosmasterHost, rosmasterPort, "/", null, null)).getOrElse(new URI("http://localhost:11311/"))
 
 }
