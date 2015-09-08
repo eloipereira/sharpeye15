@@ -2,7 +2,7 @@ name := "ciafaWebServices"
 
 version := "0.0.0-SNAPSHOT"
 
-scalaVersion := "2.10.2"
+scalaVersion := "2.10.3"
 
 libraryDependencies ++= Seq(
   "io.spray" % "spray-can" % "1.1-M8",
@@ -18,8 +18,6 @@ libraryDependencies ++= Seq(
   "pt.edu.academiafa.seagull" % "seagull_autopilot_msgs" % "0.0.4",
   "pt.edu.academiafa.seagull" % "seagull_commons_msgs" % "0.0.2"
 )
-
-checksums in update := Nil
 
 resolvers ++= Seq(
   "Spray repository" at "http://repo.spray.io",

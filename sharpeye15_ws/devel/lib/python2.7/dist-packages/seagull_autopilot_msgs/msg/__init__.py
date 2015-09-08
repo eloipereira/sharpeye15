@@ -4,8 +4,8 @@ from ._AutopilotWaypoint import *
 from ._AutopilotStatus import *
 from ._AutopilotWPList import *
 from ._AutopilotCommand import *
-from ._AutopilotGimbalPayload import *
 from ._AutopilotADCSamples import *
+from ._AutopilotGimbalPayload import *
 from ._AutopilotTelemetry import *
 from ._AutopilotZeroLength import *
 from ._AutopilotUserAction import *
