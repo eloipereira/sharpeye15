@@ -2,7 +2,7 @@
 	<arg name="handle_payloadstream" default="false" />
     <!-- This is only needed is not running a piccolo_driver Node-->
     <node name="autopilot_driver_ground" pkg="seagull_autopilot" type="autopilot_driver"  output="screen">
-    	<param name="ap_conn_type" type="int" value="1108" />
+    	<param name="ap_conn_type" type="int" value="1" />
         <param name="ap_payloadstream" type="bool" value="true" />
         <param name="ap_host" type="str" value="172.21.4.202" />
         <param name="ap_port" type="str" value="2000" />
