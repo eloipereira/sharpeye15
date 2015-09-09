@@ -1,0 +1,19 @@
+package pt.edu.academiafa.mapWebApp.config
+
+import com.typesafe.config.ConfigFactory
+import java.net.{URI, URISyntaxException}
+import util.Try
+import org.ros.address.InetAddressFactory
+import org.ros.node.NodeConfiguration
+
+trait Configuration{
+  /**
+   * Application config object.
+   */
+  val config = ConfigFactory.load()
+
+  /** Webservices configuration */
+
+  lazy val telemetryService = Try(config.getString("webServices.telemetry")).getOrElse("localhost:8080/telemetry")
+
+}

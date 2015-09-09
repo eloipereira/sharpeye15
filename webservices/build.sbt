@@ -19,6 +19,8 @@ libraryDependencies ++= Seq(
   "pt.edu.academiafa.seagull" % "seagull_commons_msgs" % "0.0.2"
 )
 
+checksums in update := Nil
+
 resolvers ++= Seq(
   "Spray repository" at "http://repo.spray.io",
   "Typesafe repository" at "https://repo.typesafe.com/typesafe/releases/",
