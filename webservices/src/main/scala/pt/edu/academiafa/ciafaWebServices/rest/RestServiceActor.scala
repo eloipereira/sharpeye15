@@ -13,7 +13,7 @@ import scala.Some
 import spray.http._
 import spray.httpx.unmarshalling._
 import spray.routing._
-
+import spray.http.HttpHeaders.RawHeader
 
 /**
  * REST Service actor.
@@ -49,7 +49,9 @@ trait RestService extends HttpService with SLF4JLogging {
     }
   }
 
-  val rest = respondWithMediaType(MediaTypes.`application/json`) {
+  val rest = 
+  respondWithHeader(RawHeader("Access-Control-Allow-Origin", "*")) {
+  respondWithMediaType(MediaTypes.`application/json`) {	     
     path("telemetry") {
       get {
         parameters('id.as[Long].?) {
@@ -85,6 +87,7 @@ trait RestService extends HttpService with SLF4JLogging {
         }
       }
     }
+}
   }
 
   /**
