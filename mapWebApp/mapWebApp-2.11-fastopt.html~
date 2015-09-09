@@ -1,0 +1,61 @@
+<html !html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="bootstrap.css">
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript"
+	src="./target/scala-2.11/mission-viewer-scala-js-fastopt.js"></script>
+<style>
+table tr td {
+	padding: 20px;
+}
+</style>
+</head>
+<body>
+		<div  >
+			<div class="col-md-6">
+				<div style="width: 530px; height: 400px; margin-left: 60px;">
+
+					<div id="Telemetry"
+						style="font-size: 28px; color: #67890a; font-weight: bold;"></div>
+
+					<table class="table-bordered table-striped"
+						style="width: 540px; text-align: center; margin-top: 10px">
+						<tr>
+							<td>"Vehicle ID"</td>
+							<td id="vId"></td>
+						</tr>
+						<tr>
+							<td>"Indicated Air Speed"</td>
+							<td id="ias"></td>
+						</tr>
+						<tr>
+							<td>"Altitude"</td>
+							<td id="alt"></td>
+						</tr>
+						<tr>
+							<td>"Location"</td>
+							<td id="loc"></td>
+						</tr>
+						<tr>
+							<td>"Last seen"</td>
+							<td id="timestamp"></td>
+						</tr
+
+					</table>
+				</div>
+			</div>
+
+			<!-- Placeholder for the Google Map -->
+			<div class="col-md-6">
+				<div id="map_canvas" style="height: 430px; width: 512px;"></div>
+			</div>
+			<script language="JavaScript">
+			  pt.edu.academiafa.mapWebApp.app.MissionViewer().main()
+			</script>
+		</div>
+	</div>
+</body>
+</html>
