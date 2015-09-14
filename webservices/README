@@ -1,0 +1,20 @@
+UAV WebServices 
+===============
+
+# Dependencies:
+
+  * ROS Indigo
+  * seagull_autopilot, seagull_communications, seagull_commons
+  * sbt 0.13
+  * openjdk 7.0
+  * MySQL
+
+# Database Configuration:
+
+  * Create MySQL database
+  * Configure access at src/main/resources/application.conf
+
+# Installation:
+
+  * Run seagull_autopilot, seagull_communications, seagull_commons (see seagull documentation)
+  * sbt run
