@@ -1,3 +1,5 @@
 sharpeye15_ws/build
 webservices/target
+webservices/project/target/
 mapWebApp/target
+mapWebApp/project/target/

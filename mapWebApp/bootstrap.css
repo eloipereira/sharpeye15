@@ -277,7 +277,7 @@ body {
   font-size: 14px;
   line-height: 1.428571429;
   color: #333;
-  background-color: #fff;
+  background-color: #222;
 }
 input,
 button,
@@ -1400,7 +1400,7 @@ pre code {
 }
 table {
   max-width: 100%;
-  background-color: transparent;
+  background-color: #eee;
 }
 th {
   text-align: left;

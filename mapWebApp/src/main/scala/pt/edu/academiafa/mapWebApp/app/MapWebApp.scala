@@ -27,10 +27,16 @@ object MissionViewer extends js.JSApp {
 
       updateTable(result.vId.toString,result.ias.toString,result.loc.lat.toString,result.loc.lon.toString,result.loc.lon.toString,result.timestamp.toString)
 
+      val headingIndicator = jsnew($.flightIndicator)
+
       dom.setInterval(()=>{
         val result = callTelemetryService
         updateTable(result.vId.toString,result.ias.toString,result.loc.lat.toString,result.loc.lon.toString,result.loc.lon.toString,result.timestamp.toString)
         marker.setPosition( (jsnew(g.google.maps.LatLng)(result.loc.lat, result.loc.lon)))
+
+       // val indicator = (jsnew(flightIndicator)("#heading", "heading", "{heading:140, showBox:false}"))
+
+
       }
       ,10000)
       
@@ -38,8 +44,10 @@ object MissionViewer extends js.JSApp {
       ""
   } 
 
+   // def updateIndicators(ias: Int, alt: Int, roll: Int, pitch: Int, )
+
     def msToTime(unix_timestamp: Long) = {
-      val date = new Date(unix_timestamp * 1000);
+      val date = new Date(unix_timestamp );
       val hrs = date.getHours();
       val mins = date.getMinutes();
       val secs = date.getSeconds();
@@ -50,7 +58,7 @@ object MissionViewer extends js.JSApp {
 
     def updateTable(vId: String, ias: String, lat: String, lon: String, alt: String, timestamp: String)={
       document.getElementById("vId").innerHTML = "" + vId 
-      document.getElementById("ias").innerHTML = ias + " m/s"
+      document.getElementById("ias").innerHTML = ias 
       document.getElementById("alt").innerHTML = alt + " m"
       document.getElementById("loc").innerHTML = "[" + lat + ", " + lon + "]"
       document.getElementById("timestamp").innerHTML = msToTime(timestamp.toString.toLong)
