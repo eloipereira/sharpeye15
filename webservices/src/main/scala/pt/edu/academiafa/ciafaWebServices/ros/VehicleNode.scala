@@ -9,6 +9,7 @@ import org.ros.node.NodeMain
 import org.ros.node.topic.Subscriber
 import org.ros.node.topic.Publisher
 import org.apache.commons.logging.Log
+import scala.math.Pi
 
 import seagull_autopilot_msgs.AutopilotADCSamples
 import seagull_autopilot_msgs.AutopilotTelemetry
@@ -78,7 +79,7 @@ class VehicleNode extends AbstractNodeMain with Configuration{
               msg.getAccelX,
               msg.getAccelY,
               msg.getAccelZ),
-            msg.getCompass,
+            (msg.getCompass*180/Pi/10000).toFloat,
             msg.getAgl,
             Tracker(status,orbiting,from,to,eta),
             fuel

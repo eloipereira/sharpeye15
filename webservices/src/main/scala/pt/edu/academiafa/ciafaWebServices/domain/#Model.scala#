@@ -28,7 +28,7 @@ case class TelemetrySample(
   wind: Wind,
   engine: Engine,
   accel: Acceleration,
-  heading: Float,
+  heading: Double,
   agl: Int,
   track: Tracker,
   fuel: Float
