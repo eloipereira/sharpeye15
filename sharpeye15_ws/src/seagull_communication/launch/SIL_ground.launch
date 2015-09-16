@@ -5,7 +5,7 @@
     	<param name="ap_conn_type" type="int" value="1" />
         <param name="ap_payloadstream" type="bool" value="true" />
         <param name="ap_host" type="str" value="172.21.4.202" />
-        <param name="ap_port" type="str" value="2000" />
+        <param name="ap_port" type="str" value="2001" />
     </node>
 <!--
     <node name="comms_relay" pkg="seagull_communication" type="comms_relay"  output="screen">
