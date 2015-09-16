@@ -10,6 +10,8 @@ import scala.scalajs.js.JSON
 import scala.scalajs.js.Date
 import pt.edu.academiafa.mapWebApp.config.Configuration
 import org.scalajs.dom._
+import scala.math.round
+
 
 @JSExport
 object MissionViewer extends js.JSApp {
@@ -18,27 +20,39 @@ object MissionViewer extends js.JSApp {
   def main(): Unit = {
     println("---------Mission Information System---------------")
 
+    def batSymb(rotation: Int) = {
+      val symbPath = "m 0.77413318,-3.7056683 c 0,0.481 -0.443,0.812 -0.807,0.812 -0.338,0 -0.809,-0.33 -0.809,-0.812 l 0,0 c 0,0 0.051,1.766 -0.64599998,2.123 -1.037,0.531 -2.484,-0.09 -2.484,-0.936 0,-0.846 1.1,-1.186 1.1,-1.186 0,0 -1.4,-0.215 -3.873,0.795 -3.184,1.299 -4.1410002,3.40600003 -4.1410002,3.40600003 0,0 0.693,-0.707 2.0330002,-0.707 1.336,0 2.836,1.049 2.836,2.40999997 0,0 0.836,-0.592 1.982,-0.592 2.373,0 4.00199998,2.484 4.00199998,3.418 0,-0.934 1.62700002,-3.418 3.99800002,-3.418 1.148,0 1.982,0.592 1.982,0.592 0,-1.36099997 1.5,-2.40999997 2.838,-2.40999997 1.3379998,0 2.0309998,0.707 2.0309998,0.707 0,0 -0.9549998,-2.10700003 -4.1389998,-3.40600003 -2.472,-1.009 -3.872,-0.794 -3.872,-0.794 0,0 1.098,0.34 1.098,1.186 0,0.846 -1.549,1.504 -2.6,0.871 -0.66800002,-0.403 -0.52900002,-2.057 -0.52900002,-2.057 v -0.002 z"
+      val symbScale = 3
+      val symbColor = "black"
+      val symbFillOpacity = 0.7
+      val symbStrokeWeight = 1
+      lit(path = symbPath, scale = symbScale, rotation = rotation, fillColor = symbColor, fillOpacity = symbFillOpacity, strokeWeight = symbStrokeWeight)
+
+    }
+
     def initialize() = js.Function{
-      val result = callTelemetryService
+      val telemetry = callTelemetryService
+      val destWaypoint = callWaypointService(telemetry.track.to.toString.toInt)
       val map_canvas = document.getElementById("map_canvas")
-      val map_options = lit(center = (jsnew(g.google.maps.LatLng))(result.loc.lat, result.loc.lon), zoom = 3, mapTypeId = g.google.maps.MapTypeId.ROADMAP)
-      val gogleMap = (jsnew(g.google.maps.Map))(map_canvas, map_options)
-      val marker = (jsnew(g.google.maps.Marker))(lit(map = gogleMap, position = (jsnew(g.google.maps.LatLng)(result.loc.lat, result.loc.lon))))
+      val map_options = lit(center = (jsnew(g.google.maps.LatLng))(telemetry.loc.lat, telemetry.loc.lon), zoom = 3, mapTypeId = g.google.maps.MapTypeId.ROADMAP)
+      val googleMap = (jsnew(g.google.maps.Map))(map_canvas, map_options)
+     // val markerSymbol = (jsnew(g.google.maps.Symbol))(lit(path = g.google.maps.SymbolPath.FORWARD_CLOSED_ARROW, scale = 7, rotation = 193))
 
-      updateTable(result.vId.toString,result.ias.toString,result.loc.lat.toString,result.loc.lon.toString,result.loc.lon.toString,result.timestamp.toString)
+      val marker = (jsnew(g.google.maps.Marker))(lit(map = googleMap, icon = batSymb(0),  position = (jsnew(g.google.maps.LatLng)(telemetry.loc.lat, telemetry.loc.lon))))
+      val markerDest = (jsnew(g.google.maps.Marker))(lit(map = googleMap, position = (jsnew(g.google.maps.LatLng)(destWaypoint.loc.lat, destWaypoint.loc.lon))))
 
-      val headingIndicator = jsnew($.flightIndicator)
+      updateTable(telemetry,destWaypoint)
+
 
       dom.setInterval(()=>{
-        val result = callTelemetryService
-        updateTable(result.vId.toString,result.ias.toString,result.loc.lat.toString,result.loc.lon.toString,result.loc.lon.toString,result.timestamp.toString)
-        marker.setPosition( (jsnew(g.google.maps.LatLng)(result.loc.lat, result.loc.lon)))
-
-       // val indicator = (jsnew(flightIndicator)("#heading", "heading", "{heading:140, showBox:false}"))
-
-
+        val telemetry = callTelemetryService
+        val destWaypoint = callWaypointService(telemetry.track.to.toString.toInt)
+        updateTable(telemetry,destWaypoint)
+        marker.setPosition( (jsnew(g.google.maps.LatLng)(telemetry.loc.lat, telemetry.loc.lon)))
+        marker.setIcon(batSymb(round(telemetry.att.yaw.toString.toFloat)))
+        markerDest.setPosition((jsnew(g.google.maps.LatLng)(destWaypoint.loc.lat, destWaypoint.loc.lon)))
       }
-      ,10000)
+      ,1000)
       
       
       ""
@@ -56,20 +70,35 @@ object MissionViewer extends js.JSApp {
 
   
 
-    def updateTable(vId: String, ias: String, lat: String, lon: String, alt: String, timestamp: String)={
-      document.getElementById("vId").innerHTML = "" + vId 
-      document.getElementById("ias").innerHTML = ias 
-      document.getElementById("alt").innerHTML = alt + " m"
-      document.getElementById("loc").innerHTML = "[" + lat + ", " + lon + "]"
-      document.getElementById("timestamp").innerHTML = msToTime(timestamp.toString.toLong)
+    def updateTable(telemetry: js.Dynamic, destWaypiont: js.Dynamic)={
+
+      document.getElementById("vId").innerHTML = "" + telemetry.vId.toString
+      document.getElementById("ias").innerHTML = (telemetry.ias.toString.toFloat/1.943844).toString
+      document.getElementById("alt").innerHTML = (telemetry.loc.alt.toString.toFloat/3.28084).toString
+      document.getElementById("roll").innerHTML = telemetry.att.roll.toString
+      document.getElementById("pitch").innerHTML = telemetry.att.pitch.toString
+      document.getElementById("yaw").innerHTML = telemetry.att.yaw.toString
+      document.getElementById("loc").innerHTML = "[" + telemetry.loc.lat.toString + ", " + telemetry.loc.lon.toString + "]"
+      document.getElementById("dest").innerHTML = "[" + destWaypiont.loc.lat.toString + ", " + destWaypiont.loc.lon.toString + "]"
+      val eta = telemetry.track.eta.toString.toInt
+      document.getElementById("eta").innerHTML = if (eta == 32767) {0.toString} else {round(eta/60).toString}
+      document.getElementById("timestamp").innerHTML = msToTime(telemetry.timestamp.toString.toLong)
     }
 
-    def callTelemetryService() = {
+    def callTelemetryService(): js.Dynamic = {
       val xmlHttpRequest = new dom.XMLHttpRequest
       xmlHttpRequest.open("GET", "http://62.28.239.27:8080/telemetry/" , false)
       xmlHttpRequest.send();
       JSON.parse(xmlHttpRequest.responseText)
     }
+
+    def callWaypointService(index: Int): js.Dynamic = {
+      val xmlHttpRequest = new dom.XMLHttpRequest
+      xmlHttpRequest.open("GET", "http://62.28.239.27:8080/waypoint?index=%s".format(index) , false)
+      xmlHttpRequest.send();
+      JSON.parse(xmlHttpRequest.responseText)
+    }
+   
    
       (jsnew(g.google.maps.event.addDomListener)(window, "load", initialize))
   // dom.setInterval(()=> initialize, 10000)

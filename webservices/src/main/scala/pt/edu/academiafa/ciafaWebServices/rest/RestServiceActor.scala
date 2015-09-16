@@ -51,43 +51,42 @@ trait RestService extends HttpService with SLF4JLogging {
 
   val rest = 
   respondWithHeader(RawHeader("Access-Control-Allow-Origin", "*")) {
-  respondWithMediaType(MediaTypes.`application/json`) {	     
-    path("telemetry") {
-      get {
-        parameters('id.as[Long].?) {
-          id: Option[Long] => {
-            ctx: RequestContext =>
-            handleRequest(ctx) {
-              id match {
-                case None => {
-                  log.debug("[RestServiceActor]: Searching for last telemetry sample")
-                  daoService.getLastTelemetrySample
-                }
-                case Some(i) => {
-                  log.debug("[RestServiceActor]: Searching for telemetry sample with id: %s".format(i))
-                  daoService.getTelemetrySample(i)
+    respondWithMediaType(MediaTypes.`application/json`) {
+      path("telemetry") {
+        get {
+          parameters('id.as[Long].?) {
+            id: Option[Long] => {
+              ctx: RequestContext =>
+              handleRequest(ctx) {
+                id match {
+                  case None => {
+                    log.debug("[RestServiceActor]: Searching for last telemetry sample")
+                    daoService.getLastTelemetrySample
+                  }
+                  case Some(i) => {
+                    log.debug("[RestServiceActor]: Searching for telemetry sample with id: %s".format(i))
+                    daoService.getTelemetrySample(i)
+                  }
                 }
               }
             }
           }
         }
-      }
-    } ~
-    path("waypoint") {
-      get {
-        parameters('index.as[Int]) {
-          index: Int => {
-            ctx: RequestContext =>
-            handleRequest(ctx) {
-              log.debug("[RestServiceActor]: Searching for last the last waypoint sample with index: %s".format(index))
-              daoService.getLastWaypointSampleWithIndex(index)
-              
+      } ~
+      path("waypoint") {
+        get {
+          parameters('index.as[Int]) {
+            index: Int => {
+              ctx: RequestContext =>
+              handleRequest(ctx) {
+                log.debug("[RestServiceActor]: Searching for last the last waypoint sample with index: %s".format(index))
+                daoService.getLastWaypointSampleWithIndex(index)
+              }
             }
           }
         }
       }
     }
-}
   }
 
   /**
