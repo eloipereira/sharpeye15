@@ -52,7 +52,7 @@ object MissionViewer extends js.JSApp {
         marker.setIcon(batSymb(round(telemetry.att.yaw.toString.toFloat)))
         markerDest.setPosition((jsnew(g.google.maps.LatLng)(destWaypoint.loc.lat, destWaypoint.loc.lon)))
       }
-      ,1000)
+      ,5000)
       
       
       ""

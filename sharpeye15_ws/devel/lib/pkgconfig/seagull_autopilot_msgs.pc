@@ -1,8 +1,8 @@
-prefix=/home/ciafa/sharpeye15/sharpeye15_ws/devel
+prefix=/home/eloi/sharpeye15/sharpeye15_ws/devel
 
 Name: seagull_autopilot_msgs
 Description: Description of seagull_autopilot_msgs
 Version: 0.0.2
-Cflags: -I/home/ciafa/sharpeye15/sharpeye15_ws/devel/include
-Libs: -L/home/ciafa/sharpeye15/sharpeye15_ws/devel/lib 
+Cflags: -I/home/eloi/sharpeye15/sharpeye15_ws/devel/include
+Libs: -L/home/eloi/sharpeye15/sharpeye15_ws/devel/lib 
 Requires: roscpp rospy message_runtime seagull_commons_msgs
