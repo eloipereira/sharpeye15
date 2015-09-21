@@ -35,17 +35,25 @@ object MissionViewer extends js.JSApp {
       val destWaypoint = callWaypointService(telemetry.track.to.toString.toInt)
       val map_canvas = document.getElementById("map_canvas")
       val map_options = lit(center = (jsnew(g.google.maps.LatLng))(telemetry.loc.lat, telemetry.loc.lon), zoom = 3, mapTypeId = g.google.maps.MapTypeId.ROADMAP)
-      val googleMap = (jsnew(g.google.maps.Map))(map_canvas, map_options)
-     // val markerSymbol = (jsnew(g.google.maps.Symbol))(lit(path = g.google.maps.SymbolPath.FORWARD_CLOSED_ARROW, scale = 7, rotation = 193))
+      val googleMap = (jsnew(g.google.maps.Map))(map_canvas, map_options) 
+      val marker = (jsnew(g.google.maps.Marker))(lit(map = googleMap, icon = batSymb(0),  position = (jsnew(g.google.maps.LatLng)(telemetry.loc.lat, telemetry.loc.lon))))
+      val markerDest = (jsnew(g.google.maps.Marker))(lit(map = googleMap, position = (jsnew(g.google.maps.LatLng)(destWaypoint.loc.lat, destWaypoint.loc.lon))))
 
-      val mgr = (jsnew(g.google.maps.MarkerManager)(googleMap))
+      val footprintCoords =  Array(
+        (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice0.lat, telemetry.footprint.vertice0.lon),
+      (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice1.lat, telemetry.footprint.vertice1.lon),
+      (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice2.lat, telemetry.footprint.vertice2.lon),
+      (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice3.lat, telemetry.footprint.vertice3.lon))
 
-      val marker = (jsnew(g.google.maps.Marker))(lit(icon = batSymb(0),  position = (jsnew(g.google.maps.LatLng)(telemetry.loc.lat, telemetry.loc.lon))))
-      val markerDest = (jsnew(g.google.maps.Marker))(lit(position = (jsnew(g.google.maps.LatLng)(destWaypoint.loc.lat, destWaypoint.loc.lon))))
-
-      mgr.addMarker(marker)
-      mgr.addMarker(markerDest)
-      mgr.refresh
+      val footprint = (jsnew(g.google.maps.Polygon)(lit(
+        map = googleMap,
+        paths = footprintCoords,
+        strokeColor = "#FF0000",
+        strokeOpacity = 0.8,
+        strokeWeight = 2,
+        fillColor = "#FF0000",
+        fillOpacity = 0.35)
+      ))
 
       updateTable(telemetry,destWaypoint)
 
@@ -53,11 +61,16 @@ object MissionViewer extends js.JSApp {
       dom.setInterval(()=>{
         val telemetry = callTelemetryService
         val destWaypoint = callWaypointService(telemetry.track.to.toString.toInt)
+        val footprintCoords =  Array(
+        (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice0.lat, telemetry.footprint.vertice0.lon),
+      (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice1.lat, telemetry.footprint.vertice1.lon),
+      (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice2.lat, telemetry.footprint.vertice2.lon),
+      (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice3.lat, telemetry.footprint.vertice3.lon))
         updateTable(telemetry,destWaypoint)
         marker.setPosition( (jsnew(g.google.maps.LatLng)(telemetry.loc.lat, telemetry.loc.lon)))
         marker.setIcon(batSymb(round(telemetry.att.yaw.toString.toFloat)))
         markerDest.setPosition((jsnew(g.google.maps.LatLng)(destWaypoint.loc.lat, destWaypoint.loc.lon)))
-        mgr.refresh
+        footprint.setPaths(footprintCoords)
       }
       ,5000)
       
@@ -108,6 +121,5 @@ object MissionViewer extends js.JSApp {
    
    
       (jsnew(g.google.maps.event.addDomListener)(window, "load", initialize))
-  // dom.setInterval(()=> initialize, 10000)
   }
 }
