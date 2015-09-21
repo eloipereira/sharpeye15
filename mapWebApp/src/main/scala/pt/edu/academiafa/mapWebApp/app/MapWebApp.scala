@@ -48,12 +48,35 @@ object MissionViewer extends js.JSApp {
       val footprint = (jsnew(g.google.maps.Polygon)(lit(
         map = googleMap,
         paths = footprintCoords,
-        strokeColor = "#FF0000",
+        strokeColor = "#FA0000",
         strokeOpacity = 0.8,
         strokeWeight = 2,
         fillColor = "#FF0000",
         fillOpacity = 0.35)
       ))
+
+      val arrow = g.google.maps.SymbolPath.FORWARD_CLOSED_ARROW
+      val lineSymbol = lit(path = arrow)
+
+      val linePath = js.Array(
+      (jsnew(g.google.maps.LatLng))(destWaypoint.loc.lat, destWaypoint.loc.lon),
+        (jsnew(g.google.maps.LatLng))(telemetry.loc.lat, telemetry.loc.lon))
+
+	val lineIcons = js.Array(lit(
+            repeat = "70px", 
+            icon = lineSymbol,
+            offset = "100%"))
+
+      val polylineoptns = lit(
+        strokeOpacity = 0.8,
+        strokeWeight = 3,
+        map = googleMap,
+	path = linePath,
+        icons = lineIcons
+    )
+
+            
+      val line = (jsnew(g.google.maps.Polyline)(polylineoptns))
 
       updateTable(telemetry,destWaypoint)
 
@@ -66,11 +89,17 @@ object MissionViewer extends js.JSApp {
       (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice1.lat, telemetry.footprint.vertice1.lon),
       (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice2.lat, telemetry.footprint.vertice2.lon),
       (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice3.lat, telemetry.footprint.vertice3.lon))
+      
+      val linePath = Array(
+      (jsnew(g.google.maps.LatLng))(destWaypoint.loc.lat, destWaypoint.loc.lon),
+        (jsnew(g.google.maps.LatLng))(telemetry.loc.lat, telemetry.loc.lon))
+
         updateTable(telemetry,destWaypoint)
         marker.setPosition( (jsnew(g.google.maps.LatLng)(telemetry.loc.lat, telemetry.loc.lon)))
         marker.setIcon(batSymb(round(telemetry.att.yaw.toString.toFloat)))
         markerDest.setPosition((jsnew(g.google.maps.LatLng)(destWaypoint.loc.lat, destWaypoint.loc.lon)))
         footprint.setPaths(footprintCoords)
+	line.setPath(linePath)
       }
       ,5000)
       
