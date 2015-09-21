@@ -86,9 +86,10 @@ trait RestService extends HttpService with SLF4JLogging {
           }
         }
       }
-      ~
+    } ~
+    respondWithMediaType(MediaTypes.`text/html`) {
       path("webApp"){
-        getFromResource("resources/index.html")     
+        getFromResource("index.html")
       }
     }
   }
