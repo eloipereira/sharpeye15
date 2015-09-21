@@ -22,6 +22,9 @@ import seagull_commons_msgs.SeagullHeader
 import pt.edu.academiafa.ciafaWebServices.domain._
 import pt.edu.academiafa.ciafaWebServices.dao._
 import pt.edu.academiafa.ciafaWebServices.config.Configuration
+import com.eloipereira.geoutils.Coordinate
+import com.eloipereira.sensorutils.{SensorCoverage, Polygon,RollPitchYaw,PanTilt}
+import collection.JavaConversions._
 
 class VehicleNode extends AbstractNodeMain with Configuration{
 
@@ -51,7 +54,28 @@ class VehicleNode extends AbstractNodeMain with Configuration{
         if (gotStatus){
           time = msg.getTimestamp
           vehicleId = msg.getHeader.getVehicleId
-        
+          val poly:Polygon = SensorCoverage.getGeoSensorFootprint(
+            new Coordinate(msg.getLatitude,msg.getLongitude,msg.getAltitude),
+            new RollPitchYaw(msg.getRoll,msg.getPitch,msg.getYaw),
+            new Coordinate(sensorOffsetX.toDouble,sensorOffsetY.toDouble,sensorOffsetZ.toDouble),
+            new PanTilt(sensorPan,sensorTilt),
+            sensorWidth,
+            sensorHeight,
+            sensorFocal
+          )
+          val vertices = poly.getPoints
+          val v0lat = vertices(0).x.toFloat
+          val v0lon = vertices(0).y.toFloat
+          val v0alt = vertices(0).z.toFloat
+          val v1lat = vertices(1).x.toFloat
+          val v1lon = vertices(1).y.toFloat
+          val v1alt = vertices(1).z.toFloat
+          val v2lat = vertices(2).x.toFloat
+          val v2lon = vertices(2).y.toFloat
+          val v2alt = vertices(2).z.toFloat
+          val v3lat = vertices(3).x.toFloat
+          val v3lon = vertices(3).y.toFloat
+          val v3alt = vertices(3).z.toFloat
           val sample = TelemetrySample(
             None,
             time,
@@ -84,10 +108,10 @@ class VehicleNode extends AbstractNodeMain with Configuration{
             Tracker(status,orbiting,from,to,eta),
             fuel,
             Trapezoid(
-              Location(0.0f,0.0f,0.0f),
-              Location(0.0f,0.0f,0.0f),
-              Location(0.0f,0.0f,0.0f),
-              Location(0.0f,0.0f,0.0f)
+              Location(v0lat,v0lon,v0alt),
+              Location(v1lat,v1lon,v1alt),
+              Location(v2lat,v2lon,v2alt),
+              Location(v3lat,v3lon,v3alt)
             )
           )
 

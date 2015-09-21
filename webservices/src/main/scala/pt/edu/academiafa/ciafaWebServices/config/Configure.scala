@@ -48,4 +48,21 @@ trait Configuration{
 
   lazy val masterUri: URI = Try(new URI("http", null, rosmasterHost, rosmasterPort, "/", null, null)).getOrElse(new URI("http://localhost:11311/"))
 
+  /** Platform configuration */
+
+  lazy val sensorOffsetX: Float = Try(config.getString("sensor.offset.x").toFloat).getOrElse(0.0f)
+
+  lazy val sensorOffsetY: Float = Try(config.getString("sensor.offset.y").toFloat).getOrElse(0.0f)
+
+  lazy val sensorOffsetZ: Float = Try(config.getString("sensor.offset.z").toFloat).getOrElse(0.0f)
+
+  lazy val sensorPan: Float = Try(config.getString("sensor.Attitude.pan").toFloat).getOrElse(0.0f)
+
+  lazy val sensorTilt: Float = Try(config.getString("sensor.Attitude.tilt").toFloat).getOrElse(-90.0f)
+
+  lazy val sensorWidth: Int = Try(Integer.parseInt(config.getString("sensor.width"))).getOrElse(640)
+
+  lazy val sensorHeight: Int = Try(Integer.parseInt(config.getString("sensor.height"))).getOrElse(480)
+
+  lazy val sensorFocal: Int = Try(Integer.parseInt(config.getString("sensor.focal"))).getOrElse(500)
 }
