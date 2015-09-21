@@ -82,7 +82,13 @@ class VehicleNode extends AbstractNodeMain with Configuration{
             (msg.getCompass*180/Pi/10000).toFloat,
             msg.getAgl,
             Tracker(status,orbiting,from,to,eta),
-            fuel
+            fuel,
+            Trapezoid(
+              Location(0.0f,0.0f,0.0f),
+              Location(0.0f,0.0f,0.0f),
+              Location(0.0f,0.0f,0.0f),
+              Location(0.0f,0.0f,0.0f)
+            )
           )
 
           if (time - lastSavedTime >= samplePeriod){

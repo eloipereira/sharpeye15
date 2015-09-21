@@ -16,7 +16,8 @@ libraryDependencies ++= Seq(
   "ch.qos.logback" % "logback-classic" % "1.0.13",
   "pt.edu.academiafa" % "seagull-rosjava-lib" % "0.0.2",
   "pt.edu.academiafa.seagull" % "seagull_autopilot_msgs" % "0.0.4",
-  "pt.edu.academiafa.seagull" % "seagull_commons_msgs" % "0.0.2"
+  "pt.edu.academiafa.seagull" % "seagull_commons_msgs" % "0.0.2",
+  "sensorcoverage" % "sensorcoverage" % "1.0"
 )
 
 checksums in update := Nil
@@ -25,5 +26,6 @@ resolvers ++= Seq(
   "Spray repository" at "http://repo.spray.io",
   "Typesafe repository" at "https://repo.typesafe.com/typesafe/releases/",
   "Seagull RosJava" at "https://bitbucket.org/ciafa-sw/maven2-release/raw/master/seagull-rosjava-libs",
-  "Seagull Messages" at "https://bitbucket.org/ciafa-sw/maven2-release/raw/master/ros-messages"
+  "Seagull Messages" at "https://bitbucket.org/ciafa-sw/maven2-release/raw/master/ros-messages", 
+  "Ciafa Maven2 releases" at "https://bitbucket.org/ciafa-sw/maven2-release/raw/master"
 )

@@ -31,7 +31,8 @@ case class TelemetrySample(
   heading: Float,
   agl: Int,
   track: Tracker,
-  fuel: Float
+  fuel: Float,
+  footprint: Trapezoid
 )
 
 /**
@@ -68,6 +69,19 @@ case class Location(
   lat: Float,
   lon: Float,
   alt: Float
+)
+
+/**
+  * Trapezoid entity.
+  * 
+  * @param verticeN Nth vertice of the trapezoid
+  */
+
+case class Trapezoid(
+  vertice0: Location,
+  vertice1: Location,
+  vertice2: Location,
+  vertice3: Location
 )
 
 /**

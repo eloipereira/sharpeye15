@@ -38,8 +38,14 @@ object MissionViewer extends js.JSApp {
       val googleMap = (jsnew(g.google.maps.Map))(map_canvas, map_options)
      // val markerSymbol = (jsnew(g.google.maps.Symbol))(lit(path = g.google.maps.SymbolPath.FORWARD_CLOSED_ARROW, scale = 7, rotation = 193))
 
-      val marker = (jsnew(g.google.maps.Marker))(lit(map = googleMap, icon = batSymb(0),  position = (jsnew(g.google.maps.LatLng)(telemetry.loc.lat, telemetry.loc.lon))))
-      val markerDest = (jsnew(g.google.maps.Marker))(lit(map = googleMap, position = (jsnew(g.google.maps.LatLng)(destWaypoint.loc.lat, destWaypoint.loc.lon))))
+      val mgr = (jsnew(g.google.maps.MarkerManager)(googleMap))
+
+      val marker = (jsnew(g.google.maps.Marker))(lit(icon = batSymb(0),  position = (jsnew(g.google.maps.LatLng)(telemetry.loc.lat, telemetry.loc.lon))))
+      val markerDest = (jsnew(g.google.maps.Marker))(lit(position = (jsnew(g.google.maps.LatLng)(destWaypoint.loc.lat, destWaypoint.loc.lon))))
+
+      mgr.addMarker(marker)
+      mgr.addMarker(markerDest)
+      mgr.refresh
 
       updateTable(telemetry,destWaypoint)
 
@@ -51,6 +57,7 @@ object MissionViewer extends js.JSApp {
         marker.setPosition( (jsnew(g.google.maps.LatLng)(telemetry.loc.lat, telemetry.loc.lon)))
         marker.setIcon(batSymb(round(telemetry.att.yaw.toString.toFloat)))
         markerDest.setPosition((jsnew(g.google.maps.LatLng)(destWaypoint.loc.lat, destWaypoint.loc.lon)))
+        mgr.refresh
       }
       ,5000)
       

@@ -36,6 +36,18 @@ class TelemetrySamples(tag: Tag) extends Table[TelemetrySample](tag,"TELEMETRY")
   def to = column[Short]("TO_WP")
   def eta = column[Int]("ETA")
   def fuel = column[Float]("FUEL")
+  def fpLat0 = column[Float]("FP_LAT0")
+  def fpLon0 = column[Float]("FP_LON0")
+  def fpAlt0 = column[Float]("FP_ALT0")
+  def fpLat1 = column[Float]("FP_LAT1")
+  def fpLon1 = column[Float]("FP_LON1")
+  def fpAlt1 = column[Float]("FP_ALT1")
+  def fpLat2 = column[Float]("FP_LAT2")
+  def fpLon2 = column[Float]("FP_LON2")
+  def fpAlt2 = column[Float]("FP_ALT2")
+  def fpLat3 = column[Float]("FP_LAT3")
+  def fpLon3 = column[Float]("FP_LON3")
+  def fpAlt3 = column[Float]("FP_ALT3")
   def * = telemetrySampleValue <> (toModel,toTuple)
 
   private val telemetrySampleValue = (
@@ -52,7 +64,8 @@ class TelemetrySamples(tag: Tag) extends Table[TelemetrySample](tag,"TELEMETRY")
     compass,
     agl,
     (status,orbiting,from,to,eta),
-    fuel
+    fuel,
+    ((fpLat0,fpLon0,fpAlt0),(fpLat1,fpLon1,fpAlt1),(fpLat2,fpLon2,fpAlt2),(fpLat3,fpLon3,fpAlt3))
   )
 
   private val toModel: TelemetrySampleTupleType => TelemetrySample = { telTuple =>
@@ -70,7 +83,13 @@ class TelemetrySamples(tag: Tag) extends Table[TelemetrySample](tag,"TELEMETRY")
       telTuple._11,
       telTuple._12,
       Tracker.tupled.apply(telTuple._13),
-      telTuple._14
+      telTuple._14,
+      Trapezoid.tupled.apply(
+        Location.tupled.apply(telTuple._15._1._1,telTuple._15._1._2,telTuple._15._1._3),
+        Location.tupled.apply(telTuple._15._2._1,telTuple._15._2._2,telTuple._15._2._3),
+        Location.tupled.apply(telTuple._15._3._1,telTuple._15._3._2,telTuple._15._3._3),
+        Location.tupled.apply(telTuple._15._4._1,telTuple._15._4._2,telTuple._15._4._3)
+      )
     )
   }
 
@@ -90,7 +109,13 @@ class TelemetrySamples(tag: Tag) extends Table[TelemetrySample](tag,"TELEMETRY")
         tel.heading,
         tel.agl,
         Tracker.unapply(tel.track).get,
-        tel.fuel
+        tel.fuel,
+        (
+          Location.unapply(tel.footprint.vertice0).get,
+          Location.unapply(tel.footprint.vertice1).get,
+          Location.unapply(tel.footprint.vertice2).get,
+          Location.unapply(tel.footprint.vertice3).get
+        )
       )
     }
   }
@@ -161,7 +186,8 @@ trait TupleTypes {
   protected type EngineTupleType = (Int,Int)
   protected type AccelerationTupleType = (Int,Int,Int)
   protected type TrackerTupleType = (Boolean,Boolean,Short,Short,Int)
-  protected type TelemetrySampleTupleType = (Option[Long],Long,Int,LocationTupleType,Int,GroundSpeedTupleType,AttitudeTupleType,WindTupleType,EngineTupleType,AccelerationTupleType,Float,Int,TrackerTupleType,Float)
+  protected type TrapezoidTupleType = (LocationTupleType, LocationTupleType, LocationTupleType, LocationTupleType)
+  protected type TelemetrySampleTupleType = (Option[Long],Long,Int,LocationTupleType,Int,GroundSpeedTupleType,AttitudeTupleType,WindTupleType,EngineTupleType,AccelerationTupleType,Float,Int,TrackerTupleType,Float,TrapezoidTupleType)
   protected type OrbitTupleType = (Boolean,Int,Int)
   protected type WaypointSampleTupleType = (Option[Long],Long,Int,Int,LocationTupleType,OrbitTupleType,Int)
 
