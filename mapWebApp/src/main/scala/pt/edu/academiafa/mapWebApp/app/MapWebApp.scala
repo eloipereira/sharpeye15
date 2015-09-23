@@ -59,12 +59,12 @@ object MissionViewer extends js.JSApp {
         fillOpacity = 0.35)
       ))
       
-      googleMap.addListener("bounds_changed", {()=>
-        mayUpdate = false
-        setTimeout({()=>
-          mayUpdate = true
-        },1500)
-      })
+      // googleMap.addListener("bounds_changed", {()=>
+      //   mayUpdate = false
+      //   setTimeout({()=>
+      //     mayUpdate = true
+      //   },1500)
+      // })
 
       
       
