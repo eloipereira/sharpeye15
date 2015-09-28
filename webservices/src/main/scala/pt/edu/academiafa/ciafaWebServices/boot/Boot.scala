@@ -7,6 +7,8 @@ import pt.edu.academiafa.ciafaWebServices.rest.RestServiceActor
 import pt.edu.academiafa.ciafaWebServices.ros._
 import spray.can.Http
 import org.ros.node.{DefaultNodeMainExecutor, NodeMainExecutor}
+import akka.util.Timeout
+import java.util.concurrent.TimeUnit
 
 
 object Boot extends App with Configuration {
@@ -14,6 +16,8 @@ object Boot extends App with Configuration {
   // start ROS telemetry node 
   val executor: NodeMainExecutor = DefaultNodeMainExecutor.newDefault
   executor.execute(new VehicleNode, rosConfiguration)
+
+  implicit val timeout = Timeout(5, TimeUnit.SECONDS)
 
   // create an actor system for application
   implicit val system = ActorSystem("rest-service")

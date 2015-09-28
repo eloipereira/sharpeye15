@@ -41,51 +41,11 @@ trait TelemetrySampleDataAccess  extends DatabaseErrorHandlers {
   protected implicit val db: Database
   protected implicit val telemetrySamples: TableQuery[TelemetrySamples]
 
-  private var lastTelemetrySample: TelemetrySample = TelemetrySample(
-            None,
-            0,
-            0,
-            Location(
-              0.0f,
-              0.0f,
-              0.0f),
-            0,
-            GroundSpeed(
-              0,
-              0,
-              0),
-            Attitude(
-              0,
-              0,
-              0.0f),
-            Wind(
-              0.0f,
-              0.0f),
-            Engine(
-              0,
-              0),
-            Acceleration(
-              0,
-              0,
-              0),
-            0.0f,
-            0,
-            Tracker(false,false,0,0,0),
-            0,
-            Trapezoid(
-              Location(0.0f,0.0f,0.0f),
-              Location(0.0f,0.0f,0.0f),
-              Location(0.0f,0.0f,0.0f),
-              Location(0.0f,0.0f,0.0f)
-            )
-          )
-
   def createTelemetrySample(sample: TelemetrySample): Either[Failure, TelemetrySample] = {
     try {
       val id = db.withDynSession {
         telemetrySamples += sample
       }
-      lastTelemetrySample = sample.copy(id = Some(id))
       Right(sample.copy(id = Some(id)))
     } catch {
       case e: SQLException =>
@@ -150,8 +110,7 @@ trait TelemetrySampleDataAccess  extends DatabaseErrorHandlers {
     try {
       db.withDynSession {
         if (telemetrySamples.list.length > 0){
-          //Right(telemetrySamples.list.last)
-          Right(lastTelemetrySample)
+          Right(telemetrySamples.list.last)
         } else {
           Left(telemetrySampleTableEmpty)
         }

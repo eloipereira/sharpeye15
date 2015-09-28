@@ -85,7 +85,7 @@ object MissionViewer extends js.JSApp {
           updateTelemetryData
         }
       }
-      ,3000)
+      ,5000)
       
       dom.setInterval(()=>{
         if (mayUpdate){
@@ -93,7 +93,7 @@ object MissionViewer extends js.JSApp {
           updateDestinationData
         }
       }
-      ,20000)
+      ,10000)
 
       def updateTelemetryData={
         document.getElementById("vId").innerHTML = "" + telemetry.vId.toString
