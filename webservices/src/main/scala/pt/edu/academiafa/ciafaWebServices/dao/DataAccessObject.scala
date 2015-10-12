@@ -14,16 +14,20 @@ class DataAccessObject extends Configuration with TelemetrySampleDataAccess with
   // init Database instance
   protected val db = Database.forURL(url = "jdbc:mysql://%s:%d/%s".format(dbHost, dbPort, dbName), user = dbUser, password = dbPassword, driver = "com.mysql.jdbc.Driver")
 
-  protected val telemetrySamples = TableQuery[TelemetrySamples]
+  protected val telemetrySamples = TableQuery[HistoryTelemetrySamples]
   protected val waypointSamples = TableQuery[WaypointSamples]
+  protected val lastTelemetrySample = TableQuery[LastTelemetrySample]
 
   // create tables if not exist
   db.withDynSession {
-    if (MTable.getTables("TELEMETRY").list().isEmpty) {
+    if (MTable.getTables(missionName.toUpperCase + "_HISTORY_TELEMETRY").list().isEmpty) {
       telemetrySamples.ddl.create
     }
-    if (MTable.getTables("WAYPOINT").list().isEmpty){
+    if (MTable.getTables(missionName.toUpperCase + "_WAYPOINT").list().isEmpty){
       waypointSamples.ddl.create
+    }
+    if (MTable.getTables(missionName.toUpperCase + "_LAST_TELEMETRY").list().isEmpty) {
+      lastTelemetrySample.ddl.create
     }
   }
 }
@@ -39,14 +43,45 @@ trait TelemetrySampleDataAccess  extends DatabaseErrorHandlers {
    * @return saved telemetry sample entity
    */
   protected implicit val db: Database
-  protected implicit val telemetrySamples: TableQuery[TelemetrySamples]
+  protected implicit val telemetrySamples: TableQuery[HistoryTelemetrySamples]
+  protected implicit val lastTelemetrySample: TableQuery[LastTelemetrySample]
 
   def createTelemetrySample(sample: TelemetrySample): Either[Failure, TelemetrySample] = {
     try {
+//      deleteLastTelemetrySample(sample.vId)
       val id = db.withDynSession {
+        val lastSample = lastTelemetrySample.where(_.vId === sample.vId)
+        lastSample.delete
+        lastTelemetrySample += sample
         telemetrySamples += sample
       }
       Right(sample.copy(id = Some(id)))
+    } catch {
+      case e: SQLException =>
+        Left(databaseError(e))
+    }
+  }
+
+  /**
+   * Deletes last telemetry sample of vehicle vId from database.
+   *
+   * @param id id of the telemetry sample to delete
+   * @return deleted telemetry sample entity
+   */
+  def deleteLastTelemetrySample(vId: Int): Either[Failure, LastTelemetrySample] = {
+    try {
+      db.withDynTransaction {
+        val query = lastTelemetrySample.where(_.vId === vId)
+        val samplesQ = query.run.asInstanceOf[List[LastTelemetrySample]]
+        samplesQ.size match {
+          case 0 =>
+            Left(telemetrySampleNotFoundError(1L))
+          case _ => {
+            query.delete
+            Right(samplesQ.head)
+          }
+        }
+      }
     } catch {
       case e: SQLException =>
         Left(databaseError(e))
@@ -109,8 +144,8 @@ trait TelemetrySampleDataAccess  extends DatabaseErrorHandlers {
   def getLastTelemetrySample: Either[Failure, TelemetrySample] = {
     try {
       db.withDynSession {
-        if (telemetrySamples.list.length > 0){
-          Right(telemetrySamples.list.last)
+        if (lastTelemetrySample.list.length > 0){
+          Right(lastTelemetrySample.list.last)
         } else {
           Left(telemetrySampleTableEmpty)
         }

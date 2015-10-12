@@ -12,6 +12,8 @@ trait Configuration{
    */
   val config = ConfigFactory.load()
 
+  lazy val missionName = Try(config.getString("mission.name")).getOrElse("test")
+
   /** Host name/address to start service on. */
   lazy val serviceHost = Try(config.getString("service.host")).getOrElse("localhost")
 
@@ -66,3 +68,5 @@ trait Configuration{
 
   lazy val sensorFocal: Int = Try(Integer.parseInt(config.getString("sensor.focal"))).getOrElse(500)
 }
+
+object Configuration extends Configuration

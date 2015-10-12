@@ -2,11 +2,16 @@ package pt.edu.academiafa.ciafaWebServices.domain
 
 import scala.slick.driver.MySQLDriver.simple._
 import scala.slick.lifted.Tag
-
+import pt.edu.academiafa.ciafaWebServices.config.Configuration._
 /**
  * Mapped telemetry samples table object.
  */
-class TelemetrySamples(tag: Tag) extends Table[TelemetrySample](tag,"TELEMETRY") with TupleTypes {
+
+class HistoryTelemetrySamples(tag: Tag) extends TelemetrySamples(tag,missionName.toUpperCase + "_HISTORY_TELEMETRY")
+
+class LastTelemetrySample(tag: Tag) extends TelemetrySamples(tag,missionName.toUpperCase + "_LAST_TELEMETRY")
+
+class TelemetrySamples(tag: Tag, name: String) extends Table[TelemetrySample](tag,name) with TupleTypes {
 
   def id = column[Long]("TEL_ID", O.PrimaryKey, O.AutoInc)
   def timestamp = column[Long]("TIMESTAMP")
@@ -125,7 +130,7 @@ class TelemetrySamples(tag: Tag) extends Table[TelemetrySample](tag,"TELEMETRY")
 /**
  * Mapped waypoint samples table object.
  */
-class WaypointSamples(tag: Tag) extends Table[WaypointSample](tag,"WAYPOINT") with TupleTypes {
+class WaypointSamples(tag: Tag) extends Table[WaypointSample](tag,missionName.toUpperCase + "_WAYPOINT") with TupleTypes {
   
   def id = column[Option[Long]]("WP_SAMPLE_ID", O.PrimaryKey, O.AutoInc)
   def timestamp = column[Long]("TIMESTAMP")
