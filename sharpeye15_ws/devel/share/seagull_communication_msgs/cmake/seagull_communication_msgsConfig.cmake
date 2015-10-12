@@ -67,14 +67,14 @@ set(seagull_communication_msgs_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(seagull_communication_msgs_SOURCE_PREFIX /home/eloi/sharpeye15/sharpeye15_ws/src/seagull_communication_msgs)
-  set(seagull_communication_msgs_DEVEL_PREFIX /home/eloi/sharpeye15/sharpeye15_ws/devel)
+  set(seagull_communication_msgs_SOURCE_PREFIX /home/ciafa/sharpeye15/sharpeye15_ws/src/seagull_communication_msgs)
+  set(seagull_communication_msgs_DEVEL_PREFIX /home/ciafa/sharpeye15/sharpeye15_ws/devel)
   set(seagull_communication_msgs_INSTALL_PREFIX "")
   set(seagull_communication_msgs_PREFIX ${seagull_communication_msgs_DEVEL_PREFIX})
 else()
   set(seagull_communication_msgs_SOURCE_PREFIX "")
   set(seagull_communication_msgs_DEVEL_PREFIX "")
-  set(seagull_communication_msgs_INSTALL_PREFIX /home/eloi/sharpeye15/sharpeye15_ws/install)
+  set(seagull_communication_msgs_INSTALL_PREFIX /home/ciafa/sharpeye15/sharpeye15_ws/install)
   set(seagull_communication_msgs_PREFIX ${seagull_communication_msgs_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(seagull_communication_msgs_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/eloi/sharpeye15/sharpeye15_ws/devel/include;/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_communication_msgs/include " STREQUAL " ")
+if(NOT "/home/ciafa/sharpeye15/sharpeye15_ws/devel/include;/home/ciafa/sharpeye15/sharpeye15_ws/src/seagull_communication_msgs/include " STREQUAL " ")
   set(seagull_communication_msgs_INCLUDE_DIRS "")
-  set(_include_dirs "/home/eloi/sharpeye15/sharpeye15_ws/devel/include;/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_communication_msgs/include")
+  set(_include_dirs "/home/ciafa/sharpeye15/sharpeye15_ws/devel/include;/home/ciafa/sharpeye15/sharpeye15_ws/src/seagull_communication_msgs/include")
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
       set(include ${idir})
@@ -103,7 +103,7 @@ if(NOT "/home/eloi/sharpeye15/sharpeye15_ws/devel/include;/home/eloi/sharpeye15/
         message(FATAL_ERROR "Project 'seagull_communication_msgs' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  Ask the maintainer 'Pedro Marques da Silva <posilva@academiafa.edu.pt>' to fix it.")
       endif()
     else()
-      message(FATAL_ERROR "Project 'seagull_communication_msgs' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/eloi/sharpeye15/sharpeye15_ws/src/seagull_communication_msgs/${idir}'.  Ask the maintainer 'Pedro Marques da Silva <posilva@academiafa.edu.pt>' to fix it.")
+      message(FATAL_ERROR "Project 'seagull_communication_msgs' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/ciafa/sharpeye15/sharpeye15_ws/src/seagull_communication_msgs/${idir}'.  Ask the maintainer 'Pedro Marques da Silva <posilva@academiafa.edu.pt>' to fix it.")
     endif()
     _list_append_unique(seagull_communication_msgs_INCLUDE_DIRS ${include})
   endforeach()
@@ -122,7 +122,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/eloi/sharpeye15/sharpeye15_ws/devel/lib;/home/eloi/sharpeye15/sharpeye15_ws/devel/lib;/opt/ros/indigo/lib)
+    foreach(path /home/ciafa/sharpeye15/sharpeye15_ws/devel/lib;/home/ciafa/sharpeye15/sharpeye15_ws/devel/lib;/opt/ros/indigo/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -145,7 +145,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(seagull_communication_msgs_EXPORTED_TARGETS "seagull_communication_msgs_generate_messages_cpp;seagull_communication_msgs_generate_messages_java;seagull_communication_msgs_generate_messages_lisp;seagull_communication_msgs_generate_messages_py")
+set(seagull_communication_msgs_EXPORTED_TARGETS "seagull_communication_msgs_generate_messages_cpp;seagull_communication_msgs_generate_messages_lisp;seagull_communication_msgs_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${seagull_communication_msgs_EXPORTED_TARGETS})
   if(NOT TARGET ${t})

@@ -176,12 +176,13 @@ class VehicleNode extends AbstractNodeMain with Configuration{
       new CancellableLoop{
         override def loop: Unit = {
           if (vehicleId != 0){
-            Thread.sleep(updateWaypointsPeriod)
             var req: AutopilotRequestWaypoints = waypointRequestPub.newMessage
             var header = req.getHeader
             header.setVehicleId(vehicleId)
             req.setHeader(header)
+	    log.info("****************************[VehicleNode]: requesting waypoints for vehicle " +  req.getHeader.getVehicleId)        
             waypointRequestPub.publish(req)
+	    Thread.sleep(updateWaypointsPeriod)
           }
         }
       }

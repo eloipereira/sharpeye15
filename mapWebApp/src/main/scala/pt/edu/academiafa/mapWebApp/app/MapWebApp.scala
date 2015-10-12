@@ -45,9 +45,10 @@ object MissionViewer extends js.JSApp {
 
       var footprintCoords =  Array(
         (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice0.lat, telemetry.footprint.vertice0.lon),
-      (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice1.lat, telemetry.footprint.vertice1.lon),
-      (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice2.lat, telemetry.footprint.vertice2.lon),
-      (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice3.lat, telemetry.footprint.vertice3.lon))
+        (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice1.lat, telemetry.footprint.vertice1.lon),
+        (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice2.lat, telemetry.footprint.vertice2.lon),
+        (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice3.lat, telemetry.footprint.vertice3.lon)
+      )
 
       val footprint = (jsnew(g.google.maps.Polygon)(lit(
         map = googleMap,
@@ -57,24 +58,27 @@ object MissionViewer extends js.JSApp {
         strokeWeight = 2,
         fillColor = "#FF0000",
         fillOpacity = 0.35)
-      ))
-      
-      // googleMap.addListener("bounds_changed", {()=>
-      //   mayUpdate = false
-      //   setTimeout({()=>
-      //     mayUpdate = true
-      //   },1500)
-      // })
-
-      
+      ))   
       
       val lineSymbol = lit(path = "M 0,-1 0,1", strokeOpacity = 0.8, scale = 2)
       var linePath = js.Array(
-      (jsnew(g.google.maps.LatLng))(destWaypoint.loc.lat, destWaypoint.loc.lon),
+        (jsnew(g.google.maps.LatLng))(destWaypoint.loc.lat, destWaypoint.loc.lon),
         (jsnew(g.google.maps.LatLng))(telemetry.loc.lat, telemetry.loc.lon))
       val lineIcons = js.Array(lit(repeat = "20px", icon = lineSymbol ,offset = "100%"))
       val polylineoptns = lit(strokeOpacity = 0,map = googleMap, path = linePath, icons = lineIcons)    
-      val line = (jsnew(g.google.maps.Polyline)(polylineoptns))
+      val destLine = (jsnew(g.google.maps.Polyline)(polylineoptns))
+
+      val trajectoryLineSymbol = lit(path = "M 0,-1 0,1", strokeOpacity = 0.2, scale = 2)
+      val MAX_TRAJECTORY_SIZE = 200
+      var flightTrajectory = js.Array(
+        (jsnew(g.google.maps.LatLng))(telemetry.loc.lat, telemetry.loc.lon),
+        (jsnew(g.google.maps.LatLng))(telemetry.loc.lat, telemetry.loc.lon)
+      )
+      val trajectoryLineIcons = js.Array(lit(repeat = "20px", icon = trajectoryLineSymbol ,offset = "100%"))      
+      val trajectoryPolylineoptns = lit(strokeOpacity = 0,map = googleMap, path = flightTrajectory, icons = trajectoryLineIcons)
+      val trajectLine = (jsnew(g.google.maps.Polyline)(trajectoryPolylineoptns))
+
+
 
       updateTelemetryData
       updateDestinationData
@@ -112,13 +116,18 @@ object MissionViewer extends js.JSApp {
           (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice2.lat, telemetry.footprint.vertice2.lon),
           (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice3.lat, telemetry.footprint.vertice3.lon)
         )
+	marker.setPosition( (jsnew(g.google.maps.LatLng)(telemetry.loc.lat, telemetry.loc.lon)))
+        marker.setIcon(batSymb(round(telemetry.att.yaw.toString.toFloat)))
+        footprint.setPaths(footprintCoords)
         linePath = Array(
           (jsnew(g.google.maps.LatLng))(destWaypoint.loc.lat, destWaypoint.loc.lon),
           (jsnew(g.google.maps.LatLng))(telemetry.loc.lat, telemetry.loc.lon))
-        marker.setPosition( (jsnew(g.google.maps.LatLng)(telemetry.loc.lat, telemetry.loc.lon)))
-        marker.setIcon(batSymb(round(telemetry.att.yaw.toString.toFloat)))
-        footprint.setPaths(footprintCoords)
-        line.setPath(linePath)
+        destLine.setPath(linePath)
+        flightTrajectory.push((jsnew(g.google.maps.LatLng))(telemetry.loc.lat, telemetry.loc.lon))
+        if(flightTrajectory.length > MAX_TRAJECTORY_SIZE){
+          flightTrajectory.shift
+        }
+        trajectLine.setPath(flightTrajectory)
     }
 
     def updateDestinationData={
@@ -127,13 +136,11 @@ object MissionViewer extends js.JSApp {
       linePath = Array(
         (jsnew(g.google.maps.LatLng))(destWaypoint.loc.lat, destWaypoint.loc.lon),
         (jsnew(g.google.maps.LatLng))(telemetry.loc.lat, telemetry.loc.lon))
-      line.setPath(linePath)
+      destLine.setPath(linePath)
     }
       
       ""
   } 
-
-   // def updateIndicators(ias: Int, alt: Int, roll: Int, pitch: Int, )
 
     def msToTime(unix_timestamp: Long) = {
       val date = new Date(unix_timestamp );
@@ -151,7 +158,6 @@ object MissionViewer extends js.JSApp {
     }
 
     def callWaypointService(index: Int): js.Dynamic = {
-      //val xmlHttpRequest = new dom.XMLHttpRequest
       xmlHttpRequest.open("GET", "http://62.28.239.27:8080/waypoint?index=%s".format(index) , false)
       xmlHttpRequest.send();
       JSON.parse(xmlHttpRequest.responseText)
