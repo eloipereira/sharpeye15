@@ -8,7 +8,7 @@ import seagull_commons_msgs.msg
 import std_msgs.msg
 
 class AutopilotStatus(genpy.Message):
-  _md5sum = "7020af956e00569af73fa27209515635"
+  _md5sum = "ba6bd3a788b80b299ef58cd33c2e580f"
   _type = "seagull_autopilot_msgs/AutopilotStatus"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """seagull_commons_msgs/SeagullHeader header
@@ -44,6 +44,7 @@ bool userAction4
 bool userAction5
 bool userAction6
 bool userAction7
+uint16 elapsedTime
 
 ================================================================================
 MSG: seagull_commons_msgs/SeagullHeader
@@ -73,8 +74,8 @@ string frame_id
   STATUS_ON = 1
   STATUS_AUTO = 2
 
-  __slots__ = ['header','orbitRadius','trackerStatus','timeToWp','wpFrom','wpTo','airBoundaryViolated','autopilotEngineKill','commsTimeout','fligthTimerElapsed','fligthTermination','gpsTimeout','orbiting','loopControl1','loopControl2','loopControl3','loopControl4','loopControl5','loopControl6','loopControl7','loopControl8','loopControlCount','userAction0','userAction1','userAction2','userAction3','userAction4','userAction5','userAction6','userAction7']
-  _slot_types = ['seagull_commons_msgs/SeagullHeader','uint8','uint8','uint16','uint8','uint8','bool','bool','bool','bool','bool','bool','bool','uint8','uint8','uint8','uint8','uint8','uint8','uint8','uint8','uint8','bool','bool','bool','bool','bool','bool','bool','bool']
+  __slots__ = ['header','orbitRadius','trackerStatus','timeToWp','wpFrom','wpTo','airBoundaryViolated','autopilotEngineKill','commsTimeout','fligthTimerElapsed','fligthTermination','gpsTimeout','orbiting','loopControl1','loopControl2','loopControl3','loopControl4','loopControl5','loopControl6','loopControl7','loopControl8','loopControlCount','userAction0','userAction1','userAction2','userAction3','userAction4','userAction5','userAction6','userAction7','elapsedTime']
+  _slot_types = ['seagull_commons_msgs/SeagullHeader','uint8','uint8','uint16','uint8','uint8','bool','bool','bool','bool','bool','bool','bool','uint8','uint8','uint8','uint8','uint8','uint8','uint8','uint8','uint8','bool','bool','bool','bool','bool','bool','bool','bool','uint16']
 
   def __init__(self, *args, **kwds):
     """
@@ -84,7 +85,7 @@ string frame_id
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       header,orbitRadius,trackerStatus,timeToWp,wpFrom,wpTo,airBoundaryViolated,autopilotEngineKill,commsTimeout,fligthTimerElapsed,fligthTermination,gpsTimeout,orbiting,loopControl1,loopControl2,loopControl3,loopControl4,loopControl5,loopControl6,loopControl7,loopControl8,loopControlCount,userAction0,userAction1,userAction2,userAction3,userAction4,userAction5,userAction6,userAction7
+       header,orbitRadius,trackerStatus,timeToWp,wpFrom,wpTo,airBoundaryViolated,autopilotEngineKill,commsTimeout,fligthTimerElapsed,fligthTermination,gpsTimeout,orbiting,loopControl1,loopControl2,loopControl3,loopControl4,loopControl5,loopControl6,loopControl7,loopControl8,loopControlCount,userAction0,userAction1,userAction2,userAction3,userAction4,userAction5,userAction6,userAction7,elapsedTime
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -153,6 +154,8 @@ string frame_id
         self.userAction6 = False
       if self.userAction7 is None:
         self.userAction7 = False
+      if self.elapsedTime is None:
+        self.elapsedTime = 0
     else:
       self.header = seagull_commons_msgs.msg.SeagullHeader()
       self.orbitRadius = 0
@@ -184,6 +187,7 @@ string frame_id
       self.userAction5 = False
       self.userAction6 = False
       self.userAction7 = False
+      self.elapsedTime = 0
 
   def _get_types(self):
     """
@@ -209,7 +213,7 @@ string frame_id
       else:
         buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_struct_H2BH26B.pack(_x.header.vehicleId, _x.orbitRadius, _x.trackerStatus, _x.timeToWp, _x.wpFrom, _x.wpTo, _x.airBoundaryViolated, _x.autopilotEngineKill, _x.commsTimeout, _x.fligthTimerElapsed, _x.fligthTermination, _x.gpsTimeout, _x.orbiting, _x.loopControl1, _x.loopControl2, _x.loopControl3, _x.loopControl4, _x.loopControl5, _x.loopControl6, _x.loopControl7, _x.loopControl8, _x.loopControlCount, _x.userAction0, _x.userAction1, _x.userAction2, _x.userAction3, _x.userAction4, _x.userAction5, _x.userAction6, _x.userAction7))
+      buff.write(_struct_H2BH26BH.pack(_x.header.vehicleId, _x.orbitRadius, _x.trackerStatus, _x.timeToWp, _x.wpFrom, _x.wpTo, _x.airBoundaryViolated, _x.autopilotEngineKill, _x.commsTimeout, _x.fligthTimerElapsed, _x.fligthTermination, _x.gpsTimeout, _x.orbiting, _x.loopControl1, _x.loopControl2, _x.loopControl3, _x.loopControl4, _x.loopControl5, _x.loopControl6, _x.loopControl7, _x.loopControl8, _x.loopControlCount, _x.userAction0, _x.userAction1, _x.userAction2, _x.userAction3, _x.userAction4, _x.userAction5, _x.userAction6, _x.userAction7, _x.elapsedTime))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
@@ -237,8 +241,8 @@ string frame_id
         self.header.header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 32
-      (_x.header.vehicleId, _x.orbitRadius, _x.trackerStatus, _x.timeToWp, _x.wpFrom, _x.wpTo, _x.airBoundaryViolated, _x.autopilotEngineKill, _x.commsTimeout, _x.fligthTimerElapsed, _x.fligthTermination, _x.gpsTimeout, _x.orbiting, _x.loopControl1, _x.loopControl2, _x.loopControl3, _x.loopControl4, _x.loopControl5, _x.loopControl6, _x.loopControl7, _x.loopControl8, _x.loopControlCount, _x.userAction0, _x.userAction1, _x.userAction2, _x.userAction3, _x.userAction4, _x.userAction5, _x.userAction6, _x.userAction7,) = _struct_H2BH26B.unpack(str[start:end])
+      end += 34
+      (_x.header.vehicleId, _x.orbitRadius, _x.trackerStatus, _x.timeToWp, _x.wpFrom, _x.wpTo, _x.airBoundaryViolated, _x.autopilotEngineKill, _x.commsTimeout, _x.fligthTimerElapsed, _x.fligthTermination, _x.gpsTimeout, _x.orbiting, _x.loopControl1, _x.loopControl2, _x.loopControl3, _x.loopControl4, _x.loopControl5, _x.loopControl6, _x.loopControl7, _x.loopControl8, _x.loopControlCount, _x.userAction0, _x.userAction1, _x.userAction2, _x.userAction3, _x.userAction4, _x.userAction5, _x.userAction6, _x.userAction7, _x.elapsedTime,) = _struct_H2BH26BH.unpack(str[start:end])
       self.airBoundaryViolated = bool(self.airBoundaryViolated)
       self.autopilotEngineKill = bool(self.autopilotEngineKill)
       self.commsTimeout = bool(self.commsTimeout)
@@ -278,7 +282,7 @@ string frame_id
       else:
         buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_struct_H2BH26B.pack(_x.header.vehicleId, _x.orbitRadius, _x.trackerStatus, _x.timeToWp, _x.wpFrom, _x.wpTo, _x.airBoundaryViolated, _x.autopilotEngineKill, _x.commsTimeout, _x.fligthTimerElapsed, _x.fligthTermination, _x.gpsTimeout, _x.orbiting, _x.loopControl1, _x.loopControl2, _x.loopControl3, _x.loopControl4, _x.loopControl5, _x.loopControl6, _x.loopControl7, _x.loopControl8, _x.loopControlCount, _x.userAction0, _x.userAction1, _x.userAction2, _x.userAction3, _x.userAction4, _x.userAction5, _x.userAction6, _x.userAction7))
+      buff.write(_struct_H2BH26BH.pack(_x.header.vehicleId, _x.orbitRadius, _x.trackerStatus, _x.timeToWp, _x.wpFrom, _x.wpTo, _x.airBoundaryViolated, _x.autopilotEngineKill, _x.commsTimeout, _x.fligthTimerElapsed, _x.fligthTermination, _x.gpsTimeout, _x.orbiting, _x.loopControl1, _x.loopControl2, _x.loopControl3, _x.loopControl4, _x.loopControl5, _x.loopControl6, _x.loopControl7, _x.loopControl8, _x.loopControlCount, _x.userAction0, _x.userAction1, _x.userAction2, _x.userAction3, _x.userAction4, _x.userAction5, _x.userAction6, _x.userAction7, _x.elapsedTime))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
@@ -307,8 +311,8 @@ string frame_id
         self.header.header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 32
-      (_x.header.vehicleId, _x.orbitRadius, _x.trackerStatus, _x.timeToWp, _x.wpFrom, _x.wpTo, _x.airBoundaryViolated, _x.autopilotEngineKill, _x.commsTimeout, _x.fligthTimerElapsed, _x.fligthTermination, _x.gpsTimeout, _x.orbiting, _x.loopControl1, _x.loopControl2, _x.loopControl3, _x.loopControl4, _x.loopControl5, _x.loopControl6, _x.loopControl7, _x.loopControl8, _x.loopControlCount, _x.userAction0, _x.userAction1, _x.userAction2, _x.userAction3, _x.userAction4, _x.userAction5, _x.userAction6, _x.userAction7,) = _struct_H2BH26B.unpack(str[start:end])
+      end += 34
+      (_x.header.vehicleId, _x.orbitRadius, _x.trackerStatus, _x.timeToWp, _x.wpFrom, _x.wpTo, _x.airBoundaryViolated, _x.autopilotEngineKill, _x.commsTimeout, _x.fligthTimerElapsed, _x.fligthTermination, _x.gpsTimeout, _x.orbiting, _x.loopControl1, _x.loopControl2, _x.loopControl3, _x.loopControl4, _x.loopControl5, _x.loopControl6, _x.loopControl7, _x.loopControl8, _x.loopControlCount, _x.userAction0, _x.userAction1, _x.userAction2, _x.userAction3, _x.userAction4, _x.userAction5, _x.userAction6, _x.userAction7, _x.elapsedTime,) = _struct_H2BH26BH.unpack(str[start:end])
       self.airBoundaryViolated = bool(self.airBoundaryViolated)
       self.autopilotEngineKill = bool(self.autopilotEngineKill)
       self.commsTimeout = bool(self.commsTimeout)
@@ -329,5 +333,5 @@ string frame_id
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
-_struct_H2BH26B = struct.Struct("<H2BH26B")
 _struct_3I = struct.Struct("<3I")
+_struct_H2BH26BH = struct.Struct("<H2BH26BH")

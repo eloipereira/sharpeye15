@@ -93,7 +93,7 @@ public:
 
 private:
   ptime gps_epoch;
-
+  unsigned short elapsedT;
 
   //!- ROS Subscribers
   ros::Publisher telemetry_pub;

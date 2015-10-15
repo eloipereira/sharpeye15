@@ -68,6 +68,7 @@ AutopilotDriver::AutopilotDriver() :
 	ptime t(date(1980,1,6),time_duration(0,0,0));
 
 	gps_epoch=t;
+
 }
 /**
  * Node destructor
@@ -205,8 +206,9 @@ void AutopilotDriver::handleAutopilotStream(BYTE_VECTOR& payload) {
 								payload[5]));
 
 				pkt->load(autopilotStreamPkt->getPayload());
-				if (autopilotStreamPkt->getPayload()->size() == 41) // Short version
-					publishStatus(status_pub, pkt);
+				
+				//if (autopilotStreamPkt->getPayload()->size() == 41) // Short version
+				publishStatus(status_pub, pkt);
 				delete (pkt);
 				break;
 			}
@@ -430,6 +432,7 @@ void AutopilotDriver::publishWaypoint(const ros::Publisher& pub,
 	msg.altitudeToGround = pkt->isAltitudeToGround();
 	msg.orbitMultiplier50 = pkt->isOrbitMultiplier50();
 	msg.altLSB = pkt->getAltLsb();
+
 	pub.publish(msg);
 }
 /**
@@ -472,8 +475,14 @@ void AutopilotDriver::publishStatus(const ros::Publisher& pub,
 	msg.userAction5 = pkt->isUserStatus5();
 	msg.userAction6 = pkt->isUserStatus6();
 	msg.userAction7 = pkt->isUserStatus7();
+
+	if(pkt->isElapsedTimeFlag())
+		this->elapsedT = pkt->getElapsedTime();
+	msg.elapsedTime = this->elapsedT;
+
 	pub.publish(msg);
 }
+
 /**
  * Publish a autopilot telemetry message to the ROS env
  */

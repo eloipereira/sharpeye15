@@ -31,3 +31,4 @@ bool userAction4
 bool userAction5
 bool userAction6
 bool userAction7
+uint16 elapsedTime

@@ -156,7 +156,12 @@
     :reader userAction7
     :initarg :userAction7
     :type cl:boolean
-    :initform cl:nil))
+    :initform cl:nil)
+   (elapsedTime
+    :reader elapsedTime
+    :initarg :elapsedTime
+    :type cl:fixnum
+    :initform 0))
 )
 
 (cl:defclass AutopilotStatus (<AutopilotStatus>)
@@ -316,6 +321,11 @@
 (cl:defmethod userAction7-val ((m <AutopilotStatus>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader seagull_autopilot_msgs-msg:userAction7-val is deprecated.  Use seagull_autopilot_msgs-msg:userAction7 instead.")
   (userAction7 m))
+
+(cl:ensure-generic-function 'elapsedTime-val :lambda-list '(m))
+(cl:defmethod elapsedTime-val ((m <AutopilotStatus>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader seagull_autopilot_msgs-msg:elapsedTime-val is deprecated.  Use seagull_autopilot_msgs-msg:elapsedTime instead.")
+  (elapsedTime m))
 (cl:defmethod roslisp-msg-protocol:symbol-codes ((msg-type (cl:eql '<AutopilotStatus>)))
     "Constants for message type '<AutopilotStatus>"
   '((:STATUS_OFF . 0)
@@ -361,6 +371,8 @@
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'userAction5) 1 0)) ostream)
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'userAction6) 1 0)) ostream)
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:if (cl:slot-value msg 'userAction7) 1 0)) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'elapsedTime)) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 8) (cl:slot-value msg 'elapsedTime)) ostream)
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <AutopilotStatus>) istream)
   "Deserializes a message object of type '<AutopilotStatus>"
@@ -395,6 +407,8 @@
     (cl:setf (cl:slot-value msg 'userAction5) (cl:not (cl:zerop (cl:read-byte istream))))
     (cl:setf (cl:slot-value msg 'userAction6) (cl:not (cl:zerop (cl:read-byte istream))))
     (cl:setf (cl:slot-value msg 'userAction7) (cl:not (cl:zerop (cl:read-byte istream))))
+    (cl:setf (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'elapsedTime)) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 8) (cl:slot-value msg 'elapsedTime)) (cl:read-byte istream))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<AutopilotStatus>)))
@@ -405,16 +419,16 @@
   "seagull_autopilot_msgs/AutopilotStatus")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<AutopilotStatus>)))
   "Returns md5sum for a message object of type '<AutopilotStatus>"
-  "7020af956e00569af73fa27209515635")
+  "ba6bd3a788b80b299ef58cd33c2e580f")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'AutopilotStatus)))
   "Returns md5sum for a message object of type 'AutopilotStatus"
-  "7020af956e00569af73fa27209515635")
+  "ba6bd3a788b80b299ef58cd33c2e580f")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<AutopilotStatus>)))
   "Returns full string definition for message of type '<AutopilotStatus>"
-  (cl:format cl:nil "seagull_commons_msgs/SeagullHeader header~%uint8 orbitRadius~%uint8 trackerStatus~%uint16 timeToWp~%uint8 wpFrom~%uint8 wpTo~%bool airBoundaryViolated~%bool autopilotEngineKill~%bool commsTimeout~%bool fligthTimerElapsed~%bool fligthTermination~%bool gpsTimeout~%bool orbiting~%uint8 loopControl1~%uint8 loopControl2~%uint8 loopControl3~%uint8 loopControl4~%uint8 loopControl5~%uint8 loopControl6~%uint8 loopControl7~%uint8 loopControl8~%uint8 loopControlCount~%	uint8 STATUS_OFF=0~%	uint8 STATUS_ON=1~%	uint8 STATUS_AUTO=2~%bool userAction0~%bool userAction1~%bool userAction2~%bool userAction3~%bool userAction4~%bool userAction5~%bool userAction6~%bool userAction7~%~%================================================================================~%MSG: seagull_commons_msgs/SeagullHeader~%Header header~%uint16 vehicleId~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')~%# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%# 0: no frame~%# 1: global frame~%string frame_id~%~%~%"))
+  (cl:format cl:nil "seagull_commons_msgs/SeagullHeader header~%uint8 orbitRadius~%uint8 trackerStatus~%uint16 timeToWp~%uint8 wpFrom~%uint8 wpTo~%bool airBoundaryViolated~%bool autopilotEngineKill~%bool commsTimeout~%bool fligthTimerElapsed~%bool fligthTermination~%bool gpsTimeout~%bool orbiting~%uint8 loopControl1~%uint8 loopControl2~%uint8 loopControl3~%uint8 loopControl4~%uint8 loopControl5~%uint8 loopControl6~%uint8 loopControl7~%uint8 loopControl8~%uint8 loopControlCount~%	uint8 STATUS_OFF=0~%	uint8 STATUS_ON=1~%	uint8 STATUS_AUTO=2~%bool userAction0~%bool userAction1~%bool userAction2~%bool userAction3~%bool userAction4~%bool userAction5~%bool userAction6~%bool userAction7~%uint16 elapsedTime~%~%================================================================================~%MSG: seagull_commons_msgs/SeagullHeader~%Header header~%uint16 vehicleId~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')~%# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%# 0: no frame~%# 1: global frame~%string frame_id~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'AutopilotStatus)))
   "Returns full string definition for message of type 'AutopilotStatus"
-  (cl:format cl:nil "seagull_commons_msgs/SeagullHeader header~%uint8 orbitRadius~%uint8 trackerStatus~%uint16 timeToWp~%uint8 wpFrom~%uint8 wpTo~%bool airBoundaryViolated~%bool autopilotEngineKill~%bool commsTimeout~%bool fligthTimerElapsed~%bool fligthTermination~%bool gpsTimeout~%bool orbiting~%uint8 loopControl1~%uint8 loopControl2~%uint8 loopControl3~%uint8 loopControl4~%uint8 loopControl5~%uint8 loopControl6~%uint8 loopControl7~%uint8 loopControl8~%uint8 loopControlCount~%	uint8 STATUS_OFF=0~%	uint8 STATUS_ON=1~%	uint8 STATUS_AUTO=2~%bool userAction0~%bool userAction1~%bool userAction2~%bool userAction3~%bool userAction4~%bool userAction5~%bool userAction6~%bool userAction7~%~%================================================================================~%MSG: seagull_commons_msgs/SeagullHeader~%Header header~%uint16 vehicleId~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')~%# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%# 0: no frame~%# 1: global frame~%string frame_id~%~%~%"))
+  (cl:format cl:nil "seagull_commons_msgs/SeagullHeader header~%uint8 orbitRadius~%uint8 trackerStatus~%uint16 timeToWp~%uint8 wpFrom~%uint8 wpTo~%bool airBoundaryViolated~%bool autopilotEngineKill~%bool commsTimeout~%bool fligthTimerElapsed~%bool fligthTermination~%bool gpsTimeout~%bool orbiting~%uint8 loopControl1~%uint8 loopControl2~%uint8 loopControl3~%uint8 loopControl4~%uint8 loopControl5~%uint8 loopControl6~%uint8 loopControl7~%uint8 loopControl8~%uint8 loopControlCount~%	uint8 STATUS_OFF=0~%	uint8 STATUS_ON=1~%	uint8 STATUS_AUTO=2~%bool userAction0~%bool userAction1~%bool userAction2~%bool userAction3~%bool userAction4~%bool userAction5~%bool userAction6~%bool userAction7~%uint16 elapsedTime~%~%================================================================================~%MSG: seagull_commons_msgs/SeagullHeader~%Header header~%uint16 vehicleId~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')~%# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%# 0: no frame~%# 1: global frame~%string frame_id~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <AutopilotStatus>))
   (cl:+ 0
      (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'header))
@@ -447,6 +461,7 @@
      1
      1
      1
+     2
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <AutopilotStatus>))
   "Converts a ROS message object to a list"
@@ -481,4 +496,5 @@
     (cl:cons ':userAction5 (userAction5 msg))
     (cl:cons ':userAction6 (userAction6 msg))
     (cl:cons ':userAction7 (userAction7 msg))
+    (cl:cons ':elapsedTime (elapsedTime msg))
 ))

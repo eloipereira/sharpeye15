@@ -54,7 +54,8 @@ struct AutopilotStatus_
     , userAction4(false)
     , userAction5(false)
     , userAction6(false)
-    , userAction7(false)  {
+    , userAction7(false)
+    , elapsedTime(0)  {
     }
   AutopilotStatus_(const ContainerAllocator& _alloc)
     : header(_alloc)
@@ -86,7 +87,8 @@ struct AutopilotStatus_
     , userAction4(false)
     , userAction5(false)
     , userAction6(false)
-    , userAction7(false)  {
+    , userAction7(false)
+    , elapsedTime(0)  {
     }
 
 
@@ -181,6 +183,9 @@ struct AutopilotStatus_
    typedef uint8_t _userAction7_type;
   _userAction7_type userAction7;
 
+   typedef uint16_t _elapsedTime_type;
+  _elapsedTime_type elapsedTime;
+
 
     enum { STATUS_OFF = 0u };
      enum { STATUS_ON = 1u };
@@ -224,7 +229,7 @@ namespace message_traits
 
 
 // BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'seagull_autopilot_msgs': ['/home/ciafa/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg'], 'seagull_commons_msgs': ['/home/ciafa/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg'], 'std_msgs': ['/opt/ros/indigo/share/std_msgs/cmake/../msg']}
+// {'seagull_autopilot_msgs': ['/home/administrator/sharpeye15/sharpeye15_ws/src/seagull_autopilot_msgs/msg'], 'seagull_commons_msgs': ['/home/administrator/sharpeye15/sharpeye15_ws/src/seagull_commons_msgs/msg'], 'std_msgs': ['/opt/ros/indigo/share/std_msgs/cmake/../msg']}
 
 // !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
@@ -267,12 +272,12 @@ struct MD5Sum< ::seagull_autopilot_msgs::AutopilotStatus_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "7020af956e00569af73fa27209515635";
+    return "ba6bd3a788b80b299ef58cd33c2e580f";
   }
 
   static const char* value(const ::seagull_autopilot_msgs::AutopilotStatus_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x7020af956e00569aULL;
-  static const uint64_t static_value2 = 0xf73fa27209515635ULL;
+  static const uint64_t static_value1 = 0xba6bd3a788b80b29ULL;
+  static const uint64_t static_value2 = 0x9ef58cd33c2e580fULL;
 };
 
 template<class ContainerAllocator>
@@ -324,6 +329,7 @@ bool userAction4\n\
 bool userAction5\n\
 bool userAction6\n\
 bool userAction7\n\
+uint16 elapsedTime\n\
 \n\
 ================================================================================\n\
 MSG: seagull_commons_msgs/SeagullHeader\n\
@@ -394,6 +400,7 @@ namespace serialization
       stream.next(m.userAction5);
       stream.next(m.userAction6);
       stream.next(m.userAction7);
+      stream.next(m.elapsedTime);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER;
@@ -473,6 +480,8 @@ struct Printer< ::seagull_autopilot_msgs::AutopilotStatus_<ContainerAllocator> >
     Printer<uint8_t>::stream(s, indent + "  ", v.userAction6);
     s << indent << "userAction7: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.userAction7);
+    s << indent << "elapsedTime: ";
+    Printer<uint16_t>::stream(s, indent + "  ", v.elapsedTime);
   }
 };
 

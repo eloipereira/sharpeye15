@@ -59,4 +59,6 @@
           USERACTION6
           USERACTION7-VAL
           USERACTION7
+          ELAPSEDTIME-VAL
+          ELAPSEDTIME
 ))
