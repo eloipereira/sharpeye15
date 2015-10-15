@@ -15,7 +15,7 @@ libraryDependencies ++= Seq(
   "net.liftweb" %% "lift-json" % "2.5.1",
   "ch.qos.logback" % "logback-classic" % "1.0.13",
   "pt.edu.academiafa" % "seagull-rosjava-lib" % "0.0.2",
-  "pt.edu.academiafa.seagull" % "seagull_autopilot_msgs" % "0.0.4",
+  "pt.edu.academiafa.seagull" % "seagull_autopilot_msgs" % "0.0.5",
   "pt.edu.academiafa.seagull" % "seagull_commons_msgs" % "0.0.2",
   "sensorcoverage" % "sensorcoverage" % "1.0"
 )
