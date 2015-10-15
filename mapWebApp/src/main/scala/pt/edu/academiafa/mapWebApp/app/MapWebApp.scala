@@ -109,6 +109,7 @@ object MissionViewer extends js.JSApp {
         document.getElementById("loc").innerHTML = "[" + telemetry.loc.lat.toString + ", " + telemetry.loc.lon.toString + "]"
         val eta = telemetry.track.eta.toString.toInt
         document.getElementById("eta").innerHTML = if (eta == 32767) {0.toString} else {round(eta/60).toString}
+        document.getElementById("elapsedTime").innerHTML = round(telemetry.elapsedTime/6).toString
         document.getElementById("timestamp").innerHTML = msToTime(telemetry.timestamp.toString.toLong)
         footprintCoords =  Array(
           (jsnew(g.google.maps.LatLng))(telemetry.footprint.vertice0.lat, telemetry.footprint.vertice0.lon),

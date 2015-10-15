@@ -67,14 +67,14 @@ set(seagull_autopilot_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(seagull_autopilot_SOURCE_PREFIX /home/administrator/sharpeye15/sharpeye15_ws/src/seagull_autopilot)
-  set(seagull_autopilot_DEVEL_PREFIX /home/administrator/sharpeye15/sharpeye15_ws/devel)
+  set(seagull_autopilot_SOURCE_PREFIX /home/ciafa/sharpeye15/sharpeye15_ws/src/seagull_autopilot)
+  set(seagull_autopilot_DEVEL_PREFIX /home/ciafa/sharpeye15/sharpeye15_ws/devel)
   set(seagull_autopilot_INSTALL_PREFIX "")
   set(seagull_autopilot_PREFIX ${seagull_autopilot_DEVEL_PREFIX})
 else()
   set(seagull_autopilot_SOURCE_PREFIX "")
   set(seagull_autopilot_DEVEL_PREFIX "")
-  set(seagull_autopilot_INSTALL_PREFIX /home/administrator/sharpeye15/sharpeye15_ws/install)
+  set(seagull_autopilot_INSTALL_PREFIX /home/ciafa/sharpeye15/sharpeye15_ws/install)
   set(seagull_autopilot_PREFIX ${seagull_autopilot_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(seagull_autopilot_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/administrator/sharpeye15/sharpeye15_ws/src/seagull_autopilot/include " STREQUAL " ")
+if(NOT "/home/ciafa/sharpeye15/sharpeye15_ws/src/seagull_autopilot/include " STREQUAL " ")
   set(seagull_autopilot_INCLUDE_DIRS "")
-  set(_include_dirs "/home/administrator/sharpeye15/sharpeye15_ws/src/seagull_autopilot/include")
+  set(_include_dirs "/home/ciafa/sharpeye15/sharpeye15_ws/src/seagull_autopilot/include")
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
       set(include ${idir})
@@ -103,7 +103,7 @@ if(NOT "/home/administrator/sharpeye15/sharpeye15_ws/src/seagull_autopilot/inclu
         message(FATAL_ERROR "Project 'seagull_autopilot' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  Ask the maintainer 'Pedro Marques da Silva <posilva@academiafa.edu.pt>' to fix it.")
       endif()
     else()
-      message(FATAL_ERROR "Project 'seagull_autopilot' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/administrator/sharpeye15/sharpeye15_ws/src/seagull_autopilot/${idir}'.  Ask the maintainer 'Pedro Marques da Silva <posilva@academiafa.edu.pt>' to fix it.")
+      message(FATAL_ERROR "Project 'seagull_autopilot' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/ciafa/sharpeye15/sharpeye15_ws/src/seagull_autopilot/${idir}'.  Ask the maintainer 'Pedro Marques da Silva <posilva@academiafa.edu.pt>' to fix it.")
     endif()
     _list_append_unique(seagull_autopilot_INCLUDE_DIRS ${include})
   endforeach()
@@ -122,7 +122,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/administrator/sharpeye15/sharpeye15_ws/devel/lib;/opt/ros/indigo/lib)
+    foreach(path /home/ciafa/sharpeye15/sharpeye15_ws/devel/lib;/home/ciafa/sharpeye15/sharpeye15_ws/devel/lib;/opt/ros/indigo/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

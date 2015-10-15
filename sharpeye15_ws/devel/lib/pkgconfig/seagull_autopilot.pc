@@ -1,8 +1,8 @@
-prefix=/home/administrator/sharpeye15/sharpeye15_ws/devel
+prefix=/home/ciafa/sharpeye15/sharpeye15_ws/devel
 
 Name: seagull_autopilot
 Description: Description of seagull_autopilot
 Version: 0.1.2
-Cflags: -I/home/administrator/sharpeye15/sharpeye15_ws/src/seagull_autopilot/include
-Libs: -L/home/administrator/sharpeye15/sharpeye15_ws/devel/lib 
+Cflags: -I/home/ciafa/sharpeye15/sharpeye15_ws/src/seagull_autopilot/include
+Libs: -L/home/ciafa/sharpeye15/sharpeye15_ws/devel/lib 
 Requires: roscpp seagull_commons seagull_autopilot_msgs

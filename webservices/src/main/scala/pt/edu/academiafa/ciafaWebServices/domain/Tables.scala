@@ -41,6 +41,7 @@ class TelemetrySamples(tag: Tag, name: String) extends Table[TelemetrySample](ta
   def to = column[Short]("TO_WP")
   def eta = column[Int]("ETA")
   def fuel = column[Float]("FUEL")
+  def elapsedTime = column[Int]("ELAPSED_TIME")
   def fpLat0 = column[Float]("FP_LAT0")
   def fpLon0 = column[Float]("FP_LON0")
   def fpAlt0 = column[Float]("FP_ALT0")
@@ -70,6 +71,7 @@ class TelemetrySamples(tag: Tag, name: String) extends Table[TelemetrySample](ta
     agl,
     (status,orbiting,from,to,eta),
     fuel,
+    elapsedTime,
     ((fpLat0,fpLon0,fpAlt0),(fpLat1,fpLon1,fpAlt1),(fpLat2,fpLon2,fpAlt2),(fpLat3,fpLon3,fpAlt3))
   )
 
@@ -89,11 +91,12 @@ class TelemetrySamples(tag: Tag, name: String) extends Table[TelemetrySample](ta
       telTuple._12,
       Tracker.tupled.apply(telTuple._13),
       telTuple._14,
+      telTuple._15,
       Trapezoid.tupled.apply(
-        Location.tupled.apply(telTuple._15._1._1,telTuple._15._1._2,telTuple._15._1._3),
-        Location.tupled.apply(telTuple._15._2._1,telTuple._15._2._2,telTuple._15._2._3),
-        Location.tupled.apply(telTuple._15._3._1,telTuple._15._3._2,telTuple._15._3._3),
-        Location.tupled.apply(telTuple._15._4._1,telTuple._15._4._2,telTuple._15._4._3)
+        Location.tupled.apply(telTuple._16._1._1,telTuple._16._1._2,telTuple._16._1._3),
+        Location.tupled.apply(telTuple._16._2._1,telTuple._16._2._2,telTuple._16._2._3),
+        Location.tupled.apply(telTuple._16._3._1,telTuple._16._3._2,telTuple._16._3._3),
+        Location.tupled.apply(telTuple._16._4._1,telTuple._16._4._2,telTuple._16._4._3)
       )
     )
   }
@@ -115,6 +118,7 @@ class TelemetrySamples(tag: Tag, name: String) extends Table[TelemetrySample](ta
         tel.agl,
         Tracker.unapply(tel.track).get,
         tel.fuel,
+        tel.elapsedTime,
         (
           Location.unapply(tel.footprint.vertice0).get,
           Location.unapply(tel.footprint.vertice1).get,
@@ -192,7 +196,7 @@ trait TupleTypes {
   protected type AccelerationTupleType = (Int,Int,Int)
   protected type TrackerTupleType = (Boolean,Boolean,Short,Short,Int)
   protected type TrapezoidTupleType = (LocationTupleType, LocationTupleType, LocationTupleType, LocationTupleType)
-  protected type TelemetrySampleTupleType = (Option[Long],Long,Int,LocationTupleType,Int,GroundSpeedTupleType,AttitudeTupleType,WindTupleType,EngineTupleType,AccelerationTupleType,Float,Int,TrackerTupleType,Float,TrapezoidTupleType)
+  protected type TelemetrySampleTupleType = (Option[Long],Long,Int,LocationTupleType,Int,GroundSpeedTupleType,AttitudeTupleType,WindTupleType,EngineTupleType,AccelerationTupleType,Float,Int,TrackerTupleType,Float,Int,TrapezoidTupleType)
   protected type OrbitTupleType = (Boolean,Int,Int)
   protected type WaypointSampleTupleType = (Option[Long],Long,Int,Int,LocationTupleType,OrbitTupleType,Int)
 

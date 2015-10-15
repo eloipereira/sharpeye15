@@ -48,8 +48,7 @@ trait TelemetrySampleDataAccess  extends DatabaseErrorHandlers {
 
   def createTelemetrySample(sample: TelemetrySample): Either[Failure, TelemetrySample] = {
     try {
-//      deleteLastTelemetrySample(sample.vId)
-      val id = db.withDynSession {
+      val id = db.withDynTransaction {
         val lastSample = lastTelemetrySample.where(_.vId === sample.vId)
         lastSample.delete
         lastTelemetrySample += sample
@@ -62,32 +61,7 @@ trait TelemetrySampleDataAccess  extends DatabaseErrorHandlers {
     }
   }
 
-  /**
-   * Deletes last telemetry sample of vehicle vId from database.
-   *
-   * @param id id of the telemetry sample to delete
-   * @return deleted telemetry sample entity
-   */
-  def deleteLastTelemetrySample(vId: Int): Either[Failure, LastTelemetrySample] = {
-    try {
-      db.withDynTransaction {
-        val query = lastTelemetrySample.where(_.vId === vId)
-        val samplesQ = query.run.asInstanceOf[List[LastTelemetrySample]]
-        samplesQ.size match {
-          case 0 =>
-            Left(telemetrySampleNotFoundError(1L))
-          case _ => {
-            query.delete
-            Right(samplesQ.head)
-          }
-        }
-      }
-    } catch {
-      case e: SQLException =>
-        Left(databaseError(e))
-    }
-  }
-
+  
   /**
    * Deletes telemetry sample from database.
    *

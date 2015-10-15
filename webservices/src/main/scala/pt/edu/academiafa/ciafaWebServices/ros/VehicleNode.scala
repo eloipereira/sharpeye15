@@ -36,6 +36,7 @@ class VehicleNode extends AbstractNodeMain with Configuration{
   var from:Short = 0
   var to:Short = 0 
   var eta = 0
+  var elapsedTime = 0
   var gotStatus = false
   var fuel:Float = 0
   
@@ -107,6 +108,7 @@ class VehicleNode extends AbstractNodeMain with Configuration{
             msg.getAgl,
             Tracker(status,orbiting,from,to,eta),
             fuel,
+            elapsedTime,
             Trapezoid(
               Location(v0lat,v0lon,v0alt),
               Location(v1lat,v1lon,v1alt),
@@ -132,6 +134,7 @@ class VehicleNode extends AbstractNodeMain with Configuration{
         from = msg.getWpFrom
         to = msg.getWpTo
         eta = msg.getTimeToWp
+        elapsedTime = msg.getElapsedTime
         gotStatus = true
       }
     })

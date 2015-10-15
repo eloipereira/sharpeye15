@@ -1,8 +1,8 @@
-prefix=/home/administrator/sharpeye15/sharpeye15_ws/devel
+prefix=/home/ciafa/sharpeye15/sharpeye15_ws/devel
 
 Name: seagull_communication_msgs
 Description: Description of seagull_communication_msgs
 Version: 0.0.1
-Cflags: -I/home/administrator/sharpeye15/sharpeye15_ws/devel/include -I/home/administrator/sharpeye15/sharpeye15_ws/src/seagull_communication_msgs/include
-Libs: -L/home/administrator/sharpeye15/sharpeye15_ws/devel/lib 
+Cflags: -I/home/ciafa/sharpeye15/sharpeye15_ws/devel/include -I/home/ciafa/sharpeye15/sharpeye15_ws/src/seagull_communication_msgs/include
+Libs: -L/home/ciafa/sharpeye15/sharpeye15_ws/devel/lib 
 Requires: roscpp message_runtime seagull_commons_msgs

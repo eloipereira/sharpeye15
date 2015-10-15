@@ -4,6 +4,7 @@ package pt.edu.academiafa.ciafaWebServices.domain
   * TelemetrySample entity.
   *
   * @param id telemetry id
+  * @param timestamp GMT posix timestamp converted from gps time 
   * @param vId vehicle id
   * @param loc location parameters (lat, lon, alt)
   * @param ias indicated airspeed
@@ -14,7 +15,10 @@ package pt.edu.academiafa.ciafaWebServices.domain
   * @param accel acceleration (x,y,z)
   * @param heading heading
   * @param agl altitude AGL
-  * @param timestamp GMT posix timestamp converted from gps time 
+  * @param track waypoint tracker information
+  * @param fuel remaining fuel
+  * @param elapsedTime flight time
+  * @param footprint UAV sensor footprint
   */
 
 case class TelemetrySample(
@@ -32,6 +36,7 @@ case class TelemetrySample(
   agl: Int,
   track: Tracker,
   fuel: Float,
+  elapsedTime: Int,
   footprint: Trapezoid
 )
 
