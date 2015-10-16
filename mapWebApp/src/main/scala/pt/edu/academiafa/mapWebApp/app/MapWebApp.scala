@@ -68,17 +68,16 @@ object MissionViewer extends js.JSApp {
       val polylineoptns = lit(strokeOpacity = 0,map = googleMap, path = linePath, icons = lineIcons)    
       val destLine = (jsnew(g.google.maps.Polyline)(polylineoptns))
 
+      val initTrajectory = callTrajectoryService(telemetry.vId.toString.toInt)
       val trajectoryLineSymbol = lit(path = "M 0,-1 0,1", strokeOpacity = 0.2, scale = 2)
       val MAX_TRAJECTORY_SIZE = 200
-      var flightTrajectory = js.Array(
-        (jsnew(g.google.maps.LatLng))(telemetry.loc.lat, telemetry.loc.lon),
-        (jsnew(g.google.maps.LatLng))(telemetry.loc.lat, telemetry.loc.lon)
-      )
-      val trajectoryLineIcons = js.Array(lit(repeat = "20px", icon = trajectoryLineSymbol ,offset = "100%"))      
-      val trajectoryPolylineoptns = lit(strokeOpacity = 0,map = googleMap, path = flightTrajectory, icons = trajectoryLineIcons)
+     
+      var flightTrajectory = initTrajectory.map{l: js.Dynamic => 
+        (jsnew(g.google.maps.LatLng))(l.lat, l.lon)
+      }
+
+      val trajectoryPolylineoptns = lit(strokeOpacity = 0.8, strokeColor= "blue",  map = googleMap, path = flightTrajectory)
       val trajectLine = (jsnew(g.google.maps.Polyline)(trajectoryPolylineoptns))
-
-
 
       updateTelemetryData
       updateDestinationData
@@ -89,7 +88,7 @@ object MissionViewer extends js.JSApp {
           updateTelemetryData
         }
       }
-      ,5000)
+      ,3000)
       
       dom.setInterval(()=>{
         if (mayUpdate){
@@ -164,6 +163,11 @@ object MissionViewer extends js.JSApp {
       JSON.parse(xmlHttpRequest.responseText)
     }
    
+    def callTrajectoryService(vId: Int): js.Dynamic = {
+      xmlHttpRequest.open("GET", "http://62.28.239.27:8080/trajectory?vId=%s".format(vId) , false)
+      xmlHttpRequest.send();
+      JSON.parse(xmlHttpRequest.responseText)
+    }
    
       (jsnew(g.google.maps.event.addDomListener)(window, "load", initialize))
   }
