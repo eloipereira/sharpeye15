@@ -129,7 +129,21 @@ trait TelemetrySampleDataAccess  extends DatabaseErrorHandlers {
         Left(databaseError(e))
     }
   }
+
+  def getTrajectoryOfVehicle(vId: Int): Either[Failure, List[Location]] = {
+    try {
+      db.withDynSession {
+        Right(telemetrySamples.list.filter(_.vId == vId).map(_.loc).map(l => Location(l.lat,l.lon,l.alt)))
+      }
+    } catch {
+      case e: SQLException =>
+        Left(databaseError(e))
+    }
+  }
+
 }
+
+
 
 trait WaypointSampleDataAccess extends DatabaseErrorHandlers {
   

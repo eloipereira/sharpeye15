@@ -87,6 +87,17 @@ trait RestService extends HttpService with SLF4JLogging {
         }
       }
     } ~
+    path("trajectory"){
+      parameters('vId.as[Int]){
+        vId: Int =>{
+          ctx: RequestContext => {
+            handleRequest(ctx){
+              daoService.getTrajectoryOfVehicle(vId)
+            }
+          }
+        }
+      }
+    } ~
     path("webApp"){
       getFromResource("web/index.html")
     } ~ {
