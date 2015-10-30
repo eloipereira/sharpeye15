@@ -130,10 +130,13 @@ trait TelemetrySampleDataAccess  extends DatabaseErrorHandlers {
     }
   }
 
-  def getTrajectoryOfVehicle(vId: Int): Either[Failure, List[Location]] = {
+  def getTrajectoryOfVehicle(vId: Int, length: Option[Int]): Either[Failure, List[Location]] = {
     try {
       db.withDynSession {
-        Right(telemetrySamples.list.filter(_.vId == vId).map(_.loc).map(l => Location(l.lat,l.lon,l.alt)))
+        length match {
+          case None => Right(telemetrySamples.filter(_.vId === vId).list.map(_.loc).map(l => Location(l.lat,l.lon,l.alt)))
+          case Some(l) => Right(telemetrySamples.sortBy(_.id.desc).take(l).filter(_.vId === vId).list.map(_.loc).map(l => Location(l.lat,l.lon,l.alt)))
+        }
       }
     } catch {
       case e: SQLException =>

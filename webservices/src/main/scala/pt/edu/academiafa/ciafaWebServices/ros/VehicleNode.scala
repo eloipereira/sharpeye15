@@ -183,7 +183,7 @@ class VehicleNode extends AbstractNodeMain with Configuration{
             var header = req.getHeader
             header.setVehicleId(vehicleId)
             req.setHeader(header)
-	    log.info("****************************[VehicleNode]: requesting waypoints for vehicle " +  req.getHeader.getVehicleId)        
+	    log.info("[VehicleNode]: requesting waypoints for vehicle " +  req.getHeader.getVehicleId)        
             waypointRequestPub.publish(req)
 	    Thread.sleep(updateWaypointsPeriod)
           }
