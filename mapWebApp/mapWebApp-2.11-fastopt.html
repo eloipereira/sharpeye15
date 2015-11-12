@@ -11,6 +11,7 @@
     <script type="text/javascript"
             src="./target/scala-2.11/mission-viewer-scala-js-fastopt.js">
     </script>
+    
     <style>
       table tr td {
       padding: 20px;
@@ -36,15 +37,23 @@
       </center>
       
       <!-- Placeholder for the Google Map -->
-      <div class="col-xs-12 col-sm-6 col-md-8">
+      <div class="col-xs-12 col-sm-6 col-md-6">
         <div id="map_canvas" style="height: 100%; width: 100%;margin-left: 10px; margin-right: 10px; margin-top: 10px;  margin-bottom: 10px"></div>
       </div>
-      
-      
-      <div class="col-xs-6 col-md-4">
-        <div style="width: 100%; height: 100%; margin-left: 10px; margin-right: 10px; margin-top: 10px;  margin-bottom: 10px">
-	  
-          <table class="table-bordered"
+       
+	<div class="col-xs-6 col-md-6">
+	      <div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;  margin-bottom: 10px">
+		<video width="640" height="480" controls autoplay>
+		  <source src="http://62.28.239.27:8081/UAVcam.ogg" type="video/ogg">
+		    Your browser does not support the VIDEO tag and/or OGG streams.
+		</video>
+	      </div>
+	  <style>
+	    table { table-layout: fixed; width: 640px; }
+	    table th, table td { overflow: hidden; }
+	  </style>
+        <div style="margin-left: 10px; margin-right: 10px; margin-top: 10px;  margin-bottom: 10px"> 
+          <table class="table table-condensed"
                  style="width: 100%; text-align: center; margin-top: 10px">
             <tr>
               <td>Vehicle ID</td>
@@ -93,11 +102,23 @@
               <td id="timestamp"></td>
             </tr>
 	  </table>
-	  <textarea rows="3" cols="70">
-	  Portuguese Air Force Academy Research Center
-	  Developer: Eloi Pereira, email: epereira@academiafa.edu.pt
-	  Drone icon created by Anthony Lui (noun project)
-	</textarea>
+	  <div>
+	  <h5><font color="gray">
+	    <p>
+	      Portuguese Air Force Academy Research Center (CIAFA)
+	    </p>
+	    <p>
+	      Webservices and web interface: Eloi Pereira, email: epereira@academiafa.edu.pt
+	    </p>
+	    <p>
+	      Video streamming: Daniel Soares, email: dfsoares@academiafa.edu.pt
+	      </p>
+	    <p>
+	      Drone icon created by Anthony Lui (noun project)
+	    </p>
+	    </font>
+	</h5>
+	  </div>
 	</div>
       </div>
 

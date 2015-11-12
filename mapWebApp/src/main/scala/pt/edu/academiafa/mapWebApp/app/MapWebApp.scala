@@ -22,7 +22,6 @@ object MissionViewer extends js.JSApp {
     println("---------Mission Information System---------------")  
     
     val xmlHttpRequest = new dom.XMLHttpRequest
-    var mayUpdate = true
 
 
     def droneSymb(rotation: Int) = {
@@ -80,7 +79,7 @@ object MissionViewer extends js.JSApp {
       val destLine = (jsnew(g.google.maps.Polyline)(polylineoptns))
 
 
-      val MAX_TRAJECTORY_SIZE = 200
+      val MAX_TRAJECTORY_SIZE = 2000
       val initTrajectory = callTrajectoryService(telemetry.vId.toString.toInt,MAX_TRAJECTORY_SIZE)
       val trajectoryLineSymbol = lit(path = "M 0,-1 0,1", strokeOpacity = 0.2, scale = 2)
       
@@ -95,16 +94,14 @@ object MissionViewer extends js.JSApp {
       updateTelemetryData
       updateDestinationData
 
-      dom.setInterval(()=>{
-        if (mayUpdate){
-          telemetry = callTelemetryService
-          updateTelemetryData
-        }
+      dom.setInterval(()=>{       
+        telemetry = callTelemetryService
+        updateTelemetryData
       }
       ,3000)
       
       dom.setInterval(()=>{
-        if (mayUpdate){
+        if(telemetry.track.to.toString.toInt != 0 && telemetry.track.from.toString.toInt != 0){
           destWaypoint = callWaypointService(telemetry.track.to.toString.toInt)
           updateDestinationData
         }
