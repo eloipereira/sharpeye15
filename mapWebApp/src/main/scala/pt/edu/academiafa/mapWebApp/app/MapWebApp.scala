@@ -46,7 +46,11 @@ object MissionViewer extends js.JSApp {
 
     def initialize() = js.Function{
       var telemetry = callTelemetryService
-      var destWaypoint = callWaypointService(telemetry.track.to.toString.toInt)
+      var destWaypoint = telemetry
+      var destWaypointStr = callWaypointService(telemetry.track.to.toString.toInt)
+      if (!destWaypointStr.contains("error")){
+        destWaypoint = JSON.parse(destWaypointStr);
+      }
       val map_canvas = document.getElementById("map_canvas")
       val map_options = lit(center = (jsnew(g.google.maps.LatLng))(telemetry.loc.lat, telemetry.loc.lon), zoom = 14, mapTypeId = g.google.maps.MapTypeId.ROADMAP)
       val googleMap = (jsnew(g.google.maps.Map))(map_canvas, map_options) 
@@ -79,7 +83,7 @@ object MissionViewer extends js.JSApp {
       val destLine = (jsnew(g.google.maps.Polyline)(polylineoptns))
 
 
-      val MAX_TRAJECTORY_SIZE = 2000
+      val MAX_TRAJECTORY_SIZE = 4000
       val initTrajectory = callTrajectoryService(telemetry.vId.toString.toInt,MAX_TRAJECTORY_SIZE)
       val trajectoryLineSymbol = lit(path = "M 0,-1 0,1", strokeOpacity = 0.2, scale = 2)
       
@@ -102,7 +106,10 @@ object MissionViewer extends js.JSApp {
       
       dom.setInterval(()=>{
         if(telemetry.track.to.toString.toInt != 0 && telemetry.track.from.toString.toInt != 0){
-          destWaypoint = callWaypointService(telemetry.track.to.toString.toInt)
+          destWaypointStr = callWaypointService(telemetry.track.to.toString.toInt)
+          if (!destWaypointStr.contains("error")){
+            destWaypoint = JSON.parse(destWaypointStr);
+          }
           updateDestinationData
         }
       }
@@ -167,10 +174,12 @@ object MissionViewer extends js.JSApp {
       JSON.parse(xmlHttpRequest.responseText)
     }
 
-    def callWaypointService(index: Int): js.Dynamic = {
+    def callWaypointService(index: Int): String = {
       xmlHttpRequest.open("GET", "http://62.28.239.27:8080/waypoint?index=%s".format(index) , false)
       xmlHttpRequest.send();
-      JSON.parse(xmlHttpRequest.responseText)
+      xmlHttpRequest.responseText;
+
+      
     }
    
     def callTrajectoryService(vId: Int,size: Int): js.Dynamic = {
