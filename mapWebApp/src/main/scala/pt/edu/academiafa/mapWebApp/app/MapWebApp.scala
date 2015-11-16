@@ -117,8 +117,8 @@ object MissionViewer extends js.JSApp {
 
       def updateTelemetryData={
         document.getElementById("vId").innerHTML = "" + telemetry.vId.toString
-        document.getElementById("ias").innerHTML = (telemetry.ias.toString.toFloat/1.943844).toString
-        document.getElementById("alt").innerHTML = (telemetry.loc.alt.toString.toFloat/3.28084).toString
+        document.getElementById("ias").innerHTML = (telemetry.ias.toString.toFloat*1.943844).toString
+        document.getElementById("alt").innerHTML = (telemetry.loc.alt.toString.toFloat*3.28084).toString
         document.getElementById("roll").innerHTML = telemetry.att.roll.toString
         document.getElementById("pitch").innerHTML = telemetry.att.pitch.toString
         document.getElementById("yaw").innerHTML = telemetry.att.yaw.toString
