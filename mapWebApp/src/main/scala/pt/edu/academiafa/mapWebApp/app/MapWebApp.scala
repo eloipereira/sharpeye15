@@ -115,14 +115,23 @@ object MissionViewer extends js.JSApp {
       }
       ,10000)
 
+      def truncateAt(n: Double, p: Int): Double = { val s = math pow (10, p); (math floor n * s) / s }
+
       def updateTelemetryData={
+        val ias = truncateAt(telemetry.ias.toString.toDouble*1.943844,3)
+        val alt = truncateAt(telemetry.loc.alt.toString.toDouble*3.28084,3)
+        val yaw = truncateAt(telemetry.att.yaw.toString.toDouble,3)
+        val lat = truncateAt(telemetry.loc.lat.toString.toDouble,6)
+        val lon = truncateAt(telemetry.loc.lon.toString.toDouble,6)
+        val destLat = truncateAt(destWaypoint.loc.lat.toString.toDouble,6)
+        val destLon = truncateAt(destWaypoint.loc.lon.toString.toDouble,6)
         document.getElementById("vId").innerHTML = "" + telemetry.vId.toString
-        document.getElementById("ias").innerHTML = (telemetry.ias.toString.toFloat*1.943844).toString
-        document.getElementById("alt").innerHTML = (telemetry.loc.alt.toString.toFloat*3.28084).toString
+        document.getElementById("ias").innerHTML = (ias).toString
+        document.getElementById("alt").innerHTML = (alt).toString
         document.getElementById("roll").innerHTML = telemetry.att.roll.toString
         document.getElementById("pitch").innerHTML = telemetry.att.pitch.toString
-        document.getElementById("yaw").innerHTML = telemetry.att.yaw.toString
-        document.getElementById("loc").innerHTML = "[" + telemetry.loc.lat.toString + ", " + telemetry.loc.lon.toString + "]"
+        document.getElementById("yaw").innerHTML = (yaw).toString
+        document.getElementById("loc").innerHTML = "[" + lat.toString + ", " + lon.toString + "]"
         val eta = telemetry.track.eta.toString.toInt
         document.getElementById("eta").innerHTML = if (eta == 32767) {0.toString} else {round(eta/60).toString}
         document.getElementById("elapsedTime").innerHTML = telemetry.elapsedTime.toString // round(telemetry.elapsedTime.toString.toInt/6).toString
@@ -137,7 +146,7 @@ object MissionViewer extends js.JSApp {
         marker.setIcon(droneSymb(round(telemetry.att.yaw.toString.toFloat)))
         footprint.setPaths(footprintCoords)
         linePath = Array(
-          (jsnew(g.google.maps.LatLng))(destWaypoint.loc.lat, destWaypoint.loc.lon),
+          (jsnew(g.google.maps.LatLng))(destLat, destLon),
           (jsnew(g.google.maps.LatLng))(telemetry.loc.lat, telemetry.loc.lon))
         destLine.setPath(linePath)
         flightTrajectory.push((jsnew(g.google.maps.LatLng))(telemetry.loc.lat, telemetry.loc.lon))
@@ -148,11 +157,15 @@ object MissionViewer extends js.JSApp {
     }
 
     def updateDestinationData={
-      document.getElementById("dest").innerHTML = "[" + destWaypoint.loc.lat.toString + ", " + destWaypoint.loc.lon.toString + "]"
-      markerDest.setPosition((jsnew(g.google.maps.LatLng)(destWaypoint.loc.lat, destWaypoint.loc.lon)))
+      val lat = truncateAt(telemetry.loc.lat.toString.toDouble,6)
+      val lon = truncateAt(telemetry.loc.lon.toString.toDouble,6)
+      val destLat = truncateAt(destWaypoint.loc.lat.toString.toDouble,6)
+      val destLon = truncateAt(destWaypoint.loc.lon.toString.toDouble,6)
+      document.getElementById("dest").innerHTML = "[" + destLat.toString + ", " + destLon.toString + "]"
+      markerDest.setPosition((jsnew(g.google.maps.LatLng)(destLat, destLon)))
       linePath = Array(
-        (jsnew(g.google.maps.LatLng))(destWaypoint.loc.lat, destWaypoint.loc.lon),
-        (jsnew(g.google.maps.LatLng))(telemetry.loc.lat, telemetry.loc.lon))
+        (jsnew(g.google.maps.LatLng))(destLat, destLon),
+        (jsnew(g.google.maps.LatLng))(lat, lon))
       destLine.setPath(linePath)
     }
       
