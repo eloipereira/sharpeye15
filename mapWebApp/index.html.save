@@ -49,28 +49,29 @@
       </div>
 
 
-     <script>
-	setInterval(function() {
-   	var myImageElement = document.getElementById('myImage');
-    	myImageElement.src = 'http://sharpeye15.academiafa.edu.pt:9090/image.jpg?rand=' + Math.random();
-	}, 4000);
-     </script>
+<!--
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ <script>
+ function autoRefresh_div()
+ {
+    document.getElementById("imageDiv").innerHTML = "";
+    $('#imageDiv').append('<img src="imagesHtml/noImage.jpg?" + new Date().getTime(); />'); 
+  }
 
+  setInterval('autoRefresh_div()', 5000); // refresh div after 5 secs
+ </script>
+
+       
 	<div class="col-xs-6 col-md-6">
-	      <div id="imageDiv" style="margin-left: 10px; margin-right: 10px; margin-top: 10px;  margin-bottom: 10px">
-
-
-		<!-- uncomment for images -->
-		<img src="http://sharpeye15.academiafa.edu.pt:9090/image.jpg" id="myImage" />
-
-
-		<!-- uncomment for video -->		
-<!--		<video width="640" height="480" controls autoplay loop>
+	      <div id="imageDiv" style="margin-left: 10px; margin-right: 10px; margin-top: 10px;  margin-bottom: 10p
+<!--
+		<video width="640" height="480" controls autoplay loop>
 		  <source src="http://62.28.239.27:8081/UAVcam.ogg" type="video/ogg">
 		    Your browser does not support the VIDEO tag and/or OGG streams.
 		</video>
 -->
 	      </div>
+
 
 
 	  <style>
