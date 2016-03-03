@@ -1,0 +1,5 @@
+UAV WebServices 
+===============
+
+# Notes
+The web app is functional. It currently has hard-coded IPs and ports in `MapWebApp.scala` which must be changed to match the IP and port of the server that is running the services. Afterwards, it should be recompiled with the `fastOptJS` command, inside the `sbt` tool.
