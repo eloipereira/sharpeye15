@@ -23,7 +23,7 @@ UAV WebServices
  - telemetry
      + input: optional input of selecting the sample ID
      + output: the telemetry data from a sample
-     + access: `http://serverip:port/telemetry` for last telemetry sanple or `http://serverip:port/telemetry?45` for telemetry sample with ID=45
+     + access: `http://serverip:port/telemetry` for last telemetry sample or `http://serverip:port/telemetry?45` for telemetry sample with ID=45
  - waypoint: there may be several samples of the same waypoint in the database
      + input: index of waypoint
      + output: waypoint information
