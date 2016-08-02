@@ -2,12 +2,12 @@ seagull_commons_msgs/SeagullHeader header
 float32 latitude
 float32 longitude
 float32 altitude
-uint16 ias
-int16 vx
-int16 vy
-int16 vz
-int16 roll
-int16 pitch
+float32 ias
+float32 vx
+float32 vy
+float32 vz
+float32 roll
+float32 pitch
 float32 yaw
 int16 barometricAltitude
 float32 windSouth
@@ -20,5 +20,5 @@ int16 accelY
 int16 accelZ
 uint16 compass
 uint16 agl
-uint64 timestamp #GMT posix timestamp converted from gps time 
+uint64 timestamp #GMT posix timestamp converted from gps time
 float32 fuel
