@@ -206,7 +206,7 @@ void AutopilotDriver::handleAutopilotStream(BYTE_VECTOR& payload) {
 								payload[5]));
 
 				pkt->load(autopilotStreamPkt->getPayload());
-				
+
 				//if (autopilotStreamPkt->getPayload()->size() == 41) // Short version
 				publishStatus(status_pub, pkt);
 				delete (pkt);
@@ -476,8 +476,10 @@ void AutopilotDriver::publishStatus(const ros::Publisher& pub,
 	msg.userAction6 = pkt->isUserStatus6();
 	msg.userAction7 = pkt->isUserStatus7();
 
-	if(pkt->isElapsedTimeFlag())
-		this->elapsedT = pkt->getElapsedTime();
+	// TODO: implement this in PiccoloSDK
+	// if(pkt->isElapsedTimeFlag())
+	// 	this->elapsedT = pkt->getElapsedTime();
+
 	msg.elapsedTime = this->elapsedT;
 
 	pub.publish(msg);
